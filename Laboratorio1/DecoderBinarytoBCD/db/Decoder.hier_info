@@ -1,0 +1,70 @@
+|Decoder
+bin[0] => bin[0].IN1
+bin[1] => bin[1].IN1
+bin[2] => bin[2].IN1
+bin[3] => bin[3].IN1
+seg1[0] << display7segmentos:display1.seg
+seg1[1] << display7segmentos:display1.seg
+seg1[2] << display7segmentos:display1.seg
+seg1[3] << display7segmentos:display1.seg
+seg1[4] << display7segmentos:display1.seg
+seg1[5] << display7segmentos:display1.seg
+seg1[6] << display7segmentos:display1.seg
+seg2[0] << display7segmentos:display2.seg
+seg2[1] << display7segmentos:display2.seg
+seg2[2] << display7segmentos:display2.seg
+seg2[3] << display7segmentos:display2.seg
+seg2[4] << display7segmentos:display2.seg
+seg2[5] << display7segmentos:display2.seg
+seg2[6] << display7segmentos:display2.seg
+
+
+|Decoder|converter:decoder
+bin[0] => bcd[0].DATAIN
+bin[1] => LessThan0.IN6
+bin[1] => Add0.IN6
+bin[1] => bcd_temp.DATAA
+bin[2] => LessThan0.IN5
+bin[2] => Add0.IN5
+bin[2] => bcd_temp.DATAA
+bin[3] => LessThan0.IN4
+bin[3] => Add0.IN4
+bin[3] => bcd_temp.DATAA
+bcd[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= bcd_temp.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] <= bcd_temp.DB_MAX_OUTPUT_PORT_TYPE
+bcd[3] <= bcd_temp.DB_MAX_OUTPUT_PORT_TYPE
+bcd[4] <= bcd_temp.DB_MAX_OUTPUT_PORT_TYPE
+bcd[5] <= <GND>
+bcd[6] <= <GND>
+bcd[7] <= <GND>
+
+
+|Decoder|display7segmentos:display1
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Decoder|display7segmentos:display2
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
