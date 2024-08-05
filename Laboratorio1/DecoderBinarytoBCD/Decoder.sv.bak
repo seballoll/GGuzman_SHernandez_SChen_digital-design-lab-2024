@@ -6,12 +6,6 @@ module Decoder (
 
     wire [7:0] bcd;
 
-    // Instanciar el módulo converter
-    converter decoder (
-        .bin(bin),
-        .bcd(bcd)
-    );
-
     // Convertir BCD a 7 segmentos
     display7segmentos display1 (
         .bcd(bcd[3:0]),
@@ -46,28 +40,4 @@ module display7segmentos (
     end
 endmodule
 
-module converter (
-    input  wire [3:0] bin,  // Entrada de 4 bits binarios
-    output reg  [7:0] bcd   // Salida de 8 bits BCD (dos dígitos BCD)
-);
 
-    reg [7:0] bcd_temp;  //Registro temporal 8bits
-    reg [3:0] i; //Iteracion para analizar los 4 bits
-
-    always @(bin) begin
-        bcd_temp = 0;
-        bcd = 0;
-
-        for (i = 0; i < 4; i = i + 1) begin
-            bcd_temp = {bcd_temp[6:0], bin[3 - i]};
-            
-            if (i < 3 && bcd_temp[3:0] > 4) 
-                bcd_temp[3:0] = bcd_temp[3:0] + 3;
-            if (i < 3 && bcd_temp[7:4] > 4) 
-                bcd_temp[7:4] = bcd_temp[7:4] + 3;
-        end
-        
-        bcd = bcd_temp;
-    end
-
-endmodule
