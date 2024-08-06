@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Aug 06 17:14:25 2024
+Fitter Status : Successful - Tue Aug 06 17:38:57 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Problema3
 Top-level Entity Name : Problema3
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 16 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 17 / 41,910 ( < 1 % )
 Total registers : 6
 Total pins : 22 / 499 ( 4 % )
 Total virtual pins : 0

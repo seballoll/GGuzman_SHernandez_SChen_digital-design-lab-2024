@@ -3,13 +3,14 @@ module Problema3 #(parameter N = 6)(
 	input logic [N-1:0] num,
 	output logic [6:0] segA, segB);
 
-	logic [N-1:0] contador = 0;
+	logic [N-1:0] contador;
 	
 	always_ff @(negedge rst or negedge dec) begin
 		if (!rst)
 			contador <= num;  
 		else
-			contador <= contador - 1;  
+			if (contador > 0)
+				contador <= contador - 1;  
 	end
 	
 	always_comb begin
