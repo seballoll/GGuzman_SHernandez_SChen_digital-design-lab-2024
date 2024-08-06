@@ -1,35 +1,26 @@
-|Problema3
+|twobit_tb
+
+
+|twobit_tb|Problema3:problema3
 rst => contador[0].ALOAD
 rst => contador[1].ALOAD
-rst => contador[2].ALOAD
-rst => contador[3].ALOAD
-rst => contador[4].ALOAD
-rst => contador[5].ALOAD
 dec => contador[0].CLK
 dec => contador[1].CLK
-dec => contador[2].CLK
-dec => contador[3].CLK
-dec => contador[4].CLK
-dec => contador[5].CLK
 num[0] => contador[0].ADATA
 num[1] => contador[1].ADATA
-num[2] => contador[2].ADATA
-num[3] => contador[3].ADATA
-num[4] => contador[4].ADATA
-num[5] => contador[5].ADATA
-segA[0] <= Ram0.DATAOUT
-segA[1] <= Ram0.DATAOUT1
-segA[2] <= Ram0.DATAOUT2
-segA[3] <= Ram0.DATAOUT3
-segA[4] <= Ram0.DATAOUT4
-segA[5] <= Ram0.DATAOUT5
-segA[6] <= Ram0.DATAOUT6
-segB[0] <= Ram1.DATAOUT
-segB[1] <= Ram1.DATAOUT1
-segB[2] <= Ram1.DATAOUT2
-segB[3] <= Ram1.DATAOUT3
-segB[4] <= Ram1.DATAOUT4
-segB[5] <= Ram1.DATAOUT5
-segB[6] <= Ram1.DATAOUT6
+segA[0] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+segA[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segA[2] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+segA[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segA[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segA[5] <= <GND>
+segA[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segB[0] <= <VCC>
+segB[1] <= <GND>
+segB[2] <= <GND>
+segB[3] <= <GND>
+segB[4] <= <GND>
+segB[5] <= <GND>
+segB[6] <= <GND>
 
 

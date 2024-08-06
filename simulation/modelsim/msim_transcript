@@ -1,0 +1,68 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Problema3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024 {C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Problema3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:13 on Aug 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024" C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Problema3.sv 
+# -- Compiling module Problema3
+# 
+# Top level modules:
+# 	Problema3
+# End time: 17:53:13 on Aug 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024 {C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:13 on Aug 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024" C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv 
+# -- Compiling module twobit_tb
+# 
+# Top level modules:
+# 	twobit_tb
+# End time: 17:53:13 on Aug 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024 {C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:13 on Aug 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024" C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv 
+# -- Compiling module twobit_tb
+# 
+# Top level modules:
+# 	twobit_tb
+# End time: 17:53:13 on Aug 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  twobit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" twobit_tb 
+# Start time: 17:53:13 on Aug 06,2024
+# Loading sv_std.std
+# Loading work.twobit_tb
+# Loading work.Problema3
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position insertpoint  \
+sim:/twobit_tb/problema3/contador
+restart -f
+
+run 500
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 17:56:24 on Aug 06,2024, Elapsed time: 0:03:11
+# Errors: 0, Warnings: 0
