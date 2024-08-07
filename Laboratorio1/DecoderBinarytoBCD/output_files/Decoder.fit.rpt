@@ -1,5 +1,5 @@
 Fitter report for Decoder
-Wed Aug 07 00:05:33 2024
+Wed Aug 07 00:08:27 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Aug 07 00:05:33 2024       ;
+; Fitter Status                   ; Successful - Wed Aug 07 00:08:27 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Decoder                                     ;
 ; Top-level Entity Name           ; Decoder                                     ;
@@ -151,7 +151,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-16        ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -1679,7 +1679,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Decoder.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1708,10 +1708,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/gabri/OneDrive - Estudiantes ITCR/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio1/DecoderBinarytoBCD/output_files/Decoder.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 7816 megabytes
-    Info: Processing ended: Wed Aug 07 00:05:33 2024
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:21
+    Info: Peak virtual memory: 7814 megabytes
+    Info: Processing ended: Wed Aug 07 00:08:28 2024
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:01:24
 
 
 +----------------------------+

@@ -72,4 +72,4 @@ module converter (
 endmodule
 
 
-//
+//Codigo basado en https://verilogcodes.blogspot.com/2015/10/verilog-code-for-8-bit-binary-to-bcd.html
