@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Tue Aug 06 18:01:34 2024
+Analysis & Elaboration Status : Successful - Tue Aug 06 23:56:57 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Problema3
-Top-level Entity Name : twobit_tb
+Top-level Entity Name : Problema3
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
