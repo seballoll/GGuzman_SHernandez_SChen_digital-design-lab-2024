@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/simulation/modelsim
 vProblema3
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1722988393
+Z2 !s110 1722988899
 !i10b 1
 !s100 hJc3]0f@4;LIKzNM_k0@F3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1722988393.000000
+Z6 !s108 1722988899.000000
 !s107 C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Problema3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024|C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Problema3.sv|
 !i113 1
@@ -40,17 +40,17 @@ vtwobit_tb
 R1
 R2
 !i10b 1
-!s100 khNKOzK@3a6;JBT[jTIzz2
+!s100 U`zLhngbaXLk2H<g=fQf03
 R3
-IGm8F@<o8S[C14D@Ze2MIl2
+IfV0WMVam61@nX7U3HzX_M3
 R4
 S1
 R0
-w1722988263
+w1722988890
 8C:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv
 FC:/Users/sebas/OneDrive/Documentos/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/twobit_tb.sv
 !i122 2
-L0 1 25
+L0 1 33
 R5
 r1
 !s85 0
