@@ -3,20 +3,20 @@ bin[0] => bin[0].IN1
 bin[1] => bin[1].IN1
 bin[2] => bin[2].IN1
 bin[3] => bin[3].IN1
-seg1[0] << display7segmentos:display1.seg
-seg1[1] << display7segmentos:display1.seg
-seg1[2] << display7segmentos:display1.seg
-seg1[3] << display7segmentos:display1.seg
-seg1[4] << display7segmentos:display1.seg
-seg1[5] << display7segmentos:display1.seg
-seg1[6] << display7segmentos:display1.seg
-seg2[0] << display7segmentos:display2.seg
-seg2[1] << display7segmentos:display2.seg
-seg2[2] << display7segmentos:display2.seg
-seg2[3] << display7segmentos:display2.seg
-seg2[4] << display7segmentos:display2.seg
-seg2[5] << display7segmentos:display2.seg
-seg2[6] << display7segmentos:display2.seg
+seg1[0] <= display7segmentos:display1.seg
+seg1[1] <= display7segmentos:display1.seg
+seg1[2] <= display7segmentos:display1.seg
+seg1[3] <= display7segmentos:display1.seg
+seg1[4] <= display7segmentos:display1.seg
+seg1[5] <= display7segmentos:display1.seg
+seg1[6] <= display7segmentos:display1.seg
+seg2[0] <= display7segmentos:display2.seg
+seg2[1] <= display7segmentos:display2.seg
+seg2[2] <= display7segmentos:display2.seg
+seg2[3] <= display7segmentos:display2.seg
+seg2[4] <= display7segmentos:display2.seg
+seg2[5] <= display7segmentos:display2.seg
+seg2[6] <= display7segmentos:display2.seg
 
 
 |Decoder|converter:decoder

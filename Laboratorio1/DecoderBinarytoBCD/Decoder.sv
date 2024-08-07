@@ -12,7 +12,6 @@ module Decoder (
         .bcd(bcd)
     );
 
-    // Convertir BCD a 7 segmentos
     display7segmentos display1 (
         .bcd(bcd[3:0]),
         .seg(seg1)
@@ -25,7 +24,7 @@ module Decoder (
 
 endmodule
 
-module display7segmentos (
+module display7segmentos (    //Interpretador para el 7 segmentos
     input wire [3:0] bcd,
     output reg [6:0] seg
 );
@@ -54,7 +53,7 @@ module converter (
     reg [7:0] bcd_temp;  //Registro temporal 8bits
     reg [3:0] i; //Iteracion para analizar los 4 bits
 
-    always @(bin) begin
+    always @(bin) begin  //Algoritmo para interpretar los binarios y pasarlos a BCD
         bcd_temp = 0;
         bcd = 0;
 
@@ -71,3 +70,6 @@ module converter (
     end
 
 endmodule
+
+
+//
