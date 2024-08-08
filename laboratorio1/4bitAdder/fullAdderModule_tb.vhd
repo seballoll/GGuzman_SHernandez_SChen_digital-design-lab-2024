@@ -11,11 +11,16 @@ ARCHITECTURE behavior OF fullAdderModule_tb IS
  COMPONENT fullAdderModule
  PORT(
  A : IN std_logic_vector(3 downto 0);
-B : IN std_logic_vector(3 downto 0);
-Cin : IN std_logic;
-S : OUT std_logic_vector(3 downto 0);
-Cout : OUT std_logic
-);
+ B : IN std_logic_vector(3 downto 0);
+ Cin : IN std_logic;
+ S : BUFFER std_logic_vector(3 downto 0);
+ Cout : BUFFER std_logic;
+ seg1: out STD_LOGIC_VECTOR (6 downto 0);
+ seg2: out STD_LOGIC_VECTOR (6 downto 0);
+ dp1: out STD_LOGIC;
+ dp2: out STD_LOGIC
+
+ );
 
  END COMPONENT;
  
@@ -28,6 +33,11 @@ signal Cin : std_logic := '0';
  --Outputs
 signal S : std_logic_vector(3 downto 0);
 signal Cout : std_logic;
+signal seg1 : std_logic_vector(6 downto 0);
+signal seg2 : std_logic_vector(6 downto 0);
+signal dp1: STD_LOGIC;
+signal dp2: STD_LOGIC;
+
  
 BEGIN
  
@@ -37,8 +47,14 @@ BEGIN
  B => B,
  Cin => Cin,
  S => S,
- Cout => Cout
+ Cout => Cout,
+ seg1 => seg1,
+ seg2 => seg2,
+ dp1 => dp1,
+ dp2 => dp2
+
  );
+ 
  
  -- Stimulus process
  stim_proc: process

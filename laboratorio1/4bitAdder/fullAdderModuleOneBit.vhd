@@ -5,8 +5,9 @@ entity fullAdderModuleOneBit is
  Port ( A : in STD_LOGIC;
  B : in STD_LOGIC;
  Cin : in STD_LOGIC;
- S : out STD_LOGIC;
- Cout : out STD_LOGIC);
+ S : buffer STD_LOGIC;
+ Cout : buffer STD_LOGIC
+ );
 end fullAdderModuleOneBit;
  
 architecture oneBitModule of fullAdderModuleOneBit is
