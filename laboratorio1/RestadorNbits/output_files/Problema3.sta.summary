@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'dec'
+Slack : -7.865
+TNS   : -41.736
+
+Type  : Slow 1100mV 85C Model Hold 'dec'
+Slack : -3.797
+TNS   : -21.104
+
+Type  : Slow 1100mV 85C Model Recovery 'dec'
+Slack : 1.109
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'dec'
+Slack : -3.971
+TNS   : -23.811
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'dec'
+Slack : -0.394
+TNS   : -3.135
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'dec'
+Slack : -7.302
+TNS   : -38.897
+
+Type  : Slow 1100mV 0C Model Hold 'dec'
+Slack : -3.789
+TNS   : -21.037
+
+Type  : Slow 1100mV 0C Model Recovery 'dec'
+Slack : 1.274
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'dec'
+Slack : -3.985
+TNS   : -23.895
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'dec'
+Slack : -0.394
+TNS   : -3.051
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'dec'
+Slack : -4.868
+TNS   : -24.230
+
+Type  : Fast 1100mV 85C Model Hold 'dec'
+Slack : -2.222
+TNS   : -12.934
+
+Type  : Fast 1100mV 85C Model Recovery 'dec'
+Slack : 1.317
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'dec'
+Slack : -2.316
+TNS   : -13.890
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'dec'
+Slack : -0.251
+TNS   : -1.560
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : -0.015
+TNS   : -0.046
+
+Type  : Fast 1100mV 0C Model Setup 'dec'
+Slack : -4.143
+TNS   : -20.684
+
+Type  : Fast 1100mV 0C Model Hold 'dec'
+Slack : -2.127
+TNS   : -12.381
+
+Type  : Fast 1100mV 0C Model Recovery 'dec'
+Slack : 1.264
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'dec'
+Slack : -2.220
+TNS   : -13.317
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'dec'
+Slack : -0.263
+TNS   : -1.659
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -0.010
+TNS   : -0.032
+
+------------------------------------------------------------

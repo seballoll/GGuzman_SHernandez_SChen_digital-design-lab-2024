@@ -1,0 +1,12 @@
+
+/laboratorio1/4bitAdder/db
+/laboratorio1/4bitAdder/incremental_db
+/laboratorio1/4bitAdder/simulation
+laboratorio1/4bitAdder/fullAdderModule_nativelink_simulation.rpt
+laboratorio1/4bitAdder/fullAdderModule.qws
+laboratorio1/4bitAdder/fullAdderModule.qsf
+laboratorio1/4bitAdder/fullAdderModule.map.summary
+laboratorio1/4bitAdder/fullAdderModule.map.rpt
+laboratorio1/4bitAdder/fullAdderModule.flow.rpt
+laboratorio1/4bitAdder/fullAdderModule.done
+*.bak
