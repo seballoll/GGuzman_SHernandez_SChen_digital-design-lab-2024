@@ -26,29 +26,29 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:21:20 on Aug 19,2024
+# Start time: 10:33:47 on Aug 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv 
 # -- Compiling module FullAdderModule
 # 
 # Top level modules:
 # 	FullAdderModule
-# End time: 23:21:20 on Aug 19,2024, Elapsed time: 0:00:00
+# End time: 10:33:47 on Aug 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:21:21 on Aug 19,2024
+# Start time: 10:33:47 on Aug 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv 
 # -- Compiling module FullAdderModule_tb
 # 
 # Top level modules:
 # 	FullAdderModule_tb
-# End time: 23:21:21 on Aug 19,2024, Elapsed time: 0:00:00
+# End time: 10:33:47 on Aug 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  FullAdderModule_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" FullAdderModule_tb 
-# Start time: 23:21:21 on Aug 19,2024
+# Start time: 10:33:48 on Aug 20,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -71,5 +71,5 @@
 # 1 0  1   | 0   1   |    0          1
 # 1 1  0   | 0   1   |    0          1
 # 1 1  1   | 1   1   |    1          1
-# End time: 23:24:18 on Aug 19,2024, Elapsed time: 0:02:57
+# End time: 10:34:38 on Aug 20,2024, Elapsed time: 0:00:50
 # Errors: 0, Warnings: 1

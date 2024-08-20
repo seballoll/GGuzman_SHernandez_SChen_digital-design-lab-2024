@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/simulation/questa
 T_opt
-!s110 1724131282
-V@BlFm28RFd>hJXUzV[IfD3
+!s110 1724171629
+V5`HFTmT:FYSE>HmDdhFD63
 04 18 4 work FullAdderModule_tb fast 0
-=1-9828a6453f29-66c427d1-328-2ac4
+=1-9828a6453f29-66c4c56d-9-2dcc
 R0
 !s12b OEM100
 !s124 OEM10U2 
@@ -26,7 +26,7 @@ OL;O;2023.3;77
 vFullAdderModule
 2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1724131280
+Z4 !s110 1724171627
 !i10b 1
 !s100 49LjZKER`]z1CznzV_hMl0
 IB1f4inVLzzV0=ln1bWH=m1
@@ -37,23 +37,23 @@ w1724129089
 FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv
 !i122 0
 L0 1 13
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2023.3;77
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-!s108 1724131280.000000
+Z7 !s108 1724171627.000000
 !s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule.sv|
 !i113 0
-Z6 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 !s92 -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 n@full@adder@module
 vFullAdderModule_tb
 2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv
 R3
-!s110 1724131281
+R4
 !i10b 1
 !s100 Yo8QIPBZi7ZiW[zBfke>M3
 I2>_BB]d]PmW2i6PE@gceI1
@@ -64,16 +64,16 @@ w1724131215
 FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv
 !i122 1
 L0 3 53
-R4
 R5
+R6
 r1
 !s85 0
 31
-!s108 1724131281.000000
+R7
 !s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/FullAdderModule_tb.sv|
 !i113 0
-R6
-R7
+R8
+R9
 R2
 n@full@adder@module_tb
