@@ -33,38 +33,23 @@ endmodule
 
 module ALU #(parameter N = 8)(
     input logic [N-1:0] a, b,
-    input logic [2:0] aluOp, // Selector de operación
-    output logic [N-1:0] result,
-    output logic carryOut,
-    output logic zero
+    output logic [N-1:0] andResult,
+    output logic [N-1:0] orResult,
+    output logic [N-1:0] xorResult,
+    output logic [N-1:0] sllResult,  // Shift left logical
+    output logic [N-1:0] srlResult,  // Shift right logical
+    output logic [N-1:0] divResult,
+    output logic [N-1:0] modResult
 );
 
-    // Enumeración de operaciones
-    typedef enum logic [2:0] {
-        AND_OP    = 3'b000,
-        OR_OP     = 3'b001,
-        XOR_OP    = 3'b010,
-        SLL_OP    = 3'b011, // Shift left logical
-        SRL_OP    = 3'b100, // Shift right logical
-        DIV_OP    = 3'b101,
-        MOD_OP    = 3'b110
-    } alu_ops_t;
-
-    alu_ops_t operation;
-
-    always_comb begin
-        carryOut = 0;
-        case (aluOp)
-            AND_OP: result = a & b;
-            OR_OP: result = a | b;
-            XOR_OP: result = a ^ b;
-            SLL_OP: result = a << b;
-            SRL_OP: result = a >> b;
-            DIV_OP: result = a / b;
-            MOD_OP: result = a % b;
-            default: result = 0;
-        endcase
-        zero = (result == 0);
-    end
+    // Operaciones
+    assign andResult = a & b;
+    assign orResult  = a | b;
+    assign xorResult = a ^ b;
+    assign sllResult = a << b;
+    assign srlResult = a >> b;
+    assign divResult = a / b;
+    assign modResult = a % b;
 
 endmodule
+
