@@ -39,7 +39,9 @@ module ALU #(parameter N = 8)(
     output logic [N-1:0] sllResult,  // Shift left logical
     output logic [N-1:0] srlResult,  // Shift right logical
     output logic [N-1:0] divResult,
-    output logic [N-1:0] modResult
+    output logic [N-1:0] modResult,
+    output logic zeroFlag,           // Bandera Z (Cero)
+    output logic negativeFlag        // Bandera N (Negativo)
 );
 
     // Operaciones
@@ -51,7 +53,7 @@ module ALU #(parameter N = 8)(
     assign divResult = a / b;
     assign modResult = a % b;
 	 
-	  // Bandera Z (Cero): Se activa si el resultado es 0
+	 // Bandera Z (Cero): Se activa si el resultado es 0
     always_comb begin
         zeroFlag = (andResult == 0) & (orResult == 0) & (xorResult == 0) & 
                    (sllResult == 0) & (srlResult == 0) & (divResult == 0) & 
@@ -66,4 +68,3 @@ module ALU #(parameter N = 8)(
     end
 
 endmodule
-
