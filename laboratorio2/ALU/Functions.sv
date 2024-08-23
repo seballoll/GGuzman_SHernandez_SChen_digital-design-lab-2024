@@ -50,6 +50,20 @@ module ALU #(parameter N = 8)(
     assign srlResult = a >> b;
     assign divResult = a / b;
     assign modResult = a % b;
+	 
+	  // Bandera Z (Cero): Se activa si el resultado es 0
+    always_comb begin
+        zeroFlag = (andResult == 0) & (orResult == 0) & (xorResult == 0) & 
+                   (sllResult == 0) & (srlResult == 0) & (divResult == 0) & 
+                   (modResult == 0);
+    end
+
+    // Bandera N (Negativo): Se activa si el bit más significativo es 1 (signo negativo en operaciones con signo)
+    always_comb begin
+        negativeFlag = andResult[N-1] | orResult[N-1] | xorResult[N-1] |
+                       sllResult[N-1] | srlResult[N-1] | divResult[N-1] |
+                       modResult[N-1];
+    end
 
 endmodule
 
