@@ -1,23 +1,23 @@
 
 
 
-
-
-module adderSubstractorModule #(parameter N) (
-    input logic A,          // Entrada A
-    input logic B,          // Entrada B
-    input logic Sel,        // seleccion de operacion
-    output logic R,         // Resta
-    output logic Cout_borrow       // Carry out con borrow
-);
-
-    // Lógica del sumador completo de 1 bit
-	 
-	 logic Inv = B ^ Sel;
-    assign S = A ^ Inv ^ Sel;               // Resta
-    assign Cout = (A & Inv) | (Sel & A) | (Sel & Inv);  // Carry out
-
-endmodule
+//
+//
+//module adderSubstractorModule #(parameter N) (
+//    input logic A,          // Entrada A
+//    input logic B,          // Entrada B
+//    input logic Sel,        // seleccion de operacion
+//    output logic R,         // Resta
+//    output logic Cout_borrow       // Carry out con borrow
+//);
+//
+//    // Lógica del sumador completo de 1 bit
+//	 
+//	 logic Inv = B ^ Sel;
+//    assign S = A ^ Inv ^ Sel;               // Resta
+//    assign Cout = (A & Inv) | (Sel & A) | (Sel & Inv);  // Carry out
+//
+//endmodule
 
 
 

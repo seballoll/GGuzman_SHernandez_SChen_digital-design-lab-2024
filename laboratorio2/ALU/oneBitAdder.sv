@@ -2,7 +2,7 @@ module oneBitAdder (
     input logic A,          // Entrada A
     input logic B,          // Entrada B
     input logic Cin,        // Carry in
-    output logic S,         // Suma
+    output logic Sum,         // Suma
     output logic Cout       // Carry out
 );
 

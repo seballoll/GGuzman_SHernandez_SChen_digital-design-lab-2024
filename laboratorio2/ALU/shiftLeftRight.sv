@@ -5,7 +5,8 @@ module shift_left_right #(parameter N = 4, parameter Direction = 1'b0) ( // Dire
 									
 	
 		
-		for(int i = 1; i<=N-2; i++) begin // Loop that shifts the input.
+		always @(*) begin
+for(int i = 1; i<=N-2; i++) begin // Loop that shifts the input.
 			Result[i] = (Number[i-1] & Direction) || (Number[i+1] & ~Direction);
 		end 
 
@@ -14,5 +15,6 @@ module shift_left_right #(parameter N = 4, parameter Direction = 1'b0) ( // Dire
 		Result[N-1] = Number[N-2] & Direction;
 
 	
+		end
 		
 endmodule 

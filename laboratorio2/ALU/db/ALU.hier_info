@@ -1,0 +1,439 @@
+|ALU_module
+A[0] => A[0].IN4
+A[1] => A[1].IN4
+A[2] => A[2].IN4
+A[3] => A[3].IN4
+B[0] => B[0].IN2
+B[1] => B[1].IN2
+B[2] => B[2].IN2
+B[3] => B[3].IN2
+OperationIn[0] => Mux0.IN14
+OperationIn[0] => Mux1.IN14
+OperationIn[0] => Mux2.IN14
+OperationIn[0] => Mux3.IN14
+OperationIn[0] => Equal1.IN0
+OperationIn[0] => Equal3.IN3
+OperationIn[0] => Equal4.IN3
+OperationIn[1] => Mux0.IN13
+OperationIn[1] => Mux1.IN13
+OperationIn[1] => Mux2.IN13
+OperationIn[1] => Mux3.IN13
+OperationIn[1] => Equal1.IN3
+OperationIn[1] => Equal3.IN2
+OperationIn[1] => Equal4.IN0
+OperationIn[2] => Mux0.IN12
+OperationIn[2] => Mux1.IN12
+OperationIn[2] => Mux2.IN12
+OperationIn[2] => Mux3.IN12
+OperationIn[2] => Equal1.IN2
+OperationIn[2] => Equal3.IN1
+OperationIn[2] => Equal4.IN2
+OperationIn[3] => Mux0.IN11
+OperationIn[3] => Mux1.IN11
+OperationIn[3] => Mux2.IN11
+OperationIn[3] => Mux3.IN11
+OperationIn[3] => Equal1.IN1
+OperationIn[3] => Equal3.IN0
+OperationIn[3] => Equal4.IN1
+Result[0] << Result[0].DB_MAX_OUTPUT_PORT_TYPE
+Result[1] << Result[1].DB_MAX_OUTPUT_PORT_TYPE
+Result[2] << Result[2].DB_MAX_OUTPUT_PORT_TYPE
+Result[3] << Result[3].DB_MAX_OUTPUT_PORT_TYPE
+N << N.DB_MAX_OUTPUT_PORT_TYPE
+Z << Equal2.DB_MAX_OUTPUT_PORT_TYPE
+C << C.DB_MAX_OUTPUT_PORT_TYPE
+V << V.DB_MAX_OUTPUT_PORT_TYPE
+seg1[0] << bcd_to_7seg:seg1_inst.seg
+seg1[1] << bcd_to_7seg:seg1_inst.seg
+seg1[2] << bcd_to_7seg:seg1_inst.seg
+seg1[3] << bcd_to_7seg:seg1_inst.seg
+seg1[4] << bcd_to_7seg:seg1_inst.seg
+seg1[5] << bcd_to_7seg:seg1_inst.seg
+seg1[6] << bcd_to_7seg:seg1_inst.seg
+seg2[0] << bcd_to_7seg:seg2_inst.seg
+seg2[1] << bcd_to_7seg:seg2_inst.seg
+seg2[2] << bcd_to_7seg:seg2_inst.seg
+seg2[3] << bcd_to_7seg:seg2_inst.seg
+seg2[4] << bcd_to_7seg:seg2_inst.seg
+seg2[5] << bcd_to_7seg:seg2_inst.seg
+seg2[6] << bcd_to_7seg:seg2_inst.seg
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor
+A[0] => A[0].IN2
+A[1] => A[1].IN2
+A[2] => A[2].IN2
+A[3] => A[3].IN2
+B[0] => B[0].IN2
+B[1] => B[1].IN2
+B[2] => B[2].IN2
+B[3] => B[3].IN2
+Cin => ~NO_FANOUT~
+Bin => ~NO_FANOUT~
+Sum[0] <= oneBitAdder:gen_loop[0].adder_inst.Sum
+Sum[1] <= oneBitAdder:gen_loop[1].adder_inst.Sum
+Sum[2] <= oneBitAdder:gen_loop[2].adder_inst.Sum
+Sum[3] <= oneBitAdder:gen_loop[3].adder_inst.Sum
+Cout <= oneBitAdder:gen_loop[3].adder_inst.Cout
+Sub[0] <= oneBitSubstractor:gen_loop[0].subtractor_inst.Sub
+Sub[1] <= oneBitSubstractor:gen_loop[1].subtractor_inst.Sub
+Sub[2] <= oneBitSubstractor:gen_loop[2].subtractor_inst.Sub
+Sub[3] <= oneBitSubstractor:gen_loop[3].subtractor_inst.Sub
+Bout <= <GND>
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[0].adder_inst
+A => Sum.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[0].subtractor_inst
+A => Sub.IN0
+A => Bout.IN0
+A => Bout.IN0
+B => Sub.IN1
+B => Bout.IN1
+B => Bout.IN0
+Bin => Sub.IN1
+Bin => Bout.IN1
+Bin => Bout.IN1
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[1].adder_inst
+A => Sum.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[1].subtractor_inst
+A => Sub.IN0
+A => Bout.IN0
+A => Bout.IN0
+B => Sub.IN1
+B => Bout.IN1
+B => Bout.IN0
+Bin => Sub.IN1
+Bin => Bout.IN1
+Bin => Bout.IN1
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[2].adder_inst
+A => Sum.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[2].subtractor_inst
+A => Sub.IN0
+A => Bout.IN0
+A => Bout.IN0
+B => Sub.IN1
+B => Bout.IN1
+B => Bout.IN0
+Bin => Sub.IN1
+Bin => Bout.IN1
+Bin => Bout.IN1
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[3].adder_inst
+A => Sum.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => Sum.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[3].subtractor_inst
+A => Sub.IN0
+A => Bout.IN0
+A => Bout.IN0
+B => Sub.IN1
+B => Bout.IN1
+B => Bout.IN0
+Bin => Sub.IN1
+Bin => Bout.IN1
+Bin => Bout.IN1
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|shift_left_right:sl
+Number[0] => Result[1].DATAIN
+Number[1] => Result[2].DATAIN
+Number[2] => Result[3].DATAIN
+Number[3] => ~NO_FANOUT~
+Result[0] <= <GND>
+Result[1] <= Number[0].DB_MAX_OUTPUT_PORT_TYPE
+Result[2] <= Number[1].DB_MAX_OUTPUT_PORT_TYPE
+Result[3] <= Number[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|shift_left_right:sr
+Number[0] => ~NO_FANOUT~
+Number[1] => Result[0].DATAIN
+Number[2] => Result[1].DATAIN
+Number[3] => Result[2].DATAIN
+Result[0] <= Number[1].DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Number[2].DB_MAX_OUTPUT_PORT_TYPE
+Result[2] <= Number[3].DB_MAX_OUTPUT_PORT_TYPE
+Result[3] <= <GND>
+
+
+|ALU_module|multiplier:mult
+a[0] => full_result.IN0
+a[0] => comb.IN0
+a[0] => comb.IN0
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[1] => comb.IN0
+a[1] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[2] => comb.IN0
+a[2] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+a[3] => comb.IN0
+a[3] => comb.IN0
+a[3] => comb.IN0
+b[0] => full_result.IN1
+b[0] => comb.IN1
+b[0] => comb.IN1
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[1] => comb.IN1
+b[1] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[2] => comb.IN1
+b[2] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+b[3] => comb.IN1
+b[3] => comb.IN1
+b[3] => comb.IN1
+result[0] <= full_result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= full_adder:full_adder1.port3
+result[2] <= full_adder:full_adder5.port3
+result[3] <= full_adder:full_adder9.port3
+overflow <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder1
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder3
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder4
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder5
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder6
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder7
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder8
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder9
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder10
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder11
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|multiplier:mult|full_adder:full_adder12
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|bin2bcd:bcd_inst
+bin[0] => bcd[0].DATAIN
+bin[1] => LessThan0.IN6
+bin[1] => Add0.IN6
+bin[1] => bcd.DATAA
+bin[2] => LessThan0.IN5
+bin[2] => Add0.IN5
+bin[2] => bcd.DATAA
+bin[3] => LessThan0.IN4
+bin[3] => Add0.IN4
+bin[3] => bcd.DATAA
+bcd[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[4] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[5] <= <GND>
+bcd[6] <= <GND>
+bcd[7] <= <GND>
+
+
+|ALU_module|bcd_to_7seg:seg1_inst
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_module|bcd_to_7seg:seg2_inst
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

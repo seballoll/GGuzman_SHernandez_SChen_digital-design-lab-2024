@@ -1,87 +1,139 @@
+`timescale 1ns / 1ps
+
 module ALU_Testbench;
 
-    // Parámetros
-    parameter N = 8;
+    // Parameters
+    parameter Nbit = 4;
 
-    // Entradas y salidas
-    logic [N-1:0] a, b;
-    logic [N-1:0] andResult, orResult, xorResult;
-    logic [N-1:0] sllResult, srlResult, divResult, modResult;
-    logic zeroFlag, negativeFlag;
+    // Inputs
+    logic [Nbit-1:0] A, B;
+    logic [3:0] Operation;
 
-    // Instancia de la ALU
-    ALU #(N) uut (
-        .a(a),
-        .b(b),
-        .andResult(andResult),
-        .orResult(orResult),
-        .xorResult(xorResult),
-        .sllResult(sllResult),
-        .srlResult(srlResult),
-        .divResult(divResult),
-        .modResult(modResult),
-        .zeroFlag(zeroFlag),
-        .negativeFlag(negativeFlag)
+    // Outputs
+    logic [Nbit-1:0] Result;
+    logic N, Z, C, V;
+    logic [6:0] seg1, seg2;
+
+    // Instantiate the Unit Undwer Twest (UUT)
+    ALU_module #(.Nbit(Nbit)) uut (
+        .A(A),
+        .B(B),
+        .Operation(Operation),
+        .Result(Result),
+        .N(N),
+        .Z(Z),
+        .C(C),
+        .V(V),
+        .seg1(seg1),
+        .seg2(seg2)
     );
 
-    // Proceso de prueba
+    // Testbench logic
     initial begin
-        // Prueba 1: AND lógico
-        a = 8'b11001100;
-        b = 8'b10101010;
-        #10;  // Espera para permitir que la operación se realice
-        $display("AND Result: %b, Zero Flag: %b, Negative Flag: %b", andResult, zeroFlag, negativeFlag);
+        // Initialize Inputs
+        A = 0;
+        B = 0;
+        Operation = 0;
 
-        // Prueba 2: OR lógico
-        a = 8'b00001111;
-        b = 8'b11110000;
+        // Wait for global reset
         #10;
-        $display("OR Result: %b, Zero Flag: %b, Negative Flag: %b", orResult, zeroFlag, negativeFlag);
-
-        // Prueba 3: XOR lógico
-        a = 8'b10101010;
-        b = 8'b01010101;
+        
+        // Test case 1: Addition
+        A = 4'b0011; // 3 in decimal
+        B = 4'b0101; // 5 in decimal
+        Operation = 4'b0000; // Addition
         #10;
-        $display("XOR Result: %b, Zero Flag: %b, Negative Flag: %b", xorResult, zeroFlag, negativeFlag);
-
-        // Prueba 4: Shift left logical (desplazamiento lógico a la izquierda)
-        a = 8'b00001111;
-        b = 8'd1;  // Desplazar a la izquierda por 1
+        $display("Test Addition: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
+        
+        // Test case 2: Subtraction
+        A = 4'b1001; // 9 in decimal
+        B = 4'b0010; // 2 in decimal
+        Operation = 4'b0001; // Subtraction
         #10;
-        $display("Shift Left Result: %b, Zero Flag: %b, Negative Flag: %b", sllResult, zeroFlag, negativeFlag);
+        $display("Test Subtraction: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Prueba 5: Shift right logical (desplazamiento lógico a la derecha)
-        a = 8'b10000000;
-        b = 8'd1;  // Desplazar a la derecha por 1
+        // Test case 3: Multiplication
+        A = 4'b0011; // 3 in decimal
+        B = 4'b0010; // 2 in decimal
+        Operation = 4'b0010; // Multiplication
         #10;
-        $display("Shift Right Result: %b, Zero Flag: %b, Negative Flag: %b", srlResult, zeroFlag, negativeFlag);
+        $display("Test Multiplication: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Prueba 6: División
-        a = 8'd100;
-        b = 8'd5;
+        // Test case 4: Division
+        A = 4'b1000; // 8 in decimal
+        B = 4'b0010; // 2 in decimal
+        Operation = 4'b0011; // Division
         #10;
-        $display("División Result: %d, Zero Flag: %b, Negative Flag: %b", divResult, zeroFlag, negativeFlag);
+        $display("Test Division: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Prueba 7: Módulo
-        a = 8'd100;
-        b = 8'd30;
+        // Test case 5: AND
+        A = 4'b1100; // 12 in decimal
+        B = 4'b1010; // 10 in decimal
+        Operation = 4'b0101; // AND
         #10;
-        $display("Módulo Result: %d, Zero Flag: %b, Negative Flag: %b", modResult, zeroFlag, negativeFlag);
+        $display("Test AND: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Prueba 8: Operación con resultado cero
-        a = 8'b00000000;
-        b = 8'b00000000;
+        // Test case 6: OR
+        A = 4'b1100; // 12 in decimal
+        B = 4'b0011; // 3 in decimal
+        Operation = 4'b0110; // OR
         #10;
-        $display("Operación Cero - AND Result: %b, Zero Flag: %b, Negative Flag: %b", andResult, zeroFlag, negativeFlag);
+        $display("Test OR: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Prueba 9: Operación con resultado negativo (bit más significativo en 1)
-        a = 8'b10000000;
-        b = 8'b00000001;
+        // Test case 7: XOR
+        A = 4'b1100; // 12 in decimal
+        B = 4'b1010; // 10 in decimal
+        Operation = 4'b0111; // XOR
         #10;
-        $display("Operación Negativa - AND Result: %b, Zero Flag: %b, Negative Flag: %b", andResult, zeroFlag, negativeFlag);
+        $display("Test XOR: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
 
-        // Finalizar la simulación
-        $finish;
+        // Test case 8: Shift Left
+        A = 4'b0011; // 3 in decimal
+        B = 4'b0000; // B is not used
+        Operation = 4'b1000; // Shift Left
+        #10;
+        $display("Test Shift Left: A = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, Result, N, Z, C, V);
+
+        // Test case 9: Shift Right
+        A = 4'b1100; // 12 in decimal
+        B = 4'b0000; // B is not used
+        Operation = 4'b1001; // Shift Right
+        #10;
+        $display("Test Shift Right: A = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, Result, N, Z, C, V);
+
+        // Finish the simulation
+		  
+		  // Test case 10: carry add
+        A = 4'b1111; // 15 in decimal
+        B = 4'b0001; // 1 in decimal
+        Operation = 4'b0000; // Shift Right
+        #10;
+        $display("Test Carry flag: A = %d,B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A,B, Result, N, Z, C, V);
+		  
+		  
+		  // Test case 11: negative sub
+        A = 4'b0000; // 0 in decimal
+        B = 4'b0010; // 2 in decimal
+        Operation = 4'b0001; // Shift Right
+        #10;
+        $display("Test negative flag: A = %d,B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A,B, Result, N, Z, C, V);
+		  
+		  // Test case 12: Multiplication
+        A = 4'b1000; // 3 in decimal
+        B = 4'b0010; // 2 in decimal
+        Operation = 4'b0010; // Multiplication
+        #10;
+        $display("Test overflow flag: A = %d, B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A, B, Result, N, Z, C, V);
+		  
+		  // Test case 13: cero
+        A = 4'b0001; // 0 in decimal
+        B = 4'b0001; // 2 in decimal
+        Operation = 4'b0001; // Shift Right
+        #10;
+        $display("Test cero flag: A = %d,B = %d, Result = %d, N = %b, Z = %b, C = %b, V = %b", A,B, Result, N, Z, C, V);
+
+        // Finish the simulation
+        
     end
 
 endmodule
