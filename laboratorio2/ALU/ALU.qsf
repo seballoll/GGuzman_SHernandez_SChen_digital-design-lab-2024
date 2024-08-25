@@ -82,3 +82,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE multiplier.sv
 set_global_assignment -name SYSTEMVERILOG_FILE multiplier_display.sv
 set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Display7segmentos.sv
+set_global_assignment -name SYSTEMVERILOG_FILE multiplier_display_tb.sv
