@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ALU
-Sun Aug 25 14:50:26 2024
+Analysis & Elaboration report for ALU
+Mon Aug 26 20:04:44 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -7,34 +7,28 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |ALU_module
- 11. Parameter Settings for User Entity Instance: adderSubstractorModule:adderSubstractor
- 12. Parameter Settings for User Entity Instance: shift_left_right:sl
- 13. Parameter Settings for User Entity Instance: shift_left_right:sr
- 14. Parameter Settings for User Entity Instance: multiplier:mult
- 15. Parameter Settings for User Entity Instance: bin2bcd:bcd_inst
- 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 18. Port Connectivity Checks: "multiplier:mult|full_adder:full_adder9"
- 19. Port Connectivity Checks: "multiplier:mult|full_adder:full_adder5"
- 20. Port Connectivity Checks: "multiplier:mult|full_adder:full_adder4"
- 21. Port Connectivity Checks: "multiplier:mult|full_adder:full_adder1"
- 22. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[3].subtractor_inst"
- 23. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[0].subtractor_inst"
- 24. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[0].adder_inst"
- 25. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU_module
+  5. Parameter Settings for User Entity Instance: adderSubstractorModule:adderSubstractor
+  6. Parameter Settings for User Entity Instance: shift_left_right:sl
+  7. Parameter Settings for User Entity Instance: shift_left_right:sr
+  8. Parameter Settings for User Entity Instance: multiplier:mult
+  9. Parameter Settings for User Entity Instance: bin2bcd:bcd_inst
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[3].adders[1].adder_inst"
+ 12. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[2].adders[3].adder_inst"
+ 13. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[2].adders[1].adder_inst"
+ 14. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[1].adders[3].adder_inst"
+ 15. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[1].adders[1].adder_inst"
+ 16. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[0].adders[3].adder_inst"
+ 17. Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[0].adders[1].adder_inst"
+ 18. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[3].subtractor_inst"
+ 19. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[0].subtractor_inst"
+ 20. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[0].adder_inst"
+ 21. Port Connectivity Checks: "adderSubstractorModule:adderSubstractor"
+ 22. Analysis & Elaboration Messages
+ 23. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -58,31 +52,104 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Aug 25 14:50:26 2024          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                   ; ALU                                            ;
-; Top-level Entity Name           ; ALU_module                                     ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 34                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Aug 26 20:04:44 2024          ;
+; Quartus Prime Version         ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                 ; ALU                                            ;
+; Top-level Entity Name         ; ALU_module                                     ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU_module ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; Nbit           ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adderSubstractorModule:adderSubstractor ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shift_left_right:sl ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
+; Direction      ; 1     ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shift_left_right:sr ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
+; Direction      ; 0     ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplier:mult ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2bcd:bcd_inst ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -168,273 +235,70 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[3].adders[1].adder_inst" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
-; ALU_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv              ;         ;
-; oneBitSubstractor.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv       ;         ;
-; oneBitAdder.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv             ;         ;
-; adderSubstractorModule.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv  ;         ;
-; shiftLeftRight.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv          ;         ;
-; multiplier.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv              ;         ;
-; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv              ;         ;
-; Display7segmentos.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv       ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                     ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                                                    ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                     ;         ;
-; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/lpm_divide_42m.tdf      ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/sign_div_unsign_7kh.tdf ;         ;
-; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/alt_u_div_kse.tdf       ;         ;
-; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/lpm_divide_1am.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[2].adders[3].adder_inst"                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Sum  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 58         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 102        ;
-;     -- 7 input functions                    ; 2          ;
-;     -- 6 input functions                    ; 11         ;
-;     -- 5 input functions                    ; 28         ;
-;     -- 4 input functions                    ; 25         ;
-;     -- <=3 input functions                  ; 36         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 34         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; B[3]~input ;
-; Maximum fan-out                             ; 27         ;
-; Total fan-out                               ; 457        ;
-; Average fan-out                             ; 2.69       ;
-+---------------------------------------------+------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[2].adders[1].adder_inst" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name            ; Library Name ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |ALU_module                                           ; 102 (33)            ; 0 (0)                     ; 0                 ; 0          ; 34   ; 0            ; |ALU_module                                                                                                 ; ALU_module             ; work         ;
-;    |adderSubstractorModule:adderSubstractor|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|adderSubstractorModule:adderSubstractor                                                         ; adderSubstractorModule ; work         ;
-;       |oneBitAdder:gen_loop[2].adder_inst|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|adderSubstractorModule:adderSubstractor|oneBitAdder:gen_loop[2].adder_inst                      ; oneBitAdder            ; work         ;
-;       |oneBitSubstractor:gen_loop[1].subtractor_inst| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|adderSubstractorModule:adderSubstractor|oneBitSubstractor:gen_loop[1].subtractor_inst           ; oneBitSubstractor      ; work         ;
-;    |bcd_to_7seg:seg1_inst|                            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|bcd_to_7seg:seg1_inst                                                                           ; bcd_to_7seg            ; work         ;
-;    |bin2bcd:bcd_inst|                                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|bin2bcd:bcd_inst                                                                                ; bin2bcd                ; work         ;
-;    |lpm_divide:Div0|                                  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
-;       |lpm_divide_1am:auto_generated|                 ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am         ; work         ;
-;          |sign_div_unsign_7kh:divider|                ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh    ; work         ;
-;             |alt_u_div_kse:divider|                   ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse          ; work         ;
-;    |lpm_divide:Mod0|                                  ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
-;       |lpm_divide_42m:auto_generated|                 ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m         ; work         ;
-;          |sign_div_unsign_7kh:divider|                ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh    ; work         ;
-;             |alt_u_div_kse:divider|                   ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse          ; work         ;
-;    |multiplier:mult|                                  ; 12 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult                                                                                 ; multiplier             ; work         ;
-;       |full_adder:full_adder2|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder2                                                          ; full_adder             ; work         ;
-;       |full_adder:full_adder3|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder3                                                          ; full_adder             ; work         ;
-;       |full_adder:full_adder4|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder4                                                          ; full_adder             ; work         ;
-;       |full_adder:full_adder6|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder6                                                          ; full_adder             ; work         ;
-;       |full_adder:full_adder8|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder8                                                          ; full_adder             ; work         ;
-;       |full_adder:full_adder9|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_module|multiplier:mult|full_adder:full_adder9                                                          ; full_adder             ; work         ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[1].adders[3].adder_inst"                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Sum  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[1].adders[1].adder_inst" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |ALU_module|Mux2           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[0].adders[3].adder_inst"                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Sum  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU_module ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; Nbit           ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adderSubstractorModule:adderSubstractor ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shift_left_right:sl ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-; Direction      ; 1     ; Unsigned Binary                         ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shift_left_right:sr ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-; Direction      ; 0     ; Unsigned Binary                         ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: multiplier:mult ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; N              ; 4     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bin2bcd:bcd_inst ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; N              ; 4     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "multiplier:mult|full_adder:full_adder9"                                                                                                                                              ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; cin     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; cin[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "multiplier:mult|full_adder:full_adder5"                                                                                                                                              ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; cin     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; cin[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "multiplier:mult|full_adder:full_adder4"                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; a[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "multiplier:mult|full_adder:full_adder1"                                                                                                                                              ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; cin     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; cin[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier:mult|full_adder:partial_products[0].adders[1].adder_inst" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -477,54 +341,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 105                         ;
-;     arith             ; 12                          ;
-;         0 data inputs ; 4                           ;
-;         2 data inputs ; 2                           ;
-;         5 data inputs ; 6                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 73                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 22                          ;
-;         6 data inputs ; 11                          ;
-;     shared            ; 18                          ;
-;         0 data inputs ; 6                           ;
-;         2 data inputs ; 6                           ;
-;         4 data inputs ; 6                           ;
-; boundary_port         ; 34                          ;
-;                       ;                             ;
-; Max LUT depth         ; 11.50                       ;
-; Average LUT depth     ; 8.93                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Aug 25 14:50:18 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+    Info: Processing started: Mon Aug 26 20:04:37 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu_module.sv
@@ -541,7 +365,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file shiftle
     Info (12023): Found entity 1: shift_left_right File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file multiplier.sv
     Info (12023): Found entity 1: multiplier File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 2
-    Info (12023): Found entity 2: bin2bcd File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 37
+    Info (12023): Found entity 2: bin2bcd File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_display.sv
     Info (12023): Found entity 1: multiplier_display File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier_display.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
@@ -552,6 +376,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file multipl
     Info (12023): Found entity 1: multiplier_display_tb File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier_display_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file addersubstractormodule_tb.sv
     Info (12023): Found entity 1: adderSubstractorModule_tb File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule_tb.sv Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file alu_measure_tb.sv
+    Info (12023): Found entity 1: ALU_measure File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv Line: 1
+    Info (12023): Found entity 2: ALU_measure_tb File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv Line: 53
 Info (12127): Elaborating entity "ALU_module" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at ALU_module.sv(82): truncated value with size 32 to match size of target (1) File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 82
 Warning (10230): Verilog HDL assignment warning at ALU_module.sv(83): truncated value with size 32 to match size of target (1) File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 83
@@ -562,56 +389,22 @@ Info (12128): Elaborating entity "oneBitSubstractor" for hierarchy "adderSubstra
 Info (12128): Elaborating entity "shift_left_right" for hierarchy "shift_left_right:sl" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 41
 Info (12128): Elaborating entity "shift_left_right" for hierarchy "shift_left_right:sr" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 47
 Info (12128): Elaborating entity "multiplier" for hierarchy "multiplier:mult" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 54
-Info (12128): Elaborating entity "full_adder" for hierarchy "multiplier:mult|full_adder:full_adder1" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 15
+Info (12128): Elaborating entity "full_adder" for hierarchy "multiplier:mult|full_adder:partial_products[0].adders[1].adder_inst" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 30
 Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:bcd_inst" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 90
-Warning (10230): Verilog HDL assignment warning at multiplier.sv(49): truncated value with size 32 to match size of target (4) File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at multiplier.sv(57): truncated value with size 32 to match size of target (4) File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv Line: 57
 Info (12128): Elaborating entity "bcd_to_7seg" for hierarchy "bcd_to_7seg:seg1_inst" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 96
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 69
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 64
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 69
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 69
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
-    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/lpm_divide_42m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/sign_div_unsign_7kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
-    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 64
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 64
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
-    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/db/lpm_divide_1am.tdf Line: 25
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg2[1]" is stuck at GND File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 7
-    Warning (13410): Pin "seg2[2]" is stuck at GND File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 7
-    Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 7
-Info (286030): Timing-Driven Synthesis is running
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/output_files/ALU.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 136 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 102 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Sun Aug 25 14:50:26 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Mon Aug 26 20:04:44 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:20
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/output_files/ALU.map.smsg.
 
 

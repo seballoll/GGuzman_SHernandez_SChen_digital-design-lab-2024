@@ -1,13 +1,13 @@
 module ALU_module #(parameter Nbit=4)(
 	 input logic [Nbit-1:0] A, B,      // Operand A and B
-    input logic [3:0] OperationIn,       // 4-bit operation code
+    input logic [3:0] Operation,       // 4-bit operation code
     output logic [Nbit-1:0] Result,   // Result
 	 output N, Z, C, V,
 	 output logic [6:0] seg1, seg2
 );
 
 
-	wire [3:0] Operation ;
+	//wire [3:0] Operation ;
 	wire [Nbit-1:0] Sum;
 	wire [Nbit-1:0] Sub;
 	wire [Nbit-1:0] Mult;
@@ -19,7 +19,7 @@ module ALU_module #(parameter Nbit=4)(
 	wire Mult_Overflow;
 
 	
-	assign Operation = ~OperationIn;
+	//assign Operation = ~OperationIn;
 	//instantiating modules
 
 // Instantiate Adder Substractor N bits

@@ -7,34 +7,34 @@ B[0] => B[0].IN2
 B[1] => B[1].IN2
 B[2] => B[2].IN2
 B[3] => B[3].IN2
-OperationIn[0] => Mux0.IN14
-OperationIn[0] => Mux1.IN14
-OperationIn[0] => Mux2.IN14
-OperationIn[0] => Mux3.IN14
-OperationIn[0] => Equal1.IN0
-OperationIn[0] => Equal3.IN3
-OperationIn[0] => Equal4.IN3
-OperationIn[1] => Mux0.IN13
-OperationIn[1] => Mux1.IN13
-OperationIn[1] => Mux2.IN13
-OperationIn[1] => Mux3.IN13
-OperationIn[1] => Equal1.IN3
-OperationIn[1] => Equal3.IN2
-OperationIn[1] => Equal4.IN0
-OperationIn[2] => Mux0.IN12
-OperationIn[2] => Mux1.IN12
-OperationIn[2] => Mux2.IN12
-OperationIn[2] => Mux3.IN12
-OperationIn[2] => Equal1.IN2
-OperationIn[2] => Equal3.IN1
-OperationIn[2] => Equal4.IN2
-OperationIn[3] => Mux0.IN11
-OperationIn[3] => Mux1.IN11
-OperationIn[3] => Mux2.IN11
-OperationIn[3] => Mux3.IN11
-OperationIn[3] => Equal1.IN1
-OperationIn[3] => Equal3.IN0
-OperationIn[3] => Equal4.IN1
+Operation[0] => Mux0.IN14
+Operation[0] => Mux1.IN14
+Operation[0] => Mux2.IN14
+Operation[0] => Mux3.IN14
+Operation[0] => Equal1.IN0
+Operation[0] => Equal3.IN3
+Operation[0] => Equal4.IN3
+Operation[1] => Mux0.IN13
+Operation[1] => Mux1.IN13
+Operation[1] => Mux2.IN13
+Operation[1] => Mux3.IN13
+Operation[1] => Equal1.IN3
+Operation[1] => Equal3.IN2
+Operation[1] => Equal4.IN0
+Operation[2] => Mux0.IN12
+Operation[2] => Mux1.IN12
+Operation[2] => Mux2.IN12
+Operation[2] => Mux3.IN12
+Operation[2] => Equal1.IN2
+Operation[2] => Equal3.IN1
+Operation[2] => Equal4.IN2
+Operation[3] => Mux0.IN11
+Operation[3] => Mux1.IN11
+Operation[3] => Mux2.IN11
+Operation[3] => Mux3.IN11
+Operation[3] => Equal1.IN1
+Operation[3] => Equal3.IN0
+Operation[3] => Equal4.IN1
 Result[0] << Result[0].DB_MAX_OUTPUT_PORT_TYPE
 Result[1] << Result[1].DB_MAX_OUTPUT_PORT_TYPE
 Result[2] << Result[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -217,26 +217,26 @@ Result[3] <= <GND>
 
 
 |ALU_module|multiplier:mult
-a[0] => full_result.IN0
+a[0] => partial_sum.IN0
 a[0] => comb.IN0
 a[0] => comb.IN0
 a[0] => comb.IN0
+a[1] => partial_sum.IN0
 a[1] => comb.IN0
 a[1] => comb.IN0
 a[1] => comb.IN0
-a[1] => comb.IN0
+a[2] => partial_sum.IN0
 a[2] => comb.IN0
 a[2] => comb.IN0
 a[2] => comb.IN0
-a[2] => comb.IN0
+a[3] => partial_sum.IN0
 a[3] => comb.IN0
 a[3] => comb.IN0
 a[3] => comb.IN0
-a[3] => comb.IN0
-b[0] => full_result.IN1
-b[0] => comb.IN1
-b[0] => comb.IN1
-b[0] => comb.IN1
+b[0] => partial_sum.IN1
+b[0] => partial_sum.IN1
+b[0] => partial_sum.IN1
+b[0] => partial_sum.IN1
 b[1] => comb.IN1
 b[1] => comb.IN1
 b[1] => comb.IN1
@@ -249,14 +249,14 @@ b[3] => comb.IN1
 b[3] => comb.IN1
 b[3] => comb.IN1
 b[3] => comb.IN1
-result[0] <= full_result.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= full_adder:full_adder1.port3
-result[2] <= full_adder:full_adder5.port3
-result[3] <= full_adder:full_adder9.port3
+result[0] <= partial_sum[3][0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= partial_sum[3][1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= partial_sum[3][2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= full_adder:partial_products[3].adders[3].adder_inst.Sum
 overflow <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder1
+|ALU_module|multiplier:mult|full_adder:partial_products[0].adders[1].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -267,7 +267,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder2
+|ALU_module|multiplier:mult|full_adder:partial_products[0].adders[2].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -278,7 +278,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder3
+|ALU_module|multiplier:mult|full_adder:partial_products[0].adders[3].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -289,7 +289,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder4
+|ALU_module|multiplier:mult|full_adder:partial_products[1].adders[1].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -300,7 +300,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder5
+|ALU_module|multiplier:mult|full_adder:partial_products[1].adders[2].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -311,7 +311,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder6
+|ALU_module|multiplier:mult|full_adder:partial_products[1].adders[3].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -322,7 +322,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder7
+|ALU_module|multiplier:mult|full_adder:partial_products[2].adders[1].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -333,7 +333,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder8
+|ALU_module|multiplier:mult|full_adder:partial_products[2].adders[2].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -344,7 +344,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder9
+|ALU_module|multiplier:mult|full_adder:partial_products[2].adders[3].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -355,7 +355,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder10
+|ALU_module|multiplier:mult|full_adder:partial_products[3].adders[1].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -366,7 +366,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder11
+|ALU_module|multiplier:mult|full_adder:partial_products[3].adders[2].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1
@@ -377,7 +377,7 @@ Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_module|multiplier:mult|full_adder:full_adder12
+|ALU_module|multiplier:mult|full_adder:partial_products[3].adders[3].adder_inst
 a => Sum.IN0
 a => cout.IN0
 b => Sum.IN1

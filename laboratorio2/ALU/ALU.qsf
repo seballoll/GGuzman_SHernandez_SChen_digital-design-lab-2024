@@ -57,15 +57,12 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ALU_Testbench -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ALU_measure_tb -section_id eda_simulation
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_module.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_Testbench.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME ALU_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_Testbench -section_id ALU_Testbench
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE oneBitSubstractor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE oneBitAdder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adderSubstractorModule.sv
@@ -79,8 +76,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE adderSubstractorModule_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME adderSubstractorModule_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id adderSubstractorModule_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME adderSubstractorModule_tb -section_id adderSubstractorModule_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ALU_Testbench.sv -section_id ALU_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE adderSubstractorModule_tb.sv -section_id adderSubstractorModule_tb
 set_location_assignment PIN_AA24 -to N
 set_location_assignment PIN_AB23 -to Z
 set_location_assignment PIN_AC23 -to C
@@ -115,4 +110,14 @@ set_location_assignment PIN_AD17 -to seg2[3]
 set_location_assignment PIN_AE18 -to seg2[4]
 set_location_assignment PIN_AE17 -to seg2[5]
 set_location_assignment PIN_V17 -to seg2[6]
+set_global_assignment -name SYSTEMVERILOG_FILE ALU_measure_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME ALU_measure_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_measure_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_measure_tb -section_id ALU_measure_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_Testbench.sv -section_id ALU_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE adderSubstractorModule_tb.sv -section_id adderSubstractorModule_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_measure_tb.sv -section_id ALU_measure_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

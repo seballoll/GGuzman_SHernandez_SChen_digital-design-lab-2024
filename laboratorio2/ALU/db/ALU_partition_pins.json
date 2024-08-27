@@ -80,11 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "OperationIn[3]",
-					"strict" : false
-				},
-				{
-					"name" : "OperationIn[0]",
+					"name" : "Operation[3]",
 					"strict" : false
 				},
 				{
@@ -92,11 +88,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "OperationIn[1]",
+					"name" : "Operation[0]",
 					"strict" : false
 				},
 				{
-					"name" : "OperationIn[2]",
+					"name" : "Operation[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Operation[2]",
 					"strict" : false
 				},
 				{
