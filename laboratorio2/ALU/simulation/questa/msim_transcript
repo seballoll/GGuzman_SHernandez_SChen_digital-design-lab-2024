@@ -1,0 +1,192 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt10".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt11".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt12".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt13".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt14".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt15".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt16".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt17".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt5".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt6".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt7".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt8".  Locker is seba2@ELENA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt9".  Locker is seba2@ELENA.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv 
+# -- Compiling module ALU_module
+# 
+# Top level modules:
+# 	ALU_module
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv 
+# -- Compiling module oneBitSubstractor
+# 
+# Top level modules:
+# 	oneBitSubstractor
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv 
+# -- Compiling module oneBitAdder
+# 
+# Top level modules:
+# 	oneBitAdder
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv 
+# -- Compiling module adderSubstractorModule
+# 
+# Top level modules:
+# 	adderSubstractorModule
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv 
+# -- Compiling module shift_left_right
+# 
+# Top level modules:
+# 	shift_left_right
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:55 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv 
+# -- Compiling module multiplier
+# -- Compiling module bin2bcd
+# 
+# Top level modules:
+# 	multiplier
+# 	bin2bcd
+# End time: 20:04:55 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:56 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 20:04:56 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:56 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv 
+# -- Compiling module bcd_to_7seg
+# 
+# Top level modules:
+# 	bcd_to_7seg
+# End time: 20:04:56 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU {C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:04:56 on Aug 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU" C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv 
+# -- Compiling module ALU_measure
+# -- Compiling module ALU_measure_tb
+# 
+# Top level modules:
+# 	ALU_measure_tb
+# End time: 20:04:56 on Aug 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_measure_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_measure_tb 
+# Start time: 20:04:56 on Aug 26,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.ALU_measure_tb(fast)
+# Loading work.ALU_measure(fast)
+# Loading work.ALU_module(fast)
+# Loading work.adderSubstractorModule(fast)
+# Loading work.oneBitAdder(fast)
+# Loading work.oneBitSubstractor(fast)
+# Loading work.shift_left_right(fast)
+# Loading work.shift_left_right(fast__1)
+# Loading work.multiplier(fast)
+# Loading work.full_adder(fast)
+# Loading work.bin2bcd(fast)
+# Loading work.bcd_to_7seg(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Cin'. The port definition is at: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_measure_tb/ALU_inst/ALU_inst/adderSubstractor File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Bin'. The port definition is at: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_measure_tb/ALU_inst/ALU_inst/adderSubstractor File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv Line: 26
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: seba2  Hostname: ELENA  ProcessID: 3988
+#           Attempting to use alternate WLF file "./wlft06x3ka".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft06x3ka
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Addition: A = 0011, B = 0101, Result = 1000, N = 0, Z = 0, C = 0, V = 0
+# Subtraction: A = 1001, B = 0011, Result = 0110, N = 0, Z = 0, C = 0, V = 0
+# Test Multiplication: A =  3, B =  2, Result =  0, N = 0, Z = 1, C = 0, V = 0
+# AND: A = 1010, B = 1100, Result = 1000, N = 0, Z = 0, C = 0, V = 0
+# OR: A = 1010, B = 0101, Result = 1111, N = 0, Z = 0, C = 0, V = 0
+# XOR: A = 1100, B = 0110, Result = 1010, N = 0, Z = 0, C = 0, V = 0
+# Shift Left: A = 0011, Result = 0110, N = 0, Z = 0, C = 0, V = 0
+# Shift Right: A = 1100, Result = 0110, N = 0, Z = 0, C = 0, V = 0
+# Test Carry flag: A = 15,B =  1, Result =  0, N = 0, Z = 1, C = 1, V = 1
+# Test negative flag: A =  0,B =  2, Result = 14, N = 1, Z = 0, C = 0, V = 0
+# Test overflow flag: A =  8, B =  2, Result = 14, N = 0, Z = 0, C = 0, V = 0
+# Test cero flag: A =  1,B =  1, Result =  0, N = 0, Z = 1, C = 0, V = 0
+# ** Note: $finish    : C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv(237)
+#    Time: 370 ps  Iteration: 0  Instance: /ALU_measure_tb
+# 1
+# Break in Module ALU_measure_tb at C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv line 237
