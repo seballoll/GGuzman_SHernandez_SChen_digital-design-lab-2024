@@ -1,0 +1,599 @@
+m255
+K4
+z2
+Z0 !s12c _opt18
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+Z2 !s12c _opt17
+R1
+R2
+R1
+Z3 !s12c _opt16
+R1
+R3
+R1
+!s12c _opt15
+R1
+!s12c _opt14
+R1
+!s12c _opt13
+R1
+!s12c _opt12
+R1
+!s12c _opt11
+R1
+!s12c _opt10
+R1
+Z4 !s12c _opt9
+R1
+R4
+R1
+!s12c _opt8
+R1
+!s12c _opt7
+R1
+!s12c _opt6
+R1
+Z5 !s12c _opt5
+R1
+R5
+R1
+!s12c _opt4
+R1
+!s12c _opt3
+R1
+!s12c _opt2
+R1
+!s12c _opt1
+R1
+!s12c _opt
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z6 dC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/simulation/questa
+T_opt
+!s110 1724614314
+V>?OAA7H1A;EGZCPiTC5S62
+Z7 04 13 4 work ALU_Testbench fast 0
+=1-9828a6453f29-66cb86aa-279-f94
+R1
+Z8 !s12b OEM100
+Z9 !s124 OEM10U29 
+Z10 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z11 tCvgOpt 0
+n@_opt
+Z12 OL;O;2023.3;77
+R6
+T_opt1
+!s110 1724615554
+V[l0Xd0gm=ozY6fUindoGH1
+Z13 04 25 4 work adderSubstractorModule_tb fast 0
+=1-9828a6453f29-66cb8b82-70-29fc
+R1
+R8
+Z14 !s124 OEM10U10 
+R10
+R11
+n@_opt1
+R12
+R6
+T_opt10
+!s110 1724720559
+VY<ONoC21:EMmjcNnAi[JN3
+Z15 04 14 4 work ALU_measure_tb fast 0
+=1-9828a6453f29-66cd25ae-342-2c80
+R1
+R8
+Z16 !s124 OEM10U30 
+R10
+R11
+n@_opt10
+R12
+R6
+T_opt11
+!s110 1724720996
+VCcThDl[NGIj[EmZ=_65HN1
+R15
+=1-9828a6453f29-66cd2763-31b-6e4
+R1
+R8
+R16
+R10
+R11
+n@_opt11
+R12
+R6
+T_opt12
+!s110 1724721525
+V=G7Zfndmo_LOa?Za3S=:P0
+R15
+=1-9828a6453f29-66cd2975-25f-2a68
+R1
+R8
+R16
+R10
+R11
+n@_opt12
+R12
+R6
+T_opt13
+!s110 1724721880
+VVzH`O^S?SoI6a:zo[HQi41
+R15
+=1-9828a6453f29-66cd2ad7-2ed-12b0
+R1
+R8
+R16
+R10
+R11
+n@_opt13
+R12
+R6
+T_opt14
+!s110 1724722037
+V6oLJIoN7f0`MK@:@E8[[I3
+R15
+=1-9828a6453f29-66cd2b74-3c8-2908
+R1
+R8
+R16
+R10
+R11
+n@_opt14
+R12
+R6
+T_opt15
+!s110 1724722431
+Vg6QQlB=CaKVO:2oX9:21V0
+R15
+=1-9828a6453f29-66cd2cff-1d0-1c64
+R1
+R8
+R16
+R10
+R11
+n@_opt15
+R12
+R6
+T_opt16
+!s110 1724722811
+V892l?PUm3<gCHn1a4CS?F3
+R15
+=1-9828a6453f29-66cd2e7a-2ad-1628
+R1
+R8
+R16
+R10
+R11
+n@_opt16
+R12
+R6
+T_opt17
+!s110 1724723756
+V0HFKPi7i@lKZ5]e@H0zTz1
+R15
+=1-9828a6453f29-66cd322c-166-6d8
+R1
+R8
+R16
+R10
+R11
+n@_opt17
+R12
+R6
+T_opt18
+!s110 1724724297
+VOgmXb]oEUoTdGKX@nZZMa0
+R15
+=1-9828a6453f29-66cd3449-22-18fc
+R1
+R8
+R16
+R10
+R11
+n@_opt18
+R12
+T_opt2
+!s110 1724616256
+VRG^WnTbbe@=eN@zABMfDZ3
+R13
+=1-9828a6453f29-66cb8e3f-3ae-2948
+R1
+R8
+R14
+R10
+R11
+n@_opt2
+R12
+R6
+T_opt3
+!s110 1724616555
+VAkbSE?[?R;U[>cGSF7jf43
+R7
+=1-9828a6453f29-66cb8f6a-2f5-d80
+R1
+R8
+R9
+R10
+R11
+n@_opt3
+R12
+R6
+T_opt4
+!s110 1724617153
+V=7k2ce:FgRRiiQj]D6a=l2
+R7
+=1-9828a6453f29-66cb91c0-3a8-2b20
+R1
+R8
+R9
+R10
+R11
+n@_opt4
+R12
+R6
+T_opt5
+!s110 1724617647
+VAFd:]>2>g8?OO3OXn`[5^3
+R7
+=1-9828a6453f29-66cb93af-2ae-2668
+R1
+R8
+R9
+R10
+R11
+n@_opt5
+R12
+R6
+T_opt6
+!s110 1724693859
+V8b`mLDlozY]QQXjAN5PAF3
+R15
+=1-9828a6453f29-66ccbd63-158-1f90
+R1
+R8
+R16
+R10
+R11
+n@_opt6
+R12
+R6
+T_opt7
+!s110 1724694566
+VKZWiWCiI_M_M=gcaaOATj1
+R15
+=1-9828a6453f29-66ccc026-13e-b30
+R1
+R8
+R16
+R10
+R11
+n@_opt7
+R12
+R6
+T_opt8
+!s110 1724694747
+VFh>T0KWC8X^ok4K8PATMn1
+R15
+=1-9828a6453f29-66ccc0db-1fa-1dec
+R1
+R8
+R16
+R10
+R11
+n@_opt8
+R12
+R6
+T_opt9
+!s110 1724720478
+Vg[IANVL7ZNSZl`:UN16:V1
+R15
+=1-9828a6453f29-66cd255e-16d-2e6c
+R1
+R8
+R16
+R10
+R11
+n@_opt9
+R12
+R6
+vadderSubstractorModule
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv
+Z17 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z18 !s110 1724724295
+!i10b 1
+!s100 m`<z^3MA^2eF_9P?Sm^o`2
+IlzAG]Ua:4i`@omcJ>jLkX1
+S1
+R6
+w1724616179
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv
+!i122 3
+L0 1 42
+Z19 VDg1SIo80bB@j0V0VzS_@n1
+Z20 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z21 !s108 1724724295.000000
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/adderSubstractorModule.sv|
+!i113 0
+Z22 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z23 !s92 -sv -work work +incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R11
+nadder@substractor@module
+vALU_measure
+Z24 2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv
+R17
+Z25 !s110 1724724296
+!i10b 1
+!s100 5_YZH=ERU6cjb<ZeoJ;Hj1
+I2]L0?h^U]M7V=QllO>:QR1
+S1
+R6
+Z26 w1724724167
+Z27 8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv
+Z28 FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv
+!i122 8
+L0 1 48
+R19
+R20
+r1
+!s85 0
+31
+Z29 !s108 1724724296.000000
+Z30 !s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_measure_tb.sv|
+!i113 0
+R22
+R23
+R11
+n@a@l@u_measure
+vALU_measure_tb
+R24
+R17
+R25
+!i10b 1
+!s100 LW7Zlb=8^iW=D2lV7DEli0
+IoizgFE4`6_zFFR2me49V02
+S1
+R6
+R26
+R27
+R28
+!i122 8
+L0 53 188
+R19
+R20
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R22
+R23
+R11
+n@a@l@u_measure_tb
+vALU_module
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv
+R17
+R18
+!i10b 1
+!s100 U17fj8G3`]MC8hGGXZDT20
+IANRl:mG70Rf?=f_M_@D1g2
+S1
+R6
+w1724691100
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv
+!i122 0
+L0 1 102
+R19
+R20
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/ALU_module.sv|
+!i113 0
+R22
+R23
+R11
+n@a@l@u_module
+vbcd_to_7seg
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv
+R17
+R25
+!i10b 1
+!s100 M2jhVmUZobm?W>TY[Pd9?3
+IbZ4QkJ1jRndEDeP52P@T>2
+S1
+R6
+w1724601971
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv
+!i122 7
+L0 2 20
+R19
+R20
+r1
+!s85 0
+31
+R29
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/Display7segmentos.sv|
+!i113 0
+R22
+R23
+R11
+vbin2bcd
+Z32 2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv
+R17
+R18
+!i10b 1
+!s100 cNUXbP^SRXoT0Hz6bFjnB2
+IZHfY[f9D6Z4^5ciKI25Df0
+S1
+R6
+Z33 w1724724272
+Z34 8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv
+Z35 FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv
+!i122 5
+L0 45 21
+R19
+R20
+r1
+!s85 0
+31
+R21
+Z36 !s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv|
+Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/multiplier.sv|
+!i113 0
+R22
+R23
+R11
+vfull_adder
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv
+R17
+R25
+!i10b 1
+!s100 T<WAe`oPn7gI?C@[zoSa]0
+IHFgGcb3F_H2T77COdANz03
+S1
+R6
+w1724616161
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv
+!i122 6
+L0 2 7
+R19
+R20
+r1
+!s85 0
+31
+R29
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/full_adder.sv|
+!i113 0
+R22
+R23
+R11
+vmultiplier
+R32
+R17
+R18
+!i10b 1
+!s100 U5cUC`dWIBNK>H85SEEdO3
+Im@fN<zl91TXn4nTOihlTY1
+S1
+R6
+R33
+R34
+R35
+!i122 5
+L0 2 40
+R19
+R20
+r1
+!s85 0
+31
+R21
+R36
+R37
+!i113 0
+R22
+R23
+R11
+voneBitAdder
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv
+R17
+R18
+!i10b 1
+!s100 KH2LQRhzUjYO6:1d`1c4a3
+I2P]?WdR<NcJ^QLM6okFf20
+S1
+R6
+w1724616188
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv
+!i122 2
+L0 1 13
+R19
+R20
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitAdder.sv|
+!i113 0
+R22
+R23
+R11
+none@bit@adder
+voneBitSubstractor
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv
+R17
+R18
+!i10b 1
+!s100 V[7bh94I0hA9b<ZGBlH]g3
+IAcJk<Ale;[EJG:^[VJZLU1
+S1
+R6
+w1724616125
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv
+!i122 1
+L0 1 14
+R19
+R20
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/oneBitSubstractor.sv|
+!i113 0
+R22
+R23
+R11
+none@bit@substractor
+vshift_left_right
+2C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv
+R17
+R18
+!i10b 1
+!s100 N0Di727A[Mo5>LB:k_CO90
+IMIIgcfN@>`=M4=cfS>De02
+S1
+R6
+w1724609047
+8C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv
+FC:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv
+!i122 4
+L0 1 20
+R19
+R20
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU|C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/laboratorio2/ALU/shiftLeftRight.sv|
+!i113 0
+R22
+R23
+R11
