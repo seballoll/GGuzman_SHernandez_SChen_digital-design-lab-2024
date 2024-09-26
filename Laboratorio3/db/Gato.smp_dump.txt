@@ -1,5 +1,0 @@
-
-State Machine - |MEF|current_state
-Name current_state.S1 
-current_state.S0 0 
-current_state.S1 1 
