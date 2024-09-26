@@ -92,6 +92,46 @@
 					"strict" : false
 				},
 				{
+					"name" : "matrix_out_MEF[0]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[1]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[2]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[3]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[4]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[5]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[6]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[7]",
+					"strict" : false
+				},
+				{
+					"name" : "matrix_out_MEF[8]",
+					"strict" : false
+				},
+				{
+					"name" : "load",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -105,6 +145,14 @@
 				},
 				{
 					"name" : "T",
+					"strict" : false
+				},
+				{
+					"name" : "I",
+					"strict" : false
+				},
+				{
+					"name" : "W",
 					"strict" : false
 				}
 			]

@@ -30,7 +30,7 @@ module matrixControl (
             temp_matrix <= matrix_in; // Initialize temp_matrix with input matrix
             load <= 1'b0;             // No load when reset
         end
-        else if (I) begin
+        else if (!I) begin
             temp_matrix <= matrix_in | (9'b1 << index); // Set the selected position to 1
             load <= 1'b1; // Indicate that a change has been made
         end

@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/simulation/modelsim
 vmatrixControl
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1727373601
+Z2 !s110 1727383617
 !i10b 1
 !s100 _@OkN_=>G75h7G;:A@<Ib2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -19,7 +19,7 @@ IUWaP9eH_YOXK1:86Ze01Z2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1727373379
+w1727383127
 8C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv
 FC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv
 !i122 6
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1727373601.000000
+Z6 !s108 1727383616.000000
 !s107 C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3|C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv|
 !i113 1
@@ -38,7 +38,7 @@ Z9 tCvgOpt 0
 nmatrix@control
 vmatrixRegister
 R1
-R2
+Z10 !s110 1727383616
 !i10b 1
 !s100 CaadBj@37?=ibdGiKfe8z0
 R3
@@ -65,19 +65,19 @@ R9
 nmatrix@register
 vMEF
 R1
-R2
+R10
 !i10b 1
-!s100 Kg<XY]a?WGTN=OUB@^O0B1
+!s100 K?YSMJdG6DH?k2EBI@^773
 R3
-IEgBe_gc?@@5W@hJOFfW1X3
+I4<16R=L>leYNR<4:hPFGV1
 R4
 S1
 R0
-w1727373544
+w1727383231
 8C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv
 FC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv
 !i122 3
-L0 152 205
+L0 152 209
 R5
 r1
 !s85 0
@@ -92,24 +92,24 @@ R9
 n@m@e@f
 vMEF_testbench
 R1
-!s110 1727373602
+R2
 !i10b 1
-!s100 be@i5P0_>MblfzRCNQjOE0
+!s100 zlSR[AiT?:8?cZ]Rim@HK3
 R3
-I0mTmECgg`kUafSi=H=1:c2
+I]1oWPdGAX;4MaD=iL1`J[2
 R4
 S1
 R0
-w1727371822
+w1727383592
 8C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv
 FC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv
 !i122 7
-L0 1 69
+L0 1 77
 R5
 r1
 !s85 0
 31
-R6
+!s108 1727383617.000000
 !s107 C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3|C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv|
 !i113 1
@@ -119,7 +119,7 @@ R9
 n@m@e@f_testbench
 vPantalla_Inicial
 R1
-R2
+R10
 !i10b 1
 !s100 4R^BN9`4URUVSN<VaWNKS2
 R3
@@ -146,7 +146,7 @@ R9
 n@pantalla_@inicial
 vpll
 R1
-R2
+R10
 !i10b 1
 !s100 >9fZUH_Fo_SFSCg9EM=433
 R3
@@ -154,7 +154,7 @@ IF8fWcMdRiEKL:3HmlP<eC0
 R4
 S1
 R0
-Z10 w1727327699
+Z11 w1727327699
 8C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv
 FC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv
 !i122 1
@@ -172,7 +172,7 @@ R8
 R9
 vvgaController
 R1
-!s110 1727373600
+R10
 !i10b 1
 !s100 F8WcnOI0`GI`AZkFlIn^43
 R3
@@ -180,7 +180,7 @@ IW^C_AelhGbSRQHYUC^nD71
 R4
 S1
 R0
-R10
+R11
 8C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv
 FC:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv
 !i122 0
@@ -189,7 +189,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727373600.000000
+R6
 !s107 C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3|C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv|
 !i113 1
@@ -199,7 +199,7 @@ R9
 nvga@controller
 vvideoGen
 R1
-R2
+R10
 !i10b 1
 !s100 VW8DYZD9CFnO]MFgG8z0j1
 R3

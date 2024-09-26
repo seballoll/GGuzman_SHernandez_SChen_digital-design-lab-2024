@@ -1,12 +1,17 @@
 |MEF
-I => I.IN1
+I => I.IN2
 T => next_state.S1.DATAB
 T => next_state.S0.DATAB
 W => W.IN1
 A => next_state.S0.DATAA
 A => next_state.S1.DATAA
-rst => rst.IN2
-clk => clk.IN3
+rst => estado[0]~reg0.ACLR
+rst => estado[1]~reg0.ACLR
+rst => estado[2]~reg0.ACLR
+rst => estado[3]~reg0.ACLR
+rst => current_state~3.DATAIN
+rst => rst_n.IN2
+clk => clk.IN5
 estado[0] <= estado[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 estado[1] <= estado[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 estado[2] <= estado[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -40,16 +45,18 @@ b[4] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[6] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[7] <= b.DB_MAX_OUTPUT_PORT_TYPE
-matrix_out_MEF[0] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[1] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[2] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[3] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[4] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[5] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[6] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[7] <= matrixRegister:u_matrixRegister.matrix
-matrix_out_MEF[8] <= matrixRegister:u_matrixRegister.matrix
+matrix_out_MEF[0] <= matrix_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[1] <= matrix_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[2] <= matrix_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[3] <= matrix_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[4] <= matrix_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[5] <= matrix_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[6] <= matrix_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[7] <= matrix_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+matrix_out_MEF[8] <= matrix_reg[8].DB_MAX_OUTPUT_PORT_TYPE
 load <= load.DB_MAX_OUTPUT_PORT_TYPE
+W_deb <= <GND>
+I_deb <= <GND>
 
 
 |MEF|pll:vgapll
@@ -587,6 +594,122 @@ b[4] <= line.DB_MAX_OUTPUT_PORT_TYPE
 b[5] <= line.DB_MAX_OUTPUT_PORT_TYPE
 b[6] <= line.DB_MAX_OUTPUT_PORT_TYPE
 b[7] <= line.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_4
+pb_1 => pb_1.IN1
+clk => clk.IN4
+pb_out <= pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_4|clock_enable:u1
+Clk_100M => counter[0].CLK
+Clk_100M => counter[1].CLK
+Clk_100M => counter[2].CLK
+Clk_100M => counter[3].CLK
+Clk_100M => counter[4].CLK
+Clk_100M => counter[5].CLK
+Clk_100M => counter[6].CLK
+Clk_100M => counter[7].CLK
+Clk_100M => counter[8].CLK
+Clk_100M => counter[9].CLK
+Clk_100M => counter[10].CLK
+Clk_100M => counter[11].CLK
+Clk_100M => counter[12].CLK
+Clk_100M => counter[13].CLK
+Clk_100M => counter[14].CLK
+Clk_100M => counter[15].CLK
+Clk_100M => counter[16].CLK
+Clk_100M => counter[17].CLK
+Clk_100M => counter[18].CLK
+Clk_100M => counter[19].CLK
+Clk_100M => counter[20].CLK
+Clk_100M => counter[21].CLK
+Clk_100M => counter[22].CLK
+Clk_100M => counter[23].CLK
+Clk_100M => counter[24].CLK
+Clk_100M => counter[25].CLK
+Clk_100M => counter[26].CLK
+slow_clk_en <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_4|my_dff_en:d0
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_4|my_dff_en:d1
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_4|my_dff_en:d2
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_5
+pb_1 => pb_1.IN1
+clk => clk.IN4
+pb_out <= pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_5|clock_enable:u1
+Clk_100M => counter[0].CLK
+Clk_100M => counter[1].CLK
+Clk_100M => counter[2].CLK
+Clk_100M => counter[3].CLK
+Clk_100M => counter[4].CLK
+Clk_100M => counter[5].CLK
+Clk_100M => counter[6].CLK
+Clk_100M => counter[7].CLK
+Clk_100M => counter[8].CLK
+Clk_100M => counter[9].CLK
+Clk_100M => counter[10].CLK
+Clk_100M => counter[11].CLK
+Clk_100M => counter[12].CLK
+Clk_100M => counter[13].CLK
+Clk_100M => counter[14].CLK
+Clk_100M => counter[15].CLK
+Clk_100M => counter[16].CLK
+Clk_100M => counter[17].CLK
+Clk_100M => counter[18].CLK
+Clk_100M => counter[19].CLK
+Clk_100M => counter[20].CLK
+Clk_100M => counter[21].CLK
+Clk_100M => counter[22].CLK
+Clk_100M => counter[23].CLK
+Clk_100M => counter[24].CLK
+Clk_100M => counter[25].CLK
+Clk_100M => counter[26].CLK
+slow_clk_en <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_5|my_dff_en:d0
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_5|my_dff_en:d1
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MEF|Debounce:comb_5|my_dff_en:d2
+DFF_CLOCK => Q~reg0.CLK
+clock_enable => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MEF|matrixControl:u_matrixControl

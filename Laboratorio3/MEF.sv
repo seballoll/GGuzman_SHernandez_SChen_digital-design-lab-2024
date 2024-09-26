@@ -150,14 +150,15 @@
 
 
 module MEF (
-    input logic I, T, W, A,
+    input logic I,  T, W,  A,
  //G, P, L, 
  rst, clk, 
     output logic [3:0] estado, // Asumimos 4 bits para los estados
     output logic vgaclk, hsync, vsync, sync_b, blank_b, // Señales VGA
     output logic [7:0] r, g, b, // Señales de color VGA
 	 output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
-	 output logic load         // Señal de carga de la matriz
+	 output logic load,         // Señal de carga de la matriz
+	 output logic W_deb, I_deb
 );
 
 
@@ -168,6 +169,8 @@ module MEF (
     logic [7:0] r_videoGen, g_videoGen, b_videoGen; // Señales para videoGen
     logic [7:0] r_black, g_black, b_black; // Señales para pantalla en negro
 
+	
+	 
     // Instancia de PLL para generar la señal de 25.175 MHz para el VGA
     pll vgapll(.inclk0(clk), .c0(vgaclk));
 
@@ -187,6 +190,7 @@ module MEF (
     videoGen vgagen(
         .x(x), 
         .y(y), 
+		  .matrix(matrix_out_MEF),
         .r(r_videoGen), 
         .g(g_videoGen), 
         .b(b_videoGen)
@@ -196,16 +200,35 @@ module MEF (
 	 logic [8:0] matrix_reg;    // Almacena la matriz de salida de matrixRegister
 	 
 	 initial begin
-        matrix_reg = 9'b0;  // Inicializar la matriz con ceros
+        matrix_reg = 9'b10;  // Inicializar la matriz con ceros
     end
 	 //assign matrix_out_MEF = 9'b0;
+	 
+	 
+	 logic rst_n;
+	 assign rst_n = !rst;
+	 
+	 
+	 
+	 
+    // Instancia del módulo debounce_better_version
+    Debounce (
+        .pb_1(I),       // Entrada del botón con rebote
+        .clk(clk),           // Reloj principal del sistema
+        .pb_out(Idebounced)   // Señal de salida debounced
+    );
+	  Debounce (
+        .pb_1(W),       // Entrada del botón con rebote
+        .clk(clk),           // Reloj principal del sistema
+        .pb_out(Wdebounced)   // Señal de salida debounced
+    );
 
     // Instancia del módulo matrixControl
     matrixControl u_matrixControl (
         .clk(clk),              // Señal de reloj
-        .rst_n(rst),          // Señal de reset activo bajo
+        .rst_n(rst_n),          // Señal de reset activo bajo
         .I(I),                  // Botón para seleccionar la posición de la matriz
-        .W(W),                  // Botón para confirmar y modificar la posición seleccionada
+        .W(!Wdebounced),                  // Botón para confirmar y modificar la posición seleccionada
         .matrix_in(matrix_reg),   // Matriz de entrada (inicial)
         .matrix_out(matrix_in), // Matriz de salida con el valor modificado
         .load(load)             // Señal que indica que se realizó un cambio
@@ -214,7 +237,7 @@ module MEF (
 	 // Instancia del módulo matrixRegister
     matrixRegister u_matrixRegister (
         .clk(clk),              // Señal de reloj
-        .rst_n(rst),          // Señal de reset activo bajo
+        .rst_n(rst_n),          // Señal de reset activo bajo
         .data_in(matrix_in),    // Datos modificados que se cargarán en el registro
         .load(load),            // Señal de carga desde matrixControl
         .matrix(matrix_reg)     // Matriz de salida del registro

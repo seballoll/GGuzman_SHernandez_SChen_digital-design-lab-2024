@@ -40,18 +40,29 @@ module MEF_testbench();
         rst = 1;
         I = 0;
         T = 0;
-        W = 0;
+        W = 1;
         A = 0;
         #25 rst = 0;  // Desactivar reset después de 25 ns
 
         // Transición al estado S1 (cambio a estado S1 con I)
-        #40 I = 1;    // Activar I para seleccionar posición de la matriz
-        #20 I = 0;    // Desactivar I
+            // Activar I para seleccionar posición de la matriz
+        //#20 I = 0;    // Desactivar I
         
         // Confirmar selección y modificar la matriz con W
-        #30 W = 1;    // Activar W para confirmar la selección y cargar la matriz
-        #20 W = 0;    // Desactivar W
+        #30 W = 0;    // Activar W para confirmar la selección y cargar la matriz
+		  #20 W = 1; 
+//		  #30 W = 1;
+//		  #20 W = 0; 
+//		  #30 W = 1;
+//        #20 W = 0;    // Desactivar W
 
+		  
+		  #20 I = 1;
+		  #20 I = 0;
+		   #30 W = 0;    // Activar W para confirmar la selección y cargar la matriz
+		  #20 W = 1; 
+		  #20 I = 1;
+		  #20 I = 0;
         // Mantener el estado por un tiempo y verificar la salida de la matriz
         #40 T = 1;    // Volver a S0
         #20 T = 0;    // Desactivar T
