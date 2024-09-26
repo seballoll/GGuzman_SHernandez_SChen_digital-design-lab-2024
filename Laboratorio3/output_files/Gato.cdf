@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio31/output_files/") File("Gato.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/output_files/") File("Gato.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

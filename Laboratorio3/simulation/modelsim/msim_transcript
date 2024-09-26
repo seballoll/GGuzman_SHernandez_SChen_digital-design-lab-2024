@@ -1,0 +1,129 @@
+# Reading pref.tcl
+# do Gato_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:00 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv 
+# -- Compiling module vgaController
+# 
+# Top level modules:
+# 	vgaController
+# End time: 12:00:00 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv 
+# -- Compiling module videoGen
+# 
+# Top level modules:
+# 	videoGen
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv 
+# -- Compiling module MEF
+# 
+# Top level modules:
+# 	MEF
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv 
+# -- Compiling module Pantalla_Inicial
+# 
+# Top level modules:
+# 	Pantalla_Inicial
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv 
+# -- Compiling module matrixRegister
+# 
+# Top level modules:
+# 	matrixRegister
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv 
+# -- Compiling module matrixControl
+# 
+# Top level modules:
+# 	matrixControl
+# End time: 12:00:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos\ pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3 {C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Sep 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3" C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv 
+# -- Compiling module MEF_testbench
+# 
+# Top level modules:
+# 	MEF_testbench
+# End time: 12:00:02 on Sep 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  MEF_testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" MEF_testbench 
+# Start time: 12:00:02 on Sep 26,2024
+# Loading sv_std.std
+# Loading work.MEF_testbench
+# Loading work.MEF
+# Loading work.pll
+# Loading work.vgaController
+# Loading work.Pantalla_Inicial
+# Loading work.videoGen
+# Loading work.matrixControl
+# Loading work.matrixRegister
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'vgagen'.  Expected 8, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /MEF_testbench/uut/vgagen File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 187
+# ** Warning: (vsim-3722) C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv(187): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv(187): [TFMPC] - Missing connection for port 'rst_n'.
+# ** Warning: (vsim-3722) C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv(187): [TFMPC] - Missing connection for port 'matrix'.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gabri  Hostname: DESKTOP-7CQB5CM  ProcessID: 21764
+#           Attempting to use alternate WLF file "./wlft59jj8a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft59jj8a
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Matrix after modification in S1: 000000000
+# ** Note: $stop    : C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv(66)
+#    Time: 355 ps  Iteration: 0  Instance: /MEF_testbench
+# Break in Module MEF_testbench at C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv line 66
+# End time: 12:00:26 on Sep 26,2024, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 6

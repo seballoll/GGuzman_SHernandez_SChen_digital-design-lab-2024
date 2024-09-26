@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSXFC6D6F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY MEF
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:43:15  SEPTEMBER 09, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "Cyclone V SoC Development Kit"
 set_location_assignment PIN_AK16 -to b[7]
@@ -84,12 +84,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_AB30 -to I
-set_location_assignment PIN_AA24 -to estado[0]
-set_location_assignment PIN_AB23 -to estado[1]
-set_location_assignment PIN_AC23 -to estado[2]
-set_location_assignment PIN_AD24 -to estado[3]
 set_location_assignment PIN_AA30 -to rst
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE spiMaster.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vgaController.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vga.sv
@@ -99,3 +94,26 @@ set_global_assignment -name SYSTEMVERILOG_FILE videoGen.sv
 set_global_assignment -name SYSTEMVERILOG_FILE MEF.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Pantalla_Inicial.sv
 set_global_assignment -name SYSTEMVERILOG_FILE matrixRegister.sv
+set_global_assignment -name SYSTEMVERILOG_FILE matrixControl.sv
+set_location_assignment PIN_AJ4 -to W
+set_location_assignment PIN_AA24 -to matrix_out_MEF[0]
+set_location_assignment PIN_AB23 -to matrix_out_MEF[1]
+set_location_assignment PIN_AC23 -to matrix_out_MEF[2]
+set_location_assignment PIN_AD24 -to matrix_out_MEF[3]
+set_location_assignment PIN_AG25 -to matrix_out_MEF[4]
+set_location_assignment PIN_AF25 -to matrix_out_MEF[5]
+set_location_assignment PIN_AE24 -to matrix_out_MEF[6]
+set_location_assignment PIN_AF24 -to matrix_out_MEF[7]
+set_location_assignment PIN_AB22 -to matrix_out_MEF[8]
+set_global_assignment -name SYSTEMVERILOG_FILE MEF_testbench.sv
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH MEF_testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME MEF_testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MEF_testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME MEF_testbench -section_id MEF_testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MEF_testbench.sv -section_id MEF_testbench
+set_location_assignment PIN_AB28 -to A
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

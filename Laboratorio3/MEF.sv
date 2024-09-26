@@ -150,13 +150,17 @@
 
 
 module MEF (
-    input logic I, T,
+    input logic I, T, W, A,
  //G, P, L, 
  rst, clk, 
     output logic [3:0] estado, // Asumimos 4 bits para los estados
     output logic vgaclk, hsync, vsync, sync_b, blank_b, // Señales VGA
-    output logic [7:0] r, g, b // Señales de color VGA
+    output logic [7:0] r, g, b, // Señales de color VGA
+	 output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
+	 output logic load         // Señal de carga de la matriz
 );
+
+
 
     //logic C;
     logic [9:0] x, y;
@@ -187,6 +191,36 @@ module MEF (
         .g(g_videoGen), 
         .b(b_videoGen)
     );
+	 
+	 logic [8:0] matrix_in;
+	 logic [8:0] matrix_reg;    // Almacena la matriz de salida de matrixRegister
+	 
+	 initial begin
+        matrix_reg = 9'b0;  // Inicializar la matriz con ceros
+    end
+	 //assign matrix_out_MEF = 9'b0;
+
+    // Instancia del módulo matrixControl
+    matrixControl u_matrixControl (
+        .clk(clk),              // Señal de reloj
+        .rst_n(rst),          // Señal de reset activo bajo
+        .I(I),                  // Botón para seleccionar la posición de la matriz
+        .W(W),                  // Botón para confirmar y modificar la posición seleccionada
+        .matrix_in(matrix_reg),   // Matriz de entrada (inicial)
+        .matrix_out(matrix_in), // Matriz de salida con el valor modificado
+        .load(load)             // Señal que indica que se realizó un cambio
+    );
+	 
+	 // Instancia del módulo matrixRegister
+    matrixRegister u_matrixRegister (
+        .clk(clk),              // Señal de reloj
+        .rst_n(rst),          // Señal de reset activo bajo
+        .data_in(matrix_in),    // Datos modificados que se cargarán en el registro
+        .load(load),            // Señal de carga desde matrixControl
+        .matrix(matrix_reg)     // Matriz de salida del registro
+    );
+	 
+	 assign matrix_out_MEF = matrix_reg;
 
     // Pantalla en negro (todos los píxeles son 0)
     assign r_black = 8'b00000000;
@@ -221,7 +255,7 @@ module MEF (
         next_state = current_state; // Mantener el estado por defecto
         case (current_state)
             S0: begin
-                if (I) // Verificar que T está en alto
+                if (T) // Verificar que T está en alto
                     next_state = S1; // Cambio a S1 si T está en alto
 //                else if (A)
 //                    next_state = S5;
@@ -232,7 +266,7 @@ module MEF (
 //                    next_state = S3;
 //                else if (P)
 //                    next_state = S4;
-                 if (T)
+                 if (A)
 							next_state=S0;
                     //next_state = S2;
 //                else if (L)
