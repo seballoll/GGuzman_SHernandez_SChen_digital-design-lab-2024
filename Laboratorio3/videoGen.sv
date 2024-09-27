@@ -48,6 +48,7 @@ module videoGen (
 
     // Variables para representar las formas en cada casilla
     logic [8:0] drawX;
+    
 
     // Generamos las líneas del tablero de Tic-Tac-Toe (3x3)
     assign verticalLine1 = (x >= leftOffset + squareSize + spacing && x <= leftOffset + squareSize + spacing + 2 && 
@@ -81,6 +82,9 @@ module videoGen (
                       (y >= topOffset + 2 * (squareSize + spacing) && y < topOffset + 3 * squareSize + 2 * spacing);
     assign drawX[8] = (matrix[8] == 1'b1) && (x >= leftOffset + 2 * (squareSize + spacing) && x < leftOffset + 3 * squareSize + 2 * spacing) &&
                       (y >= topOffset + 2 * (squareSize + spacing) && y < topOffset + 3 * squareSize + 2 * spacing);
+
+							 
+	 
 
     // Combinamos todas las líneas y formas para determinar si debemos dibujar un píxel
     assign line = verticalLine1 | verticalLine2 | horizontalLine1 | horizontalLine2;

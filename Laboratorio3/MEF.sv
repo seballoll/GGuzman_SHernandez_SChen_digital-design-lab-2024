@@ -158,7 +158,9 @@ module MEF (
     output logic [7:0] r, g, b, // Señales de color VGA
 	 output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
 	 output logic load,         // Señal de carga de la matriz
-	 output logic W_deb, I_deb
+	 //output logic finished,    // Señal que indica que el contador ha llegado a 15 segundos
+    output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos (decenas)
+    output logic [6:0] seg2   // Segmentos del segundo display de 7 segmentos (unidades)
 );
 
 
@@ -168,7 +170,8 @@ module MEF (
     logic [7:0] r_PantallaInicial, g_PantallaInicial, b_PantallaInicial; // Señales para Pantalla Inicial
     logic [7:0] r_videoGen, g_videoGen, b_videoGen; // Señales para videoGen
     logic [7:0] r_black, g_black, b_black; // Señales para pantalla en negro
-
+	 logic finished;   // Señal que indica que el contador ha llegado a 15 segundos
+	 logic [3:0] count;
 	
 	 
     // Instancia de PLL para generar la señal de 25.175 MHz para el VGA
@@ -185,6 +188,22 @@ module MEF (
         .g(g_PantallaInicial), 
         .b(b_PantallaInicial)
     );
+	 
+	 //Display
+	 TopCounter counter_inst (
+        .clk(clk),
+        .rst(rst),
+        .finished(finished),
+        .count(count)
+    );
+
+    // Instanciamos el controlador de displays BCD
+    DisplayController display_inst (
+        .bin(count),
+        .seg1(seg1),
+        .seg2(seg2)
+    );
+
 
     // Instancia del módulo videoGen
     videoGen vgagen(

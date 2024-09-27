@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Sep 26 17:01:26 2024
+Analysis & Synthesis Status : Successful - Fri Sep 27 13:54:17 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Gato
 Top-level Entity Name : MEF
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 76
-Total pins : 51
+Total registers : 109
+Total pins : 63
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

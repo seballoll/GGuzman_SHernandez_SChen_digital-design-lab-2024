@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Thu Sep 26 17:01:26 2024
+Fri Sep 27 13:54:17 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -20,9 +20,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  12. Parameter Settings for User Entity Instance: vgaController:vgaCont
  13. Port Connectivity Checks: "Debounce:comb_4"
  14. Port Connectivity Checks: "videoGen:vgagen"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 15. Port Connectivity Checks: "TopCounter:counter_inst"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -49,14 +50,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 26 17:01:26 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 27 13:54:17 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; MEF                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 76                                          ;
-; Total pins                      ; 51                                          ;
+; Total registers                 ; 109                                         ;
+; Total pins                      ; 63                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -169,24 +170,35 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv         ;         ;
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv    ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv              ;         ;
-; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv         ;         ;
-; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv              ;         ;
-; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv ;         ;
-; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv   ;         ;
-; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; TopCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv        ;         ;
+; HexTo7Segment.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv     ;         ;
+; DisplayController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv ;         ;
+; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv           ;         ;
+; BinaryToBCD.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv       ;         ;
+; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv          ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv     ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv               ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv          ;         ;
+; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv               ;         ;
+; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv  ;         ;
+; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv    ;         ;
+; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv     ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -194,46 +206,51 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 113       ;
+; Estimate of Logic utilization (ALMs needed) ; 137       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 188       ;
+; Combinational ALUT usage for logic          ; 233       ;
 ;     -- 7 input functions                    ; 3         ;
-;     -- 6 input functions                    ; 33        ;
-;     -- 5 input functions                    ; 25        ;
-;     -- 4 input functions                    ; 43        ;
-;     -- <=3 input functions                  ; 84        ;
+;     -- 6 input functions                    ; 37        ;
+;     -- 5 input functions                    ; 27        ;
+;     -- 4 input functions                    ; 51        ;
+;     -- <=3 input functions                  ; 115       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 76        ;
+; Dedicated logic registers                   ; 109       ;
 ;                                             ;           ;
-; I/O pins                                    ; 51        ;
+; I/O pins                                    ; 63        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 56        ;
-; Total fan-out                               ; 1045      ;
-; Average fan-out                             ; 2.86      ;
+; Maximum fan-out                             ; 89        ;
+; Total fan-out                               ; 1323      ;
+; Average fan-out                             ; 2.83      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name      ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+------------------+--------------+
-; |MEF                                  ; 188 (35)            ; 76 (2)                    ; 0                 ; 0          ; 51   ; 0            ; |MEF                                  ; MEF              ; work         ;
-;    |Debounce:comb_5|                  ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5                  ; Debounce         ; work         ;
-;       |clock_enable:u1|               ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|clock_enable:u1  ; clock_enable     ; work         ;
-;       |my_dff_en:d0|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d0     ; my_dff_en        ; work         ;
-;       |my_dff_en:d1|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d1     ; my_dff_en        ; work         ;
-;       |my_dff_en:d2|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d2     ; my_dff_en        ; work         ;
-;    |Pantalla_Inicial:pantallaInicial| ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Pantalla_Inicial:pantallaInicial ; Pantalla_Inicial ; work         ;
-;    |matrixControl:u_matrixControl|    ; 39 (39)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixControl:u_matrixControl    ; matrixControl    ; work         ;
-;    |matrixRegister:u_matrixRegister|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixRegister:u_matrixRegister  ; matrixRegister   ; work         ;
-;    |pll:vgapll|                       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|pll:vgapll                       ; pll              ; work         ;
-;    |vgaController:vgaCont|            ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|vgaController:vgaCont            ; vgaController    ; work         ;
-;    |videoGen:vgagen|                  ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|videoGen:vgagen                  ; videoGen         ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name       ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; |MEF                                  ; 233 (35)            ; 109 (2)                   ; 0                 ; 0          ; 63   ; 0            ; |MEF                                                       ; MEF               ; work         ;
+;    |Debounce:comb_5|                  ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5                                       ; Debounce          ; work         ;
+;       |clock_enable:u1|               ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|clock_enable:u1                       ; clock_enable      ; work         ;
+;       |my_dff_en:d0|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d0                          ; my_dff_en         ; work         ;
+;       |my_dff_en:d1|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d1                          ; my_dff_en         ; work         ;
+;       |my_dff_en:d2|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d2                          ; my_dff_en         ; work         ;
+;    |DisplayController:display_inst|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst                        ; DisplayController ; work         ;
+;       |BinaryToBCD:bcd_conv|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD       ; work         ;
+;       |HexTo7Segment:display2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment     ; work         ;
+;    |Pantalla_Inicial:pantallaInicial| ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial  ; work         ;
+;    |TopCounter:counter_inst|          ; 37 (4)              ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst                               ; TopCounter        ; work         ;
+;       |Counter:counter_chain[0].u|    ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter           ; work         ;
+;    |matrixControl:u_matrixControl|    ; 39 (39)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixControl:u_matrixControl                         ; matrixControl     ; work         ;
+;    |matrixRegister:u_matrixRegister|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixRegister:u_matrixRegister                       ; matrixRegister    ; work         ;
+;    |pll:vgapll|                       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|pll:vgapll                                            ; pll               ; work         ;
+;    |vgaController:vgaCont|            ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|vgaController:vgaCont                                 ; vgaController     ; work         ;
+;    |videoGen:vgagen|                  ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|videoGen:vgagen                                       ; videoGen          ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -248,19 +265,439 @@ Encoding Type:  One-Hot
 +------------------+------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; estado[3]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; estado[2]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; estado[1]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; current_state~5                       ; Lost fanout                            ;
-; current_state~6                       ; Lost fanout                            ;
-; current_state~7                       ; Lost fanout                            ;
-; Total Number of Removed Registers = 6 ;                                        ;
-+---------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                         ;
++----------------------------------------------------------------+---------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                        ;
++----------------------------------------------------------------+---------------------------------------------------------------------------+
+; estado[3]~reg0                                                 ; Stuck at GND due to stuck port data_in                                    ;
+; estado[2]~reg0                                                 ; Stuck at GND due to stuck port data_in                                    ;
+; estado[1]~reg0                                                 ; Stuck at GND due to stuck port data_in                                    ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|t0          ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[25] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[25]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[25] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[23] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[23]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[23] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[22] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[22]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[21] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[21]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[21] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[20] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[20]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[20] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[19] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[19]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[17] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[17]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[17] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[15] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[15]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[15] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[14] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[14]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[13] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[13]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[13] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[12] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[12]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[12] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[6]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[6]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[6]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[5]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[5]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[5]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[4]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[4]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[4]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[3]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[3]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[3]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[2]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[2]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[2]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[1]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[1]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[0]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[0]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[0]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[26] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[26]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[26] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[24] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[24]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[18] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[18]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[18] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[16] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[16]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[11] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[11]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[10] ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[10]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[9]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[9]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[9]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[8]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[8]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[8]  ;
+; TopCounter:counter_inst|Counter:counter_chain[10].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[11].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[12].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[13].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[14].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[15].u|cycles[7]  ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[1].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[2].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[3].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[4].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[5].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[6].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
+; current_state~5                                                ; Lost fanout                                                               ;
+; current_state~6                                                ; Lost fanout                                                               ;
+; current_state~7                                                ; Lost fanout                                                               ;
+; Total Number of Removed Registers = 426                        ;                                                                           ;
++----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -268,10 +705,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 76    ;
-; Number of registers using Synchronous Clear  ; 47    ;
+; Total registers                              ; 109   ;
+; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 25    ;
+; Number of registers using Asynchronous Clear ; 58    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 35    ;
 ; Number of registers using Preset             ; 0     ;
@@ -284,7 +721,8 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; matrixControl:u_matrixControl|index[3] ; 7       ;
-; Total number of inverted registers = 1 ;         ;
+; TopCounter:counter_inst|reset_all      ; 28      ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
@@ -326,35 +764,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TopCounter:counter_inst"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; finished ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 76                          ;
-;     CLR               ; 3                           ;
+; arriav_ff             ; 109                         ;
+;     CLR               ; 9                           ;
+;     CLR SCLR          ; 27                          ;
 ;     ENA               ; 3                           ;
 ;     ENA CLR           ; 22                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 37                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 190                         ;
-;     arith             ; 47                          ;
-;         1 data inputs ; 47                          ;
+; arriav_lcell_comb     ; 237                         ;
+;     arith             ; 74                          ;
+;         1 data inputs ; 74                          ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 140                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 43                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 33                          ;
-; boundary_port         ; 51                          ;
+;     normal            ; 160                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 27                          ;
+;         4 data inputs ; 51                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 37                          ;
+; boundary_port         ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Average LUT depth     ; 2.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -373,10 +821,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 26 17:01:17 2024
+    Info: Processing started: Fri Sep 27 13:54:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file topcounter.sv
+    Info (12023): Found entity 1: TopCounter File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hexto7segment.sv
+    Info (12023): Found entity 1: HexTo7Segment File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displaycontroller.sv
+    Info (12023): Found entity 1: DisplayController File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
+    Info (12023): Found entity 1: Counter File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conversion.sv
+    Info (12023): Found entity 1: Conversion File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Conversion.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binarytobcd.sv
+    Info (12023): Found entity 1: BinaryToBCD File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file debounce.sv
     Info (12023): Found entity 1: Debounce File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 1
     Info (12023): Found entity 2: clock_enable File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 22
@@ -403,23 +863,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file matrixc
     Info (12023): Found entity 1: matrixControl File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mef_testbench.sv
     Info (12023): Found entity 1: MEF_testbench File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(218): created implicit net for "Idebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 218
-Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(223): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 223
-Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(219): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 219
-Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(224): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 224
+Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(237): created implicit net for "Idebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 237
+Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(242): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 242
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(238): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 238
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(243): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 243
 Info (12127): Elaborating entity "MEF" for the top level hierarchy
-Warning (10034): Output port "W_deb" at MEF.sv(161) has no driver File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 161
-Warning (10034): Output port "I_deb" at MEF.sv(162) has no driver File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 162
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 175
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 178
-Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 187
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 197
-Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:comb_4" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 219
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 178
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 181
+Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 190
+Info (12128): Elaborating entity "TopCounter" for hierarchy "TopCounter:counter_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 198
+Warning (10230): Verilog HDL assignment warning at TopCounter.sv(34): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 34
+Info (12128): Elaborating entity "Counter" for hierarchy "TopCounter:counter_inst|Counter:counter_chain[0].u" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at Counter.sv(18): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv Line: 18
+Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 205
+Info (12128): Elaborating entity "BinaryToBCD" for hierarchy "DisplayController:display_inst|BinaryToBCD:bcd_conv" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at BinaryToBCD.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv Line: 14
+Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "DisplayController:display_inst|HexTo7Segment:display1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 20
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 216
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:comb_4" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 238
 Info (12128): Elaborating entity "clock_enable" for hierarchy "Debounce:comb_4|clock_enable:u1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 9
 Warning (10230): Verilog HDL assignment warning at Debounce.sv(33): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 33
 Info (12128): Elaborating entity "my_dff_en" for hierarchy "Debounce:comb_4|my_dff_en:d0" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 12
-Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 235
-Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 244
+Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 254
+Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 263
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[0]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[0]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[0]~1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
@@ -432,9 +898,9 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[7]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[7]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[7]~29" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[8]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[8]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[8]~33" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "estado[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 353
-    Warning (13410): Pin "estado[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 353
-    Warning (13410): Pin "estado[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 353
+    Warning (13410): Pin "estado[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 372
+    Warning (13410): Pin "estado[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 372
+    Warning (13410): Pin "estado[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 372
     Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
     Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
     Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
@@ -443,20 +909,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
     Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
     Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "W_deb" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 161
-    Warning (13410): Pin "I_deb" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 162
+    Warning (13410): Pin "seg2[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 164
+    Warning (13410): Pin "seg2[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 164
+    Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 164
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 263 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 322 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 212 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Thu Sep 26 17:01:26 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:13
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 259 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Fri Sep 27 13:54:17 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
 
 
