@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Fri Sep 27 18:48:58 2024
+Sat Sep 28 12:33:03 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -22,9 +22,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  14. Parameter Settings for User Entity Instance: vgaController:vgaCont
  15. Port Connectivity Checks: "Debounce:comb_4"
  16. Port Connectivity Checks: "videoGen:vgagen"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 17. Port Connectivity Checks: "TopCounter:counter_inst"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,14 +53,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Sep 27 18:48:58 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat Sep 28 12:33:03 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; MEF                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 111                                         ;
-; Total pins                      ; 64                                          ;
+; Total registers                 ; 113                                         ;
+; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 37                                          ;
@@ -182,25 +184,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
-; TopCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv        ;         ;
-; HexTo7Segment.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv     ;         ;
-; DisplayController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv ;         ;
-; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv           ;         ;
-; BinaryToBCD.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv       ;         ;
-; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv          ;         ;
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv     ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv               ;         ;
-; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv          ;         ;
-; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv               ;         ;
-; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv  ;         ;
-; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv    ;         ;
-; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; TopCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv         ;         ;
+; HexTo7Segment.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv      ;         ;
+; DisplayController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv  ;         ;
+; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv            ;         ;
+; BinaryToBCD.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv        ;         ;
+; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv           ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv      ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv                ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv           ;         ;
+; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv                ;         ;
+; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv   ;         ;
+; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv     ;         ;
+; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv      ;         ;
+; Pantalla_Jugadores.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -208,51 +211,52 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 507                      ;
+; Estimate of Logic utilization (ALMs needed) ; 614                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 928                      ;
-;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 84                       ;
-;     -- 5 input functions                    ; 82                       ;
-;     -- 4 input functions                    ; 138                      ;
-;     -- <=3 input functions                  ; 623                      ;
+; Combinational ALUT usage for logic          ; 1078                     ;
+;     -- 7 input functions                    ; 3                        ;
+;     -- 6 input functions                    ; 145                      ;
+;     -- 5 input functions                    ; 97                       ;
+;     -- 4 input functions                    ; 142                      ;
+;     -- <=3 input functions                  ; 691                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 111                      ;
+; Dedicated logic registers                   ; 113                      ;
 ;                                             ;                          ;
-; I/O pins                                    ; 64                       ;
+; I/O pins                                    ; 68                       ;
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 37                       ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; videoGen:vgagen|Mult18~8 ;
-; Maximum fan-out                             ; 218                      ;
-; Total fan-out                               ; 4056                     ;
-; Average fan-out                             ; 3.37                     ;
+; Maximum fan-out                             ; 223                      ;
+; Total fan-out                               ; 4675                     ;
+; Average fan-out                             ; 3.43                     ;
 +---------------------------------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name       ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
-; |MEF                                  ; 928 (26)            ; 111 (4)                   ; 0                 ; 37         ; 64   ; 0            ; |MEF                                                       ; MEF               ; work         ;
-;    |Debounce:comb_5|                  ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5                                       ; Debounce          ; work         ;
-;       |clock_enable:u1|               ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|clock_enable:u1                       ; clock_enable      ; work         ;
-;       |my_dff_en:d0|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d0                          ; my_dff_en         ; work         ;
-;       |my_dff_en:d1|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d1                          ; my_dff_en         ; work         ;
-;       |my_dff_en:d2|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d2                          ; my_dff_en         ; work         ;
-;    |DisplayController:display_inst|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst                        ; DisplayController ; work         ;
-;       |BinaryToBCD:bcd_conv|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD       ; work         ;
-;       |HexTo7Segment:display2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment     ; work         ;
-;    |Pantalla_Inicial:pantallaInicial| ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial  ; work         ;
-;    |TopCounter:counter_inst|          ; 39 (6)              ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst                               ; TopCounter        ; work         ;
-;       |Counter:counter_chain[0].u|    ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter           ; work         ;
-;    |matrixControl:u_matrixControl|    ; 39 (39)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixControl:u_matrixControl                         ; matrixControl     ; work         ;
-;    |matrixRegister:u_matrixRegister|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixRegister:u_matrixRegister                       ; matrixRegister    ; work         ;
-;    |pll:vgapll|                       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|pll:vgapll                                            ; pll               ; work         ;
-;    |vgaController:vgaCont|            ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|vgaController:vgaCont                                 ; vgaController     ; work         ;
-;    |videoGen:vgagen|                  ; 723 (723)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |MEF|videoGen:vgagen                                       ; videoGen          ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name        ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------+--------------+
+; |MEF                                  ; 1078 (29)           ; 113 (6)                   ; 0                 ; 37         ; 68   ; 0            ; |MEF                                                       ; MEF                ; work         ;
+;    |Debounce:comb_5|                  ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5                                       ; Debounce           ; work         ;
+;       |clock_enable:u1|               ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|clock_enable:u1                       ; clock_enable       ; work         ;
+;       |my_dff_en:d0|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d0                          ; my_dff_en          ; work         ;
+;       |my_dff_en:d1|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d1                          ; my_dff_en          ; work         ;
+;       |my_dff_en:d2|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Debounce:comb_5|my_dff_en:d2                          ; my_dff_en          ; work         ;
+;    |DisplayController:display_inst|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst                        ; DisplayController  ; work         ;
+;       |BinaryToBCD:bcd_conv|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD        ; work         ;
+;       |HexTo7Segment:display2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment      ; work         ;
+;    |Pantalla_Inicial:pantallaInicial| ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial   ; work         ;
+;    |Pantalla_Jugadores:pantalla|      ; 130 (130)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|Pantalla_Jugadores:pantalla                           ; Pantalla_Jugadores ; work         ;
+;    |TopCounter:counter_inst|          ; 45 (12)             ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst                               ; TopCounter         ; work         ;
+;       |Counter:counter_chain[0].u|    ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter            ; work         ;
+;    |matrixControl:u_matrixControl|    ; 39 (39)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixControl:u_matrixControl                         ; matrixControl      ; work         ;
+;    |matrixRegister:u_matrixRegister|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|matrixRegister:u_matrixRegister                       ; matrixRegister     ; work         ;
+;    |pll:vgapll|                       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MEF|pll:vgapll                                            ; pll                ; work         ;
+;    |vgaController:vgaCont|            ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |MEF|vgaController:vgaCont                                 ; vgaController      ; work         ;
+;    |videoGen:vgagen|                  ; 724 (724)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |MEF|videoGen:vgagen                                       ; videoGen           ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -274,9 +278,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
 ; Register name                                                  ; Reason for Removal                                                        ;
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
-; current_state[2,3]                                             ; Stuck at GND due to stuck port data_in                                    ;
+; current_state[3]                                               ; Stuck at GND due to stuck port data_in                                    ;
 ; estado[3]~reg0                                                 ; Stuck at GND due to stuck port data_in                                    ;
-; estado[2]~reg0                                                 ; Stuck at GND due to stuck port data_in                                    ;
 ; TopCounter:counter_inst|Counter:counter_chain[10].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
 ; TopCounter:counter_inst|Counter:counter_chain[11].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
 ; TopCounter:counter_inst|Counter:counter_chain[12].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
@@ -697,7 +700,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TopCounter:counter_inst|Counter:counter_chain[7].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
 ; TopCounter:counter_inst|Counter:counter_chain[8].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
 ; TopCounter:counter_inst|Counter:counter_chain[9].u|cycles[7]   ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[7]  ;
-; Total Number of Removed Registers = 424                        ;                                                                           ;
+; Total Number of Removed Registers = 422                        ;                                                                           ;
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -708,8 +711,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+---------------------------+----------------------------------------+
 ; current_state[3] ; Stuck at GND              ; estado[3]~reg0                         ;
 ;                  ; due to stuck port data_in ;                                        ;
-; current_state[2] ; Stuck at GND              ; estado[2]~reg0                         ;
-;                  ; due to stuck port data_in ;                                        ;
 +------------------+---------------------------+----------------------------------------+
 
 
@@ -718,10 +719,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 111   ;
+; Total registers                              ; 113   ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
@@ -733,7 +734,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; matrixControl:u_matrixControl|index[3] ; 7       ;
+; matrixControl:u_matrixControl|index[3] ; 5       ;
 ; TopCounter:counter_inst|reset_all      ; 28      ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
@@ -744,7 +745,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MEF|TopCounter:counter_inst|counter15[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |MEF|TopCounter:counter_inst|counter15[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
@@ -787,40 +788,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------+
+; Port Connectivity Checks: "TopCounter:counter_inst" ;
++---------------+-------+----------+------------------+
+; Port          ; Type  ; Severity ; Details          ;
++---------------+-------+----------+------------------+
+; next_state[3] ; Input ; Info     ; Stuck at GND     ;
++---------------+-------+----------+------------------+
+
+
++-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 111                         ;
-;     CLR               ; 7                           ;
+; arriav_ff             ; 113                         ;
+;     CLR               ; 9                           ;
 ;     CLR SCLR          ; 27                          ;
 ;     ENA               ; 3                           ;
 ;     ENA CLR           ; 26                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 37                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 933                         ;
-;     arith             ; 422                         ;
-;         0 data inputs ; 12                          ;
-;         1 data inputs ; 118                         ;
+; arriav_lcell_comb     ; 1083                        ;
+;     arith             ; 461                         ;
+;         0 data inputs ; 14                          ;
+;         1 data inputs ; 155                         ;
 ;         2 data inputs ; 292                         ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 384                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 493                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 138                         ;
-;         5 data inputs ; 82                          ;
-;         6 data inputs ; 84                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 142                         ;
+;         5 data inputs ; 97                          ;
+;         6 data inputs ; 145                         ;
 ;     shared            ; 126                         ;
 ;         3 data inputs ; 126                         ;
 ; arriav_mac            ; 37                          ;
-; boundary_port         ; 64                          ;
+; boundary_port         ; 68                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.40                        ;
-; Average LUT depth     ; 6.91                        ;
+; Max LUT depth         ; 9.70                        ;
+; Average LUT depth     ; 7.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -839,7 +849,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 27 18:48:50 2024
+    Info: Processing started: Sat Sep 28 12:32:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -851,8 +861,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: DisplayController File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
     Info (12023): Found entity 1: Counter File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file conversion.sv
-    Info (12023): Found entity 1: Conversion File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Conversion.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file binarytobcd.sv
     Info (12023): Found entity 1: BinaryToBCD File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file debounce.sv
@@ -877,73 +885,91 @@ Info (12021): Found 1 design units, including 1 entities, in source file pantall
     Info (12023): Found entity 1: Pantalla_Inicial File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file matrixregister.sv
     Info (12023): Found entity 1: matrixRegister File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at matrixControl.sv(51): truncated literal to match 4 bits File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file matrixcontrol.sv
     Info (12023): Found entity 1: matrixControl File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mef_testbench.sv
     Info (12023): Found entity 1: MEF_testbench File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF_testbench.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(239): created implicit net for "Idebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 239
-Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(244): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 244
-Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(240): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 240
-Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(245): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 245
+Info (12021): Found 1 design units, including 1 entities, in source file pantalla_jugadores.sv
+    Info (12023): Found entity 1: Pantalla_Jugadores File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(250): created implicit net for "Idebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 250
+Warning (10236): Verilog HDL Implicit Net warning at MEF.sv(255): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 255
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(251): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 251
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF.sv(256): instance has no name File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 256
 Info (12127): Elaborating entity "MEF" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MEF.sv(173): object "r_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 173
-Warning (10036): Verilog HDL or VHDL warning at MEF.sv(173): object "g_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 173
-Warning (10036): Verilog HDL or VHDL warning at MEF.sv(173): object "b_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 173
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 179
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 182
-Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 191
-Info (12128): Elaborating entity "TopCounter" for hierarchy "TopCounter:counter_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 200
-Warning (10230): Verilog HDL assignment warning at TopCounter.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 37
-Info (12128): Elaborating entity "Counter" for hierarchy "TopCounter:counter_inst|Counter:counter_chain[0].u" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at MEF.sv(175): object "r_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 175
+Warning (10036): Verilog HDL or VHDL warning at MEF.sv(175): object "g_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 175
+Warning (10036): Verilog HDL or VHDL warning at MEF.sv(175): object "b_black" assigned a value but never read File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 175
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 181
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 184
+Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 193
+Info (12128): Elaborating entity "TopCounter" for hierarchy "TopCounter:counter_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 203
+Warning (10230): Verilog HDL assignment warning at TopCounter.sv(38): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at TopCounter.sv(48): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at TopCounter.sv(53): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 53
+Info (12128): Elaborating entity "Counter" for hierarchy "TopCounter:counter_inst|Counter:counter_chain[0].u" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at Counter.sv(18): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv Line: 18
-Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 207
+Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 210
 Info (12128): Elaborating entity "BinaryToBCD" for hierarchy "DisplayController:display_inst|BinaryToBCD:bcd_conv" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at BinaryToBCD.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv Line: 14
 Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "DisplayController:display_inst|HexTo7Segment:display1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 20
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 218
-Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:comb_4" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 240
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 221
+Info (12128): Elaborating entity "Pantalla_Jugadores" for hierarchy "Pantalla_Jugadores:pantalla" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 229
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(29): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(31): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(32): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(33): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 33
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:comb_4" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 251
 Info (12128): Elaborating entity "clock_enable" for hierarchy "Debounce:comb_4|clock_enable:u1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 9
 Warning (10230): Verilog HDL assignment warning at Debounce.sv(33): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 33
 Info (12128): Elaborating entity "my_dff_en" for hierarchy "Debounce:comb_4|my_dff_en:d0" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 12
-Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 256
-Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 265
+Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 268
+Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 277
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[0]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[0]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[0]~1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[1]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[1]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[1]~5" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[2]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[2]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[2]~9" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[3]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[3]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[3]~13" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[4]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[4]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[4]~17" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[5]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[5]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[5]~21" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[6]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[6]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[6]~25" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[7]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[7]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[7]~29" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
-    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[8]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[8]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[8]~33" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 33
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[0]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[0]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[0]~1" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[1]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[1]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[1]~5" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[2]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[2]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[2]~9" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[3]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[3]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[3]~13" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[4]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[4]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[4]~17" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[5]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[5]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[5]~21" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[6]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[6]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[6]~25" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[7]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[7]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[7]~29" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
+    Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[8]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[8]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[8]~33" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "estado[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 380
-    Warning (13410): Pin "estado[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 380
-    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 158
-    Warning (13410): Pin "seg2[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 165
-    Warning (13410): Pin "seg2[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 165
-    Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 165
+    Warning (13410): Pin "estado[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 399
+    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 159
+    Warning (13410): Pin "seg2[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 166
+    Warning (13410): Pin "seg2[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 166
+    Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 166
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/output_files/Gato.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1055 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Z" File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 153
+Info (21057): Implemented 1213 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 954 logic cells
+    Info (21061): Implemented 1108 logic cells
     Info (21062): Implemented 37 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4924 megabytes
-    Info: Processing ended: Fri Sep 27 18:48:58 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4933 megabytes
+    Info: Processing ended: Sat Sep 28 12:33:03 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/output_files/Gato.map.smsg.
 
 

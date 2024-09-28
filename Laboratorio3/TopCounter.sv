@@ -2,6 +2,7 @@ module TopCounter (
     input logic clk,          // Reloj global
     input logic rst,  
 	 input logic [3:0] current_state,// Señal de reset
+	 input logic [3:0] next_state,
     output logic finished,    // Señal que indica que el contador ha llegado a 15 segundos
     output logic [3:0] count  // Contador de 4 bits para visualizar los segundos
 );
@@ -32,11 +33,26 @@ module TopCounter (
 		  
         else begin
             // Detectar cuándo se activan las señales t0
-            if (|t && (current_state==4'b0001))
+            if (|t && (current_state==4'b0001)) 
 				begin
                 counter15 <= counter15 + 1;  // Sumar el pulso t0
             end
-            
+				
+				if (current_state != next_state)
+				begin
+					counter15 <= 0;
+				end
+				
+            if (|t && (current_state==4'b0110)) 
+				begin
+                counter15 <= counter15 + 1;  // Sumar el pulso t0
+            end
+				
+				if (|t && (current_state==4'b0111)) 
+				begin
+                counter15 <= counter15 + 1;  // Sumar el pulso t0
+            end
+				
             // Si el contador llega a 15, reiniciamos todo
             if (counter15 == 16) begin
                 counter15 <= 0;  // Reiniciamos el contador de 15 segundos

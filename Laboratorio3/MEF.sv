@@ -150,7 +150,8 @@
 
 
 module MEF (
-    input logic I,  T, W,  A,
+    input logic I,  T, W,  A, B, Z, J1, J2,
+	 // I JUGADOR1, T JUGADOR 1 VS CPU, A JUGADOR 1 VS JUGADOR 2, W MOVERSE DE CASILLAS, B JUGADOR 1, Z MOVERSE JUGADOR 2
  //G, P, L, 
  rst, clk, 
     output logic [3:0] estado, // Asumimos 4 bits para los estados
@@ -169,6 +170,7 @@ module MEF (
     //logic C;
     logic [9:0] x, y;
     logic [7:0] r_PantallaInicial, g_PantallaInicial, b_PantallaInicial; // Señales para Pantalla Inicial
+	 logic [7:0] r_PantallaJugadores, g_PantallaJugadores, b_PantallaJugadores;
     logic [7:0] r_videoGen, g_videoGen, b_videoGen; // Señales para videoGen
     logic [7:0] r_black, g_black, b_black; // Señales para pantalla en negro
 	 //logic finished;   // Señal que indica que el contador ha llegado a 15 segundos
@@ -195,6 +197,7 @@ module MEF (
         .clk(clk),
         .rst(rst),
 		  .current_state(current_state),
+		  .next_state(next_state),
         .finished(finished),
         .count(count)
     );
@@ -215,6 +218,14 @@ module MEF (
         .r(r_videoGen), 
         .g(g_videoGen), 
         .b(b_videoGen)
+    );
+	 
+	 Pantalla_Jugadores pantalla (
+        .x(x),
+        .y(y),
+        .r(r_PantallaJugadores),
+        .g(g_PantallaJugadores),
+        .b(b_PantallaJugadores)
     );
 	 
 	 logic [8:0] matrix_in;
@@ -249,6 +260,7 @@ module MEF (
         .clk(clk),              // Señal de reloj
         .rst_n(rst_n),          // Señal de reset activo bajo
         .I(I),                  // Botón para seleccionar la posición de la matriz
+		  .current_state(current_state),
         .W(!Wdebounced),                  // Botón para confirmar y modificar la posición seleccionada
         .matrix_in(matrix_reg),   // Matriz de entrada (inicial)
         .matrix_out(matrix_in), // Matriz de salida con el valor modificado
@@ -273,9 +285,10 @@ module MEF (
 
     // Definir los estados de la MEF
     typedef enum logic [3:0] {
-        S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010
-		  //, S3 = 4'b0011,
-//        S4 = 4'b0100, S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111, 
+        S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010,
+		  //S3 = 4'b0011,
+//        S4 = 4'b0100,
+        S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111
 //        S8 = 4'b1000, S9 = 4'b1001
     } state_t;
 
@@ -303,8 +316,8 @@ module MEF (
             S0: begin
                 if (T) // Verificar que T está en alto
                     next_state = S1; // Cambio a S1 si T está en alto
-//                else if (A)
-//                    next_state = S5;
+					 else if (A)
+                    next_state = S5;
 					 else next_state= S0;
             end
             S1: begin
@@ -337,35 +350,41 @@ module MEF (
 //            S3:  next_state = S0; 
 //			
 //            S4:  next_state = S0; 
-//            S5: begin
-//                if (I)
-//                    next_state = S6;
-//                else if (A)
-//                    next_state = S7;
-//					 else next_state= S5;
-//            end
-//            S6: begin
-//                if (I)
-//                    next_state = S7;
+				S5: begin
+						 if (J1)
+							  next_state = S6;
+						 else if (J2)
+							  next_state = S7;
+						 else next_state= S5;
+					end
+            S6: begin
+                if (!I)
+                    next_state = S7;
+					  else if (finished) 
+                    next_state = S7;
+						  
+						  
 //                else if (P)
 //                    next_state = S8;
 //                else if (G)
 //                    next_state = S9;
 //                else if (L)
 //                    next_state = S6;
-//					 else;
-//            end
-//            S7: begin
-//                if (A)
-//                    next_state = S5;
+					 else next_state = S6;
+				end
+            S7: begin
+                if (!B)
+                    next_state = S6;
+					 else if (finished)
+                    next_state = S6;
 //                else if (P)
 //                    next_state = S8;
 //                else if (G)
 //                    next_state = S9;
 //                else if (L)
 //                    next_state = S0;
-//					 else next_state= S7;
-//            end
+					 else next_state= S7;
+            end
 //            S8: next_state = S0; 
 //            S9: next_state = S0;
             default: next_state = S0;
@@ -394,6 +413,11 @@ module MEF (
                 r = r_videoGen;
                 g = g_videoGen;
                 b = b_videoGen;
+            end
+				S5: begin
+                r = r_PantallaJugadores;
+                g = g_PantallaJugadores;
+                b = b_PantallaJugadores;
             end
             // Al cambiar de estado, poner la pantalla en negro para "borrar"
             default: begin
