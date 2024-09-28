@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at Debounce.sv(14): object "COUNTER_MAX" differs only in case from object "counter_max" in the same scope File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 14
+Warning (10268): Verilog HDL information at MEF.sv(300): always construct contains both blocking and non-blocking assignments File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 300

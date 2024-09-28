@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "estado[1]",
+					"strict" : false
+				},
+				{
 					"name" : "vgaclk",
 					"strict" : false
 				},
@@ -132,6 +136,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "finished",
+					"strict" : false
+				},
+				{
 					"name" : "seg1[0]",
 					"strict" : false
 				},
@@ -188,11 +196,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "T",
+					"name" : "I",
 					"strict" : false
 				},
 				{
-					"name" : "I",
+					"name" : "T",
 					"strict" : false
 				},
 				{

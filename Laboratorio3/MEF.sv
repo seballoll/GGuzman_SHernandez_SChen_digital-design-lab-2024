@@ -158,6 +158,7 @@ module MEF (
     output logic [7:0] r, g, b, // Señales de color VGA
 	 output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
 	 output logic load,         // Señal de carga de la matriz
+	 output logic finished, // Señal que indica que el contador ha llegado a 15 segundos
 	 //output logic finished,    // Señal que indica que el contador ha llegado a 15 segundos
     output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos (decenas)
     output logic [6:0] seg2   // Segmentos del segundo display de 7 segmentos (unidades)
@@ -170,7 +171,7 @@ module MEF (
     logic [7:0] r_PantallaInicial, g_PantallaInicial, b_PantallaInicial; // Señales para Pantalla Inicial
     logic [7:0] r_videoGen, g_videoGen, b_videoGen; // Señales para videoGen
     logic [7:0] r_black, g_black, b_black; // Señales para pantalla en negro
-	 logic finished;   // Señal que indica que el contador ha llegado a 15 segundos
+	 //logic finished;   // Señal que indica que el contador ha llegado a 15 segundos
 	 logic [3:0] count;
 	
 	 
@@ -193,6 +194,7 @@ module MEF (
 	 TopCounter counter_inst (
         .clk(clk),
         .rst(rst),
+		  .current_state(current_state),
         .finished(finished),
         .count(count)
     );
@@ -271,13 +273,15 @@ module MEF (
 
     // Definir los estados de la MEF
     typedef enum logic [3:0] {
-        S0 = 4'b0000, S1 = 4'b0001
-		  //, S2 = 4'b0010, S3 = 4'b0011,
+        S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010
+		  //, S3 = 4'b0011,
 //        S4 = 4'b0100, S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111, 
 //        S8 = 4'b1000, S9 = 4'b1001
     } state_t;
 
     state_t current_state, next_state;
+	 
+	 
 
 
 //    always_comb begin
@@ -308,24 +312,28 @@ module MEF (
 //                    next_state = S3;
 //                else if (P)
 //                    next_state = S4;
-                 if (A)
-							next_state=S0;
-                    //next_state = S2;
+                 if (!I)
+							next_state=S2;
+					  else if (finished)
+                    next_state = S2;
 //                else if (L)
 //                    next_state = S0;
 					 else next_state= S1;
             end
-//            S2: begin
-//                if (G)
-//                    next_state = S3;
-//                else if (P)
-//                    next_state = S4;
-//                else if (C)
-//                    next_state = S1;
-//                else if (L)
-//                    next_state = S0;
-//					 else next_state= S2;
-//            end
+					S2: begin
+						 if (A)
+							 //count <= 0 ;
+							 next_state = S1;
+//						 else if (P)
+//							  next_state = S4;
+//						 else if (G)
+//							  next_state = S1;
+//						 else if (L)
+//							  next_state = S0;
+//						 else if (C)
+//						     next_state = S0;
+						 else next_state= S2;
+					end
 //            S3:  next_state = S0; 
 //			
 //            S4:  next_state = S0; 
@@ -389,9 +397,12 @@ module MEF (
             end
             // Al cambiar de estado, poner la pantalla en negro para "borrar"
             default: begin
-                r = r_black;
-                g = g_black;
-                b = b_black;
+//                r = r_black;
+//                g = g_black;
+//                b = b_black;
+					 r = r_videoGen;
+                g = g_videoGen;
+                b = b_videoGen;
             end
         endcase
     end
