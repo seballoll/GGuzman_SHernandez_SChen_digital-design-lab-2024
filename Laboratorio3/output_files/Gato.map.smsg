@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at MEF.sv(153): object "B" differs only in case from object "b" in the same scope File: C:/Users/gabri/OneDrive/Desktop/Proyectos pichudos/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv Line: 153
+Info (10281): Verilog HDL Declaration information at Main.sv(2): object "B" differs only in case from object "b" in the same scope File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2

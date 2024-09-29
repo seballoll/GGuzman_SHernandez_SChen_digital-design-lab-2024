@@ -8,14 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "estado[1]",
-					"strict" : false
-				},
-				{
-					"name" : "estado[2]",
-					"strict" : false
-				},
-				{
 					"name" : "vgaclk",
 					"strict" : false
 				},
@@ -100,94 +92,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "matrix_out_MEF[0]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[1]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[2]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[3]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[4]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[5]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[6]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[7]",
-					"strict" : false
-				},
-				{
-					"name" : "matrix_out_MEF[8]",
-					"strict" : false
-				},
-				{
-					"name" : "load",
-					"strict" : false
-				},
-				{
-					"name" : "finished",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[5]",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -196,23 +100,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A",
-					"strict" : false
-				},
-				{
 					"name" : "I",
 					"strict" : false
 				},
 				{
-					"name" : "J2",
-					"strict" : false
-				},
-				{
-					"name" : "J1",
-					"strict" : false
-				},
-				{
-					"name" : "B",
+					"name" : "A",
 					"strict" : false
 				},
 				{
@@ -220,7 +112,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "W",
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "J1",
 					"strict" : false
 				}
 			]

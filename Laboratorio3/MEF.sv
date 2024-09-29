@@ -1,393 +1,59 @@
-//module MEF (
-//    input logic A, T, G, P, L, rst, clk,
-//    output logic [3:0] estado // Asumimos 4 bits para los estados
-//);
-//    logic C;
-//
-//    typedef enum logic [3:0] {
-//        S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010, S3 = 4'b0011,
-//        S4 = 4'b0100, S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111, 
-//        S8 = 4'b1000, S9 = 4'b1001
-//    } state_t;
-//
-//    state_t current_state, next_state;
-//    
-//    always_comb begin
-//        C = ~(G ^ P); // XNOR entre G y P
-//    end
-//
-//    // Actualización de estado
-//    always_ff @(posedge clk or posedge rst) begin
-//        if (rst)
-//            current_state <= S0;
-//        else
-//            current_state <= next_state;
-//    end
-//
-//    // Lógica de transición de estados
-//    always_comb begin
-//        next_state = current_state; // Default mantiene el estado
-//        case (current_state)
-//            // Estado S0: 
-//            // - Si T se activa, se va a S1
-//            // - Si A se activa, se va a S5
-//            S0: begin
-//                if (T)
-//                    next_state = S1;
-//                else if (A)
-//                    next_state = S5;
-//            end
-//
-//            // Estado S1: 
-//            // - Si G se activa, se va a S3
-//            // - Si P se activa, se va a S4
-//            // - Si T se activa, se va a S2
-//            // - Si L se activa, se regresa a S0
-//            S1: begin
-//                if (G)
-//                    next_state = S3;
-//                else if (P)
-//                    next_state = S4;
-//                else if (T)
-//                    next_state = S2;
-//                else if (L)
-//                    next_state = S0;
-//            end
-//
-//            // Estado S2:
-//            // - Si G se activa nuevamente, se va a S3
-//            // - Si P se activa, se va a S4
-//            // - Si C se activa, se regresa a S1
-//            // - Si L se activa, se regresa a S0
-//            S2: begin
-//                if (G)
-//                    next_state = S3;
-//                else if (P)
-//                    next_state = S4;
-//                else if (C)
-//                    next_state = S1;
-//                else if (L)
-//                    next_state = S0;
-//            end
-//
-//            // Estado S3:
-//            
-//            S3: begin
-//               
-//                    next_state = S0;
-//            end
-//
-//            // Estado S4:
-//           
-//            S4: begin
-//       
-//                    next_state = S0;
-//            end
-//
-//            // Estado S5:
-//            // - Si A se activa, se va a S6
-//            S5: begin
-//                if (T)
-//                    next_state = S6;
-//					 else if (A)
-//                    next_state = S7;
-//            end
-//
-//            // Estado S6:
-//            // - Si A se activa, se va a S7
-//            // - Si T se activa, se regresa a S0
-//            S6: begin
-//                if (T)
-//                    next_state = S7;
-//                else if (P)
-//                    next_state = S8;
-//                else if (G)
-//                    next_state = S9;
-//                else if (L)
-//                    next_state = S0;
-//            end
-//
-//            // Estado S7:
-//            // - Si A se activa, regresa a S5
-//            S7: begin
-//                if (A)
-//                    next_state = S5;
-//						  else if (P)
-//                    next_state = S8;
-//                else if (G)
-//                    next_state = S9;
-//                else if (L)
-//                    next_state = S0;
-//            end
-//				
-//				// Estado S8:
-//            // Perdida
-//            S8: begin
-//                
-//                  next_state = S0;
-//            end
-//				
-//				// Estado S9:
-//            // Ganado
-//            S9: begin                
-//                  next_state = S0;
-//            end
-//
-//            // Estado por defecto
-//            default: next_state = S0;
-//        endcase
-//    end
-//
-//    // Lógica de salida (estado)
-//    always_ff @(posedge clk or posedge rst) begin
-//        if (rst)
-//            estado <= 4'b0000;
-//        else
-//            estado <= current_state;
-//    end
-//endmodule
-
-
-
 module MEF (
-    input logic I,  T, W,  A, B, Z, J1, J2,
-	 // I JUGADOR1, T JUGADOR 1 VS CPU, A JUGADOR 1 VS JUGADOR 2, W MOVERSE DE CASILLAS, B JUGADOR 1, Z MOVERSE JUGADOR 2
- //G, P, L, 
- rst, clk, 
-    output logic [3:0] estado, // Asumimos 4 bits para los estados
-    output logic vgaclk, hsync, vsync, sync_b, blank_b, // Señales VGA
-    output logic [7:0] r, g, b, // Señales de color VGA
-	 output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
-	 output logic load,         // Señal de carga de la matriz
-	 output logic finished, // Señal que indica que el contador ha llegado a 15 segundos
-	 //output logic finished,    // Señal que indica que el contador ha llegado a 15 segundos
-    output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos (decenas)
-    output logic [6:0] seg2   // Segmentos del segundo display de 7 segmentos (unidades)
+    input logic clk, rst, T, I, B, A, J1,
+    input logic finished,            // Entrada desde el TopCounter
+    output logic [3:0] estado,       // Salida de estado actual
+    output logic [3:0] next_state    // Salida del siguiente estado
 );
-
-
-
-    //logic C;
-    logic [9:0] x, y;
-    logic [7:0] r_PantallaInicial, g_PantallaInicial, b_PantallaInicial; // Señales para Pantalla Inicial
-	 logic [7:0] r_PantallaJugadores, g_PantallaJugadores, b_PantallaJugadores;
-    logic [7:0] r_videoGen, g_videoGen, b_videoGen; // Señales para videoGen
-    logic [7:0] r_black, g_black, b_black; // Señales para pantalla en negro
-	 //logic finished;   // Señal que indica que el contador ha llegado a 15 segundos
-	 logic [3:0] count;
-	
-	 
-    // Instancia de PLL para generar la señal de 25.175 MHz para el VGA
-    pll vgapll(.inclk0(clk), .c0(vgaclk));
-
-    // Instancia del controlador VGA
-    vgaController vgaCont(.vgaclk(vgaclk), .hsync(hsync), .vsync(vsync), .sync_b(sync_b), .blank_b(blank_b), .x(x), .y(y));
-
-    // Instancia del módulo Pantalla_Inicial
-    Pantalla_Inicial pantallaInicial(
-        .x(x), 
-        .y(y), 
-        .r(r_PantallaInicial), 
-        .g(g_PantallaInicial), 
-        .b(b_PantallaInicial)
-    );
-	 
-	 //Display
-	 TopCounter counter_inst (
-        .clk(clk),
-        .rst(rst),
-		  .current_state(current_state),
-		  .next_state(next_state),
-        .finished(finished),
-        .count(count)
-    );
-
-    // Instanciamos el controlador de displays BCD
-    DisplayController display_inst (
-        .bin(count),
-        .seg1(seg1),
-        .seg2(seg2)
-    );
-
-
-    // Instancia del módulo videoGen
-    videoGen vgagen(
-        .x(x), 
-        .y(y), 
-		  .matrix(matrix_out_MEF),
-        .r(r_videoGen), 
-        .g(g_videoGen), 
-        .b(b_videoGen)
-    );
-	 
-	 Pantalla_Jugadores pantalla (
-        .x(x),
-        .y(y),
-        .r(r_PantallaJugadores),
-        .g(g_PantallaJugadores),
-        .b(b_PantallaJugadores)
-    );
-	 
-	 logic [8:0] matrix_in;
-	 logic [8:0] matrix_reg;    // Almacena la matriz de salida de matrixRegister
-	 
-	 initial begin
-        matrix_reg = 9'b10;  // Inicializar la matriz con ceros
-    end
-	 //assign matrix_out_MEF = 9'b0;
-	 
-	 
-	 logic rst_n;
-	 assign rst_n = !rst;
-	 
-	 
-	 
-	 
-    // Instancia del módulo debounce_better_version
-    Debounce (
-        .pb_1(I),       // Entrada del botón con rebote
-        .clk(clk),           // Reloj principal del sistema
-        .pb_out(Idebounced)   // Señal de salida debounced
-    );
-	  Debounce (
-        .pb_1(W),       // Entrada del botón con rebote
-        .clk(clk),           // Reloj principal del sistema
-        .pb_out(Wdebounced)   // Señal de salida debounced
-    );
-
-    // Instancia del módulo matrixControl
-    matrixControl u_matrixControl (
-        .clk(clk),              // Señal de reloj
-        .rst_n(rst_n),          // Señal de reset activo bajo
-        .I(I),                  // Botón para seleccionar la posición de la matriz
-		  .current_state(current_state),
-        .W(!Wdebounced),                  // Botón para confirmar y modificar la posición seleccionada
-        .matrix_in(matrix_reg),   // Matriz de entrada (inicial)
-        .matrix_out(matrix_in), // Matriz de salida con el valor modificado
-        .load(load)             // Señal que indica que se realizó un cambio
-    );
-	 
-	 // Instancia del módulo matrixRegister
-    matrixRegister u_matrixRegister (
-        .clk(clk),              // Señal de reloj
-        .rst_n(rst_n),          // Señal de reset activo bajo
-        .data_in(matrix_in),    // Datos modificados que se cargarán en el registro
-        .load(load),            // Señal de carga desde matrixControl
-        .matrix(matrix_reg)     // Matriz de salida del registro
-    );
-	 
-	 assign matrix_out_MEF = matrix_reg;
-
-    // Pantalla en negro (todos los píxeles son 0)
-    assign r_black = 8'b00000000;
-    assign g_black = 8'b00000000;
-    assign b_black = 8'b00000000;
 
     // Definir los estados de la MEF
     typedef enum logic [3:0] {
         S0 = 4'b0000, S1 = 4'b0001, S2 = 4'b0010,
-		  //S3 = 4'b0011,
-//        S4 = 4'b0100,
         S5 = 4'b0101, S6 = 4'b0110, S7 = 4'b0111
-//        S8 = 4'b1000, S9 = 4'b1001
     } state_t;
 
-    state_t current_state, next_state;
-	 
-	 
-
-
-//    always_comb begin
-//        C = ~(G ^ P); // XNOR entre G y P
-//    end
+    state_t current_state, next_state_enum;  // Estados actuales y siguientes
 
     // Actualización de estado
     always_ff @(posedge clk or posedge rst) begin
         if (rst)
             current_state <= S0;
         else
-            current_state <= next_state;
+            current_state <= next_state_enum;
     end
 
     // Lógica de transición de estados
     always_comb begin
-        next_state = current_state; // Mantener el estado por defecto
+        next_state_enum = current_state;  // Mantener el estado por defecto
         case (current_state)
             S0: begin
-                if (T) // Verificar que T está en alto
-                    next_state = S1; // Cambio a S1 si T está en alto
-					 else if (A)
-                    next_state = S5;
-					 else next_state= S0;
+                if (T)
+                    next_state_enum = S1;     // Cambio a S1 si T está en alto
+                else if (J1)
+                    next_state_enum = S6;     // Cambio a S6 si J1 está en alto
             end
             S1: begin
-//                if (G)
-//                    next_state = S3;
-//                else if (P)
-//                    next_state = S4;
-                 if (!I)
-							next_state=S2;
-					  else if (finished)
-                    next_state = S2;
-//                else if (L)
-//                    next_state = S0;
-					 else next_state= S1;
+                if (!I)
+                    next_state_enum = S2;     // Cambio a S2 si I está en bajo
+                else if (finished)            // Cambio a S2 si finished es 1
+                    next_state_enum = S2;
             end
-					S2: begin
-						 if (A)
-							 //count <= 0 ;
-							 next_state = S1;
-//						 else if (P)
-//							  next_state = S4;
-//						 else if (G)
-//							  next_state = S1;
-//						 else if (L)
-//							  next_state = S0;
-//						 else if (C)
-//						     next_state = S0;
-						 else next_state= S2;
-					end
-//            S3:  next_state = S0; 
-//			
-//            S4:  next_state = S0; 
-				S5: begin
-						 if (J1)
-							  next_state = S6;
-						 else if (J2)
-							  next_state = S7;
-						 else next_state= S5;
-					end
+            S2: begin
+                if (A)
+                    next_state_enum = S1;     // Regreso a S1 si A está en alto
+            end
             S6: begin
                 if (!I)
-                    next_state = S7;
-					  else if (finished) 
-                    next_state = S7;
-						  
-						  
-//                else if (P)
-//                    next_state = S8;
-//                else if (G)
-//                    next_state = S9;
-//                else if (L)
-//                    next_state = S6;
-					 else next_state = S6;
-				end
+                    next_state_enum = S7;     // Cambio a S7 si I está en bajo
+                else if (finished)            // Cambio a S7 si finished es 1
+                    next_state_enum = S7;
+            end
             S7: begin
                 if (!B)
-                    next_state = S6;
-					 else if (finished)
-                    next_state = S6;
-//                else if (P)
-//                    next_state = S8;
-//                else if (G)
-//                    next_state = S9;
-//                else if (L)
-//                    next_state = S0;
-					 else next_state= S7;
+                    next_state_enum = S6;     // Regreso a S6 si B está en bajo
+                else if (finished)            // Regreso a S6 si finished es 1
+                    next_state_enum = S6;
             end
-//            S8: next_state = S0; 
-//            S9: next_state = S0;
-            default: next_state = S0;
+            default: next_state_enum = S0;
         endcase
     end
 
@@ -396,39 +62,10 @@ module MEF (
         if (rst)
             estado <= 4'b0000;
         else
-            estado <= current_state;
+            estado <= logic'(current_state);  // Casting explícito a logic[3:0]
     end
 
-    // Multiplexor para seleccionar qué imagen mostrar
-    always_comb begin
-        case (current_state)
-            // En el estado S0 mostramos la imagen generada por Pantalla_Inicial
-            S0: begin
-                r = r_PantallaInicial;
-                g = g_PantallaInicial;
-                b = b_PantallaInicial;
-            end
-            // En el estado S1 mostramos la imagen generada por videoGen
-            S1: begin
-                r = r_videoGen;
-                g = g_videoGen;
-                b = b_videoGen;
-            end
-				S5: begin
-                r = r_PantallaJugadores;
-                g = g_PantallaJugadores;
-                b = b_PantallaJugadores;
-            end
-            // Al cambiar de estado, poner la pantalla en negro para "borrar"
-            default: begin
-//                r = r_black;
-//                g = g_black;
-//                b = b_black;
-					 r = r_videoGen;
-                g = g_videoGen;
-                b = b_videoGen;
-            end
-        endcase
-    end
+    // Asignación del siguiente estado
+    assign next_state = logic'(next_state_enum);  // Casting explícito para la salida
+
 endmodule
-
