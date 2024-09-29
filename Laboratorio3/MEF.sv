@@ -30,28 +30,33 @@ module MEF (
                     next_state_enum = S1;     // Cambio a S1 si T está en alto
                 else if (J1)
                     next_state_enum = S6;     // Cambio a S6 si J1 está en alto
+					 else next_state_enum= S0;
             end
             S1: begin
                 if (!I)
                     next_state_enum = S2;     // Cambio a S2 si I está en bajo
                 else if (finished)            // Cambio a S2 si finished es 1
                     next_state_enum = S2;
+					 else next_state_enum= S1;
             end
             S2: begin
                 if (A)
                     next_state_enum = S1;     // Regreso a S1 si A está en alto
+					 else next_state_enum= S2;
             end
             S6: begin
                 if (!I)
                     next_state_enum = S7;     // Cambio a S7 si I está en bajo
                 else if (finished)            // Cambio a S7 si finished es 1
                     next_state_enum = S7;
+					 else next_state_enum= S6;
             end
             S7: begin
                 if (!B)
                     next_state_enum = S6;     // Regreso a S6 si B está en bajo
                 else if (finished)            // Regreso a S6 si finished es 1
                     next_state_enum = S6;
+					 else  next_state_enum= S7;
             end
             default: next_state_enum = S0;
         endcase
@@ -62,10 +67,10 @@ module MEF (
         if (rst)
             estado <= 4'b0000;
         else
-            estado <= logic'(current_state);  // Casting explícito a logic[3:0]
+            estado <= current_state;  
     end
 
     // Asignación del siguiente estado
-    assign next_state = logic'(next_state_enum);  // Casting explícito para la salida
+    assign next_state = next_state_enum;  
 
 endmodule

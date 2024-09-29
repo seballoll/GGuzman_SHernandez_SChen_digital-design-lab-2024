@@ -22,10 +22,17 @@ module Main (
     TopCounter counter_inst (
         .clk(clk),
         .rst(rst),
+		  .next_state(next_state),
         .current_state(estado),  // Estado actual de la MEF
         .finished(finished),  // Señal de finished desde el contador
         .count(count)
     );
+	 
+	 Debounce debounce_inst (
+			 .pb_1(W),       // Botón de entrada a debouncing (ejemplo: Z)
+			 .clk(clk),      // Señal de reloj global
+			 .pb_out(Wdebounced) // Señal de salida debounced
+		);
 
     // Instancia de la MEF, usando la señal finished del contador como entrada
     MEF mef_inst (
@@ -37,7 +44,8 @@ module Main (
         .A(A),
         .J1(J1),
         .finished(finished),  // Conectar la salida finished del contador como entrada aquí
-        .estado(estado)
+        .estado(estado),
+		  .next_state(next_state)
     );
 
     // Instancia de PLL para generar la señal de 25.175 MHz para el VGA
@@ -85,9 +93,10 @@ module Main (
         .clk(clk), 
         .rst_n(!rst), 
         .I(I), 
-        .W(!W), 
+        .W(!Wdebounced), 
         .matrix_in(matrix_reg), 
         .matrix_out(matrix_in), 
+		  .current_state(estado),
         .load(load)
     );
 

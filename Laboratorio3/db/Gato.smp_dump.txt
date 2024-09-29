@@ -1,0 +1,8 @@
+
+State Machine - |Main|MEF:mef_inst|current_state
+Name current_state.S7 current_state.S6 current_state.S2 current_state.S1 current_state.S0 
+current_state.S0 0 0 0 0 0 
+current_state.S1 0 0 0 1 1 
+current_state.S2 0 0 1 0 1 
+current_state.S6 0 1 0 0 1 
+current_state.S7 1 0 0 0 1 

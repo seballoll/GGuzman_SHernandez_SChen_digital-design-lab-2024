@@ -31,12 +31,12 @@ module matrixControl (
             temp_matrix <= matrix_in; // Initialize temp_matrix with input matrix
             load <= 1'b0;             // No load when reset
         end
-        else if (!I && (current_state==4'd0001)) begin
+        else if (!I && (current_state==4'b0001)) begin
             temp_matrix <= matrix_in | (9'b1 << index); // Set the selected position to 1
             load <= 1'b1; // Indicate that a change has been made
         end
 		  
-			else if (!I && (current_state == 4'd0001)) begin
+			else if (!I && (current_state == 4'b0001)) begin
 			 // Verifica si el bit en la posición 'index' ya es 1
 			 if (!(matrix_in[index])) begin
 				  temp_matrix <= matrix_in | (9'b1 << index); // Pone el bit correspondiente a 1 si no lo es
@@ -48,7 +48,7 @@ module matrixControl (
 			end
 			
 		  
-			else if (!I && (current_state == 4'd0110)) begin
+			else if (!I && (current_state == 4'b0110)) begin
 			 // Verifica si el bit en la posición 'index' ya es 1
 			 if (!(matrix_in[index])) begin
 				  temp_matrix <= matrix_in | (9'b1 << index); // Pone el bit correspondiente a 1 si no lo es
