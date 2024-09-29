@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Sun Sep 29 13:13:05 2024
+Sun Sep 29 16:46:59 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 29 13:13:05 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Sep 29 16:46:59 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; Main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 115                                         ;
+; Total registers                 ; 116                                         ;
 ; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -184,26 +184,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
-; TopCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv        ;         ;
-; HexTo7Segment.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv     ;         ;
-; DisplayController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv ;         ;
-; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv           ;         ;
-; BinaryToBCD.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv       ;         ;
-; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv          ;         ;
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv     ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv               ;         ;
-; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv          ;         ;
-; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv               ;         ;
-; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv  ;         ;
-; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv    ;         ;
-; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv     ;         ;
-; Main.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv              ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; TopCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv         ;         ;
+; HexTo7Segment.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/HexTo7Segment.sv      ;         ;
+; DisplayController.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv  ;         ;
+; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv            ;         ;
+; BinaryToBCD.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv        ;         ;
+; Debounce.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv           ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/vgaController.sv      ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/pll.sv                ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/videoGen.sv           ;         ;
+; MEF.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/MEF.sv                ;         ;
+; Pantalla_Inicial.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Inicial.sv   ;         ;
+; matrixRegister.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixRegister.sv     ;         ;
+; matrixControl.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv      ;         ;
+; Pantalla_Jugadores.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv ;         ;
+; Main.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv               ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -211,52 +212,53 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 521                      ;
+; Estimate of Logic utilization (ALMs needed) ; 625                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 946                      ;
-;     -- 7 input functions                    ; 4                        ;
-;     -- 6 input functions                    ; 90                       ;
-;     -- 5 input functions                    ; 85                       ;
-;     -- 4 input functions                    ; 139                      ;
-;     -- <=3 input functions                  ; 628                      ;
+; Combinational ALUT usage for logic          ; 1101                     ;
+;     -- 7 input functions                    ; 5                        ;
+;     -- 6 input functions                    ; 143                      ;
+;     -- 5 input functions                    ; 98                       ;
+;     -- 4 input functions                    ; 160                      ;
+;     -- <=3 input functions                  ; 695                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 115                      ;
+; Dedicated logic registers                   ; 116                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 68                       ;
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 37                       ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; videoGen:vgagen|Mult18~8 ;
-; Maximum fan-out                             ; 218                      ;
-; Total fan-out                               ; 4163                     ;
-; Average fan-out                             ; 3.37                     ;
+; Maximum fan-out                             ; 241                      ;
+; Total fan-out                               ; 4771                     ;
+; Average fan-out                             ; 3.43                     ;
 +---------------------------------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name       ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; |Main                                 ; 946 (14)            ; 115 (0)                   ; 0                 ; 37         ; 68   ; 0            ; |Main                                                       ; Main              ; work         ;
-;    |Debounce:debounce_inst|           ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst                                ; Debounce          ; work         ;
-;       |clock_enable:u1|               ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|clock_enable:u1                ; clock_enable      ; work         ;
-;       |my_dff_en:d0|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d0                   ; my_dff_en         ; work         ;
-;       |my_dff_en:d1|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d1                   ; my_dff_en         ; work         ;
-;       |my_dff_en:d2|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d2                   ; my_dff_en         ; work         ;
-;    |DisplayController:display_inst|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst                        ; DisplayController ; work         ;
-;       |BinaryToBCD:bcd_conv|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD       ; work         ;
-;       |HexTo7Segment:display2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment     ; work         ;
-;    |MEF:mef_inst|                     ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                          ; MEF               ; work         ;
-;    |Pantalla_Inicial:pantallaInicial| ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial  ; work         ;
-;    |TopCounter:counter_inst|          ; 47 (14)             ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                               ; TopCounter        ; work         ;
-;       |Counter:counter_chain[0].u|    ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter           ; work         ;
-;    |matrixControl:u_matrixControl|    ; 41 (41)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|matrixControl:u_matrixControl                         ; matrixControl     ; work         ;
-;    |matrixRegister:u_matrixRegister|  ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|matrixRegister:u_matrixRegister                       ; matrixRegister    ; work         ;
-;    |pll:vgapll|                       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|pll:vgapll                                            ; pll               ; work         ;
-;    |vgaController:vgaCont|            ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                 ; vgaController     ; work         ;
-;    |videoGen:vgagen|                  ; 723 (723)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                       ; videoGen          ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name        ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; |Main                                           ; 1101 (19)           ; 116 (0)                   ; 0                 ; 37         ; 68   ; 0            ; |Main                                                       ; Main               ; work         ;
+;    |Debounce:debounce_inst|                     ; 38 (1)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst                                ; Debounce           ; work         ;
+;       |clock_enable:u1|                         ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|clock_enable:u1                ; clock_enable       ; work         ;
+;       |my_dff_en:d0|                            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d0                   ; my_dff_en          ; work         ;
+;       |my_dff_en:d1|                            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d1                   ; my_dff_en          ; work         ;
+;       |my_dff_en:d2|                            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d2                   ; my_dff_en          ; work         ;
+;    |DisplayController:display_inst|             ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst                        ; DisplayController  ; work         ;
+;       |BinaryToBCD:bcd_conv|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD        ; work         ;
+;       |HexTo7Segment:display2|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment      ; work         ;
+;    |MEF:mef_inst|                               ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                          ; MEF                ; work         ;
+;    |Pantalla_Inicial:pantallaInicial|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial   ; work         ;
+;    |Pantalla_Jugadores:pantalla_jugadores_inst| ; 130 (130)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Jugadores:pantalla_jugadores_inst            ; Pantalla_Jugadores ; work         ;
+;    |TopCounter:counter_inst|                    ; 42 (9)              ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                               ; TopCounter         ; work         ;
+;       |Counter:counter_chain[0].u|              ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter            ; work         ;
+;    |matrixControl:u_matrixControl|              ; 41 (41)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|matrixControl:u_matrixControl                         ; matrixControl      ; work         ;
+;    |matrixRegister:u_matrixRegister|            ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|matrixRegister:u_matrixRegister                       ; matrixRegister     ; work         ;
+;    |pll:vgapll|                                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|pll:vgapll                                            ; pll                ; work         ;
+;    |vgaController:vgaCont|                      ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                 ; vgaController      ; work         ;
+;    |videoGen:vgagen|                            ; 742 (742)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                       ; videoGen           ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -274,17 +276,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------+
-; State Machine - |Main|MEF:mef_inst|current_state                                                                ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
-; Name             ; current_state.S7 ; current_state.S6 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
-; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ;
-; current_state.S1 ; 0                ; 0                ; 0                ; 1                ; 1                ;
-; current_state.S2 ; 0                ; 0                ; 1                ; 0                ; 1                ;
-; current_state.S6 ; 0                ; 1                ; 0                ; 0                ; 1                ;
-; current_state.S7 ; 1                ; 0                ; 0                ; 0                ; 1                ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Main|MEF:mef_inst|current_state                                                                                   ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name             ; current_state.S7 ; current_state.S6 ; current_state.S5 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; current_state.S2 ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; current_state.S5 ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; current_state.S6 ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S7 ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -726,10 +729,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 115   ;
+; Total registers                              ; 116   ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 64    ;
+; Number of registers using Asynchronous Clear ; 65    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
@@ -785,13 +788,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MEF:mef_inst"                                                                                                                       ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                       ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
-; next_state ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "next_state[3..1]" have no fanouts ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MEF:mef_inst"                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; next_state ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "next_state[3..1]" have no fanouts                ;
+; J2         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -808,36 +812,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 115                         ;
-;     CLR               ; 11                          ;
+; arriav_ff             ; 116                         ;
+;     CLR               ; 12                          ;
 ;     CLR SCLR          ; 27                          ;
 ;     ENA               ; 3                           ;
 ;     ENA CLR           ; 26                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 37                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 951                         ;
-;     arith             ; 422                         ;
-;         0 data inputs ; 12                          ;
-;         1 data inputs ; 118                         ;
+; arriav_lcell_comb     ; 1106                        ;
+;     arith             ; 461                         ;
+;         0 data inputs ; 14                          ;
+;         1 data inputs ; 155                         ;
 ;         2 data inputs ; 292                         ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 399                         ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 514                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 139                         ;
-;         5 data inputs ; 85                          ;
-;         6 data inputs ; 90                          ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 160                         ;
+;         5 data inputs ; 98                          ;
+;         6 data inputs ; 143                         ;
 ;     shared            ; 126                         ;
 ;         3 data inputs ; 126                         ;
 ; arriav_mac            ; 37                          ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.40                        ;
-; Average LUT depth     ; 6.88                        ;
+; Max LUT depth         ; 9.70                        ;
+; Average LUT depth     ; 7.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -856,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 29 13:12:56 2024
+    Info: Processing started: Sun Sep 29 16:46:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -924,6 +928,11 @@ Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "DisplayControlle
 Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 89
 Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 101
 Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 110
+Info (12128): Elaborating entity "Pantalla_Jugadores" for hierarchy "Pantalla_Jugadores:pantalla_jugadores_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 117
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(29): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(31): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(32): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(33): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 33
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[0]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[0]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[0]~1" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 34
@@ -956,16 +965,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Z" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2
     Warning (15610): No output dependent on input pin "J2" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2
-Info (21057): Implemented 1077 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1232 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 972 logic cells
+    Info (21061): Implemented 1127 logic cells
     Info (21062): Implemented 37 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Sun Sep 29 13:13:05 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4930 megabytes
+    Info: Processing ended: Sun Sep 29 16:46:59 2024
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+

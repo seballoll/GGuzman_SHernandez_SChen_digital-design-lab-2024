@@ -1,5 +1,5 @@
 Flow report for Gato
-Sun Sep 29 13:14:39 2024
+Sun Sep 29 16:48:11 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Sep 29 13:14:32 2024       ;
+; Flow Status                     ; Successful - Sun Sep 29 16:48:04 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; Main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 526 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 131                                         ;
+; Logic utilization (in ALMs)     ; 624 / 41,910 ( 1 % )                        ;
+; Total registers                 ; 140                                         ;
 ; Total pins                      ; 68 / 499 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/29/2024 13:12:56 ;
+; Start date & time ; 09/29/2024 16:46:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Gato                ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+---------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id    ;
 +-------------------------------------+----------------------------------------+---------------+-------------+---------------+
-; COMPILER_SIGNATURE_ID               ; 105658701913828.172763717613192        ; --            ; --          ; --            ;
+; COMPILER_SIGNATURE_ID               ; 105658701913828.172765001123376        ; --            ; --          ; --            ;
 ; EDA_DESIGN_INSTANCE_NAME            ; NA                                     ; --            ; --          ; MEF_testbench ;
 ; EDA_TEST_BENCH_FILE                 ; MEF_testbench.sv                       ; --            ; --          ; MEF_testbench ;
 ; EDA_TEST_BENCH_MODULE_NAME          ; MEF_testbench                          ; --            ; --          ; MEF_testbench ;
@@ -100,11 +100,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4929 MB             ; 00:00:11                           ;
-; Fitter               ; 00:01:18     ; 1.1                     ; 7843 MB             ; 00:02:56                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4863 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:06     ; 2.9                     ; 5321 MB             ; 00:00:11                           ;
-; Total                ; 00:01:38     ; --                      ; --                  ; 00:03:23                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4930 MB             ; 00:00:11                           ;
+; Fitter               ; 00:00:57     ; 1.2                     ; 7939 MB             ; 00:02:17                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4861 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.9                     ; 5322 MB             ; 00:00:10                           ;
+; Total                ; 00:01:18     ; --                      ; --                  ; 00:02:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

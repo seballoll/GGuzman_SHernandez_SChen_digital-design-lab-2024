@@ -1,5 +1,5 @@
 Fitter report for Gato
-Sun Sep 29 13:14:24 2024
+Sun Sep 29 16:47:57 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -65,15 +65,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Sep 29 13:14:24 2024       ;
+; Fitter Status                   ; Successful - Sun Sep 29 16:47:57 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; Main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 526 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 131                                         ;
+; Logic utilization (in ALMs)     ; 624 / 41,910 ( 1 % )                        ;
+; Total registers                 ; 140                                         ;
 ; Total pins                      ; 68 / 499 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -155,26 +155,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.19        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processor 3            ;   1.0%      ;
-;     Processor 4            ;   1.0%      ;
-;     Processor 5            ;   0.9%      ;
-;     Processor 6            ;   0.9%      ;
-;     Processor 7            ;   0.9%      ;
-;     Processor 8            ;   0.9%      ;
-;     Processor 9            ;   0.9%      ;
-;     Processor 10           ;   0.9%      ;
-;     Processor 11           ;   0.9%      ;
-;     Processor 12           ;   0.9%      ;
-;     Processor 13           ;   0.9%      ;
-;     Processor 14           ;   0.9%      ;
-;     Processor 15           ;   0.9%      ;
-;     Processor 16           ;   0.9%      ;
+;     Processor 2            ;   1.4%      ;
+;     Processor 3            ;   1.3%      ;
+;     Processor 4            ;   1.3%      ;
+;     Processor 5            ;   1.3%      ;
+;     Processor 6            ;   1.3%      ;
+;     Processor 7            ;   1.3%      ;
+;     Processor 8            ;   1.3%      ;
+;     Processor 9            ;   1.3%      ;
+;     Processor 10           ;   1.2%      ;
+;     Processor 11           ;   1.2%      ;
+;     Processor 12           ;   1.2%      ;
+;     Processor 13           ;   1.2%      ;
+;     Processor 14           ;   1.2%      ;
+;     Processor 15           ;   1.2%      ;
+;     Processor 16           ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -184,21 +184,29 @@ https://fpgasoftware.intel.com/eula.
 ; Node                                                          ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                        ; Destination Port ; Destination Port Name ;
 +---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0                                              ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                         ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[0]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[0]~DUPLICATE             ;                  ;                       ;
 ; Debounce:debounce_inst|clock_enable:u1|counter[4]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[4]~DUPLICATE             ;                  ;                       ;
-; Debounce:debounce_inst|clock_enable:u1|counter[6]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[6]~DUPLICATE             ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[5]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[5]~DUPLICATE             ;                  ;                       ;
 ; Debounce:debounce_inst|clock_enable:u1|counter[10]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[10]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[13]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[13]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[14]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[14]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[15]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[15]~DUPLICATE            ;                  ;                       ;
 ; Debounce:debounce_inst|clock_enable:u1|counter[16]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[16]~DUPLICATE            ;                  ;                       ;
-; MEF:mef_inst|estado[1]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; MEF:mef_inst|estado[1]~DUPLICATE                                        ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[17]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[17]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[21]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[21]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[22]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[22]~DUPLICATE            ;                  ;                       ;
+; Debounce:debounce_inst|clock_enable:u1|counter[25]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Debounce:debounce_inst|clock_enable:u1|counter[25]~DUPLICATE            ;                  ;                       ;
+; MEF:mef_inst|estado[0]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; MEF:mef_inst|estado[0]~DUPLICATE                                        ;                  ;                       ;
 ; MEF:mef_inst|estado[2]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; MEF:mef_inst|estado[2]~DUPLICATE                                        ;                  ;                       ;
-; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[1]~DUPLICATE  ;                  ;                       ;
-; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[10]~DUPLICATE ;                  ;                       ;
 ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[11]~DUPLICATE ;                  ;                       ;
-; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[14]~DUPLICATE ;                  ;                       ;
 ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[16]~DUPLICATE ;                  ;                       ;
-; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[22]~DUPLICATE ;                  ;                       ;
+; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[19]~DUPLICATE ;                  ;                       ;
+; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TopCounter:counter_inst|Counter:counter_chain[0].u|cycles[24]~DUPLICATE ;                  ;                       ;
 ; matrixControl:u_matrixControl|index[0]                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; matrixControl:u_matrixControl|index[0]~DUPLICATE                        ;                  ;                       ;
 ; matrixControl:u_matrixControl|index[3]                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; matrixControl:u_matrixControl|index[3]~DUPLICATE                        ;                  ;                       ;
-; vgaController:vgaCont|x[0]                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vgaController:vgaCont|x[0]~DUPLICATE                                    ;                  ;                       ;
+; vgaController:vgaCont|x[2]                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vgaController:vgaCont|x[2]~DUPLICATE                                    ;                  ;                       ;
+; vgaController:vgaCont|x[4]                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vgaController:vgaCont|x[4]~DUPLICATE                                    ;                  ;                       ;
+; vgaController:vgaCont|y[0]                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vgaController:vgaCont|y[0]~DUPLICATE                                    ;                  ;                       ;
 ; vgaController:vgaCont|y[2]                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vgaController:vgaCont|y[2]~DUPLICATE                                    ;                  ;                       ;
 +---------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-------------------------------------------------------------------------+------------------+-----------------------+
 
@@ -209,8 +217,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1236 ) ; 0.00 % ( 0 / 1236 )        ; 0.00 % ( 0 / 1236 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1236 ) ; 0.00 % ( 0 / 1236 )        ; 0.00 % ( 0 / 1236 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1392 ) ; 0.00 % ( 0 / 1392 )        ; 0.00 % ( 0 / 1392 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1392 ) ; 0.00 % ( 0 / 1392 )        ; 0.00 % ( 0 / 1392 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -233,7 +241,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1236 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1392 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -244,113 +252,113 @@ https://fpgasoftware.intel.com/eula.
 The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/output_files/Gato.pin.
 
 
-+------------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                            ;
-+-------------------------------------------------------------+--------------------+-------+
-; Resource                                                    ; Usage              ; %     ;
-+-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 526 / 41,910       ; 1 %   ;
-; ALMs needed [=A-B+C]                                        ; 526                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 543 / 41,910       ; 1 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 52                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 485                ;       ;
-;         [c] ALMs used for registers                         ; 6                  ;       ;
-;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 18 / 41,910        ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 41,910         ; < 1 % ;
-;         [a] Due to location constrained logic               ; 0                  ;       ;
-;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
-;         [c] Due to LAB input limits                         ; 1                  ;       ;
-;         [d] Due to virtual I/Os                             ; 0                  ;       ;
-;                                                             ;                    ;       ;
-; Difficulty packing design                                   ; Low                ;       ;
-;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 91 / 4,191         ; 2 %   ;
-;     -- Logic LABs                                           ; 91                 ;       ;
-;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
-;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 947                ;       ;
-;     -- 7 input functions                                    ; 4                  ;       ;
-;     -- 6 input functions                                    ; 90                 ;       ;
-;     -- 5 input functions                                    ; 85                 ;       ;
-;     -- 4 input functions                                    ; 139                ;       ;
-;     -- <=3 input functions                                  ; 629                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 3                  ;       ;
-;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 131                ;       ;
-;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 115 / 83,820       ; < 1 % ;
-;         -- Secondary logic registers                        ; 16 / 83,820        ; < 1 % ;
-;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 115                ;       ;
-;         -- Routing optimization registers                   ; 16                 ;       ;
-;                                                             ;                    ;       ;
-; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 68 / 499           ; 14 %  ;
-;     -- Clock pins                                           ; 4 / 11             ; 36 %  ;
-;     -- Dedicated input pins                                 ; 0 / 39             ; 0 %   ;
-;                                                             ;                    ;       ;
-; Hard processor system peripheral utilization                ;                    ;       ;
-;     -- Boot from FPGA                                       ; 0 / 1 ( 0 % )      ;       ;
-;     -- Clock resets                                         ; 0 / 1 ( 0 % )      ;       ;
-;     -- Cross trigger                                        ; 0 / 1 ( 0 % )      ;       ;
-;     -- S2F AXI                                              ; 0 / 1 ( 0 % )      ;       ;
-;     -- F2S AXI                                              ; 0 / 1 ( 0 % )      ;       ;
-;     -- AXI Lightweight                                      ; 0 / 1 ( 0 % )      ;       ;
-;     -- SDRAM                                                ; 0 / 1 ( 0 % )      ;       ;
-;     -- Interrupts                                           ; 0 / 1 ( 0 % )      ;       ;
-;     -- JTAG                                                 ; 0 / 1 ( 0 % )      ;       ;
-;     -- Loan I/O                                             ; 0 / 1 ( 0 % )      ;       ;
-;     -- MPU event standby                                    ; 0 / 1 ( 0 % )      ;       ;
-;     -- MPU general purpose                                  ; 0 / 1 ( 0 % )      ;       ;
-;     -- STM event                                            ; 0 / 1 ( 0 % )      ;       ;
-;     -- TPIU trace                                           ; 0 / 1 ( 0 % )      ;       ;
-;     -- DMA                                                  ; 0 / 1 ( 0 % )      ;       ;
-;     -- CAN                                                  ; 0 / 2 ( 0 % )      ;       ;
-;     -- EMAC                                                 ; 0 / 2 ( 0 % )      ;       ;
-;     -- I2C                                                  ; 0 / 4 ( 0 % )      ;       ;
-;     -- NAND Flash                                           ; 0 / 1 ( 0 % )      ;       ;
-;     -- QSPI                                                 ; 0 / 1 ( 0 % )      ;       ;
-;     -- SDMMC                                                ; 0 / 1 ( 0 % )      ;       ;
-;     -- SPI Master                                           ; 0 / 2 ( 0 % )      ;       ;
-;     -- SPI Slave                                            ; 0 / 2 ( 0 % )      ;       ;
-;     -- UART                                                 ; 0 / 2 ( 0 % )      ;       ;
-;     -- USB                                                  ; 0 / 2 ( 0 % )      ;       ;
-;                                                             ;                    ;       ;
-; M10K blocks                                                 ; 0 / 553            ; 0 %   ;
-; Total MLAB memory bits                                      ; 0                  ;       ;
-; Total block memory bits                                     ; 0 / 5,662,720      ; 0 %   ;
-; Total block memory implementation bits                      ; 0 / 5,662,720      ; 0 %   ;
-;                                                             ;                    ;       ;
-; Total DSP Blocks                                            ; 37 / 112           ; 33 %  ;
-;                                                             ;                    ;       ;
-; Fractional PLLs                                             ; 0 / 6              ; 0 %   ;
-; Global signals                                              ; 1                  ;       ;
-;     -- Global clocks                                        ; 1 / 16             ; 6 %   ;
-;     -- Quadrant clocks                                      ; 0 / 66             ; 0 %   ;
-;     -- Horizontal periphery clocks                          ; 0 / 18             ; 0 %   ;
-; SERDES Transmitters                                         ; 0 / 100            ; 0 %   ;
-; SERDES Receivers                                            ; 0 / 100            ; 0 %   ;
-; JTAGs                                                       ; 0 / 1              ; 0 %   ;
-; ASMI blocks                                                 ; 0 / 1              ; 0 %   ;
-; CRC blocks                                                  ; 0 / 1              ; 0 %   ;
-; Remote update blocks                                        ; 0 / 1              ; 0 %   ;
-; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
-; Hard IPs                                                    ; 0 / 2              ; 0 %   ;
-; Standard RX PCSs                                            ; 0 / 9              ; 0 %   ;
-; HSSI PMA RX Deserializers                                   ; 0 / 9              ; 0 %   ;
-; Standard TX PCSs                                            ; 0 / 9              ; 0 %   ;
-; HSSI PMA TX Serializers                                     ; 0 / 9              ; 0 %   ;
-; Channel PLLs                                                ; 0 / 9              ; 0 %   ;
-; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
-; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 1.2% / 1.3% / 1.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 7.4% / 7.3% / 8.1% ;       ;
-; Maximum fan-out                                             ; 354                ;       ;
-; Highest non-global fan-out                                  ; 168                ;       ;
-; Total fan-out                                               ; 4224               ;       ;
-; Average fan-out                                             ; 3.37               ;       ;
-+-------------------------------------------------------------+--------------------+-------+
++-------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                             ;
++-------------------------------------------------------------+---------------------+-------+
+; Resource                                                    ; Usage               ; %     ;
++-------------------------------------------------------------+---------------------+-------+
+; Logic utilization (ALMs needed / total ALMs on device)      ; 624 / 41,910        ; 1 %   ;
+; ALMs needed [=A-B+C]                                        ; 624                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 636 / 41,910        ; 2 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 54                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 577                 ;       ;
+;         [c] ALMs used for registers                         ; 5                   ;       ;
+;         [d] ALMs used for memory (up to half of total ALMs) ; 0                   ;       ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 41,910         ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 41,910          ; < 1 % ;
+;         [a] Due to location constrained logic               ; 0                   ;       ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                   ;       ;
+;         [c] Due to LAB input limits                         ; 1                   ;       ;
+;         [d] Due to virtual I/Os                             ; 0                   ;       ;
+;                                                             ;                     ;       ;
+; Difficulty packing design                                   ; Low                 ;       ;
+;                                                             ;                     ;       ;
+; Total LABs:  partially or completely used                   ; 85 / 4,191          ; 2 %   ;
+;     -- Logic LABs                                           ; 85                  ;       ;
+;     -- Memory LABs (up to half of total LABs)               ; 0                   ;       ;
+;                                                             ;                     ;       ;
+; Combinational ALUT usage for logic                          ; 1,102               ;       ;
+;     -- 7 input functions                                    ; 5                   ;       ;
+;     -- 6 input functions                                    ; 143                 ;       ;
+;     -- 5 input functions                                    ; 98                  ;       ;
+;     -- 4 input functions                                    ; 160                 ;       ;
+;     -- <=3 input functions                                  ; 696                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0                   ;       ;
+;                                                             ;                     ;       ;
+; Dedicated logic registers                                   ; 140                 ;       ;
+;     -- By type:                                             ;                     ;       ;
+;         -- Primary logic registers                          ; 116 / 83,820        ; < 1 % ;
+;         -- Secondary logic registers                        ; 24 / 83,820         ; < 1 % ;
+;     -- By function:                                         ;                     ;       ;
+;         -- Design implementation registers                  ; 116                 ;       ;
+;         -- Routing optimization registers                   ; 24                  ;       ;
+;                                                             ;                     ;       ;
+; Virtual pins                                                ; 0                   ;       ;
+; I/O pins                                                    ; 68 / 499            ; 14 %  ;
+;     -- Clock pins                                           ; 3 / 11              ; 27 %  ;
+;     -- Dedicated input pins                                 ; 0 / 39              ; 0 %   ;
+;                                                             ;                     ;       ;
+; Hard processor system peripheral utilization                ;                     ;       ;
+;     -- Boot from FPGA                                       ; 0 / 1 ( 0 % )       ;       ;
+;     -- Clock resets                                         ; 0 / 1 ( 0 % )       ;       ;
+;     -- Cross trigger                                        ; 0 / 1 ( 0 % )       ;       ;
+;     -- S2F AXI                                              ; 0 / 1 ( 0 % )       ;       ;
+;     -- F2S AXI                                              ; 0 / 1 ( 0 % )       ;       ;
+;     -- AXI Lightweight                                      ; 0 / 1 ( 0 % )       ;       ;
+;     -- SDRAM                                                ; 0 / 1 ( 0 % )       ;       ;
+;     -- Interrupts                                           ; 0 / 1 ( 0 % )       ;       ;
+;     -- JTAG                                                 ; 0 / 1 ( 0 % )       ;       ;
+;     -- Loan I/O                                             ; 0 / 1 ( 0 % )       ;       ;
+;     -- MPU event standby                                    ; 0 / 1 ( 0 % )       ;       ;
+;     -- MPU general purpose                                  ; 0 / 1 ( 0 % )       ;       ;
+;     -- STM event                                            ; 0 / 1 ( 0 % )       ;       ;
+;     -- TPIU trace                                           ; 0 / 1 ( 0 % )       ;       ;
+;     -- DMA                                                  ; 0 / 1 ( 0 % )       ;       ;
+;     -- CAN                                                  ; 0 / 2 ( 0 % )       ;       ;
+;     -- EMAC                                                 ; 0 / 2 ( 0 % )       ;       ;
+;     -- I2C                                                  ; 0 / 4 ( 0 % )       ;       ;
+;     -- NAND Flash                                           ; 0 / 1 ( 0 % )       ;       ;
+;     -- QSPI                                                 ; 0 / 1 ( 0 % )       ;       ;
+;     -- SDMMC                                                ; 0 / 1 ( 0 % )       ;       ;
+;     -- SPI Master                                           ; 0 / 2 ( 0 % )       ;       ;
+;     -- SPI Slave                                            ; 0 / 2 ( 0 % )       ;       ;
+;     -- UART                                                 ; 0 / 2 ( 0 % )       ;       ;
+;     -- USB                                                  ; 0 / 2 ( 0 % )       ;       ;
+;                                                             ;                     ;       ;
+; M10K blocks                                                 ; 0 / 553             ; 0 %   ;
+; Total MLAB memory bits                                      ; 0                   ;       ;
+; Total block memory bits                                     ; 0 / 5,662,720       ; 0 %   ;
+; Total block memory implementation bits                      ; 0 / 5,662,720       ; 0 %   ;
+;                                                             ;                     ;       ;
+; Total DSP Blocks                                            ; 37 / 112            ; 33 %  ;
+;                                                             ;                     ;       ;
+; Fractional PLLs                                             ; 0 / 6               ; 0 %   ;
+; Global signals                                              ; 1                   ;       ;
+;     -- Global clocks                                        ; 1 / 16              ; 6 %   ;
+;     -- Quadrant clocks                                      ; 0 / 66              ; 0 %   ;
+;     -- Horizontal periphery clocks                          ; 0 / 18              ; 0 %   ;
+; SERDES Transmitters                                         ; 0 / 100             ; 0 %   ;
+; SERDES Receivers                                            ; 0 / 100             ; 0 %   ;
+; JTAGs                                                       ; 0 / 1               ; 0 %   ;
+; ASMI blocks                                                 ; 0 / 1               ; 0 %   ;
+; CRC blocks                                                  ; 0 / 1               ; 0 %   ;
+; Remote update blocks                                        ; 0 / 1               ; 0 %   ;
+; Oscillator blocks                                           ; 0 / 1               ; 0 %   ;
+; Hard IPs                                                    ; 0 / 2               ; 0 %   ;
+; Standard RX PCSs                                            ; 0 / 9               ; 0 %   ;
+; HSSI PMA RX Deserializers                                   ; 0 / 9               ; 0 %   ;
+; Standard TX PCSs                                            ; 0 / 9               ; 0 %   ;
+; HSSI PMA TX Serializers                                     ; 0 / 9               ; 0 %   ;
+; Channel PLLs                                                ; 0 / 9               ; 0 %   ;
+; Impedance control blocks                                    ; 0 / 4               ; 0 %   ;
+; Hard Memory Controllers                                     ; 0 / 2               ; 0 %   ;
+; Average interconnect usage (total/H/V)                      ; 1.1% / 1.1% / 1.3%  ;       ;
+; Peak interconnect usage (total/H/V)                         ; 9.6% / 9.1% / 11.1% ;       ;
+; Maximum fan-out                                             ; 376                 ;       ;
+; Highest non-global fan-out                                  ; 168                 ;       ;
+; Total fan-out                                               ; 4852                ;       ;
+; Average fan-out                                             ; 3.43                ;       ;
++-------------------------------------------------------------+---------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -358,14 +366,14 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 526 / 41910 ( 1 % )   ; 0 / 41910 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 526                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 543 / 41910 ( 1 % )   ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 52                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 485                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 6                     ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 624 / 41910 ( 1 % )   ; 0 / 41910 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 624                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 636 / 41910 ( 2 % )   ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 54                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 577                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 5                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 18 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -374,28 +382,28 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 91 / 4191 ( 2 % )     ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 91                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 85 / 4191 ( 2 % )     ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 85                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 947                   ; 0                              ;
-;     -- 7 input functions                                    ; 4                     ; 0                              ;
-;     -- 6 input functions                                    ; 90                    ; 0                              ;
-;     -- 5 input functions                                    ; 85                    ; 0                              ;
-;     -- 4 input functions                                    ; 139                   ; 0                              ;
-;     -- <=3 input functions                                  ; 629                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 3                     ; 0                              ;
+; Combinational ALUT usage for logic                          ; 1102                  ; 0                              ;
+;     -- 7 input functions                                    ; 5                     ; 0                              ;
+;     -- 6 input functions                                    ; 143                   ; 0                              ;
+;     -- 5 input functions                                    ; 98                    ; 0                              ;
+;     -- 4 input functions                                    ; 160                   ; 0                              ;
+;     -- <=3 input functions                                  ; 696                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 115 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 16 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 116 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 24 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 115                   ; 0                              ;
-;         -- Routing optimization registers                   ; 16                    ; 0                              ;
+;         -- Design implementation registers                  ; 116                   ; 0                              ;
+;         -- Routing optimization registers                   ; 24                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -413,8 +421,8 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 5845                  ; 0                              ;
-;     -- Registered Connections                               ; 812                   ; 0                              ;
+;     -- Total Connections                                    ; 6472                  ; 0                              ;
+;     -- Registered Connections                               ; 1088                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -446,16 +454,16 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; A    ; AB28  ; 5B       ; 89           ; 21           ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; B    ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; I    ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; A    ; AB28  ; 5B       ; 89           ; 21           ; 37           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; B    ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; I    ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; J1   ; AD30  ; 5B       ; 89           ; 25           ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; J2   ; AC29  ; 5B       ; 89           ; 20           ; 94           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; T    ; Y27   ; 5B       ; 89           ; 25           ; 20           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; W    ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; Z    ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; clk  ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 109                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; rst  ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 58                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk  ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 116                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; rst  ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 59                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -487,16 +495,16 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; g[6]              ; AK23  ; 4A       ; 72           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; g[7]              ; AH23  ; 4A       ; 70           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; hsync             ; AK19  ; 4A       ; 60           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; load              ; V25   ; 5B       ; 89           ; 20           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[0] ; AE28  ; 5A       ; 89           ; 11           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[1] ; W25   ; 5B       ; 89           ; 20           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[2] ; W21   ; 5A       ; 89           ; 8            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[3] ; AF28  ; 5A       ; 89           ; 13           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[4] ; AB27  ; 5B       ; 89           ; 23           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[5] ; V23   ; 5A       ; 89           ; 15           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[6] ; AG28  ; 5A       ; 89           ; 13           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[7] ; AA26  ; 5B       ; 89           ; 23           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; matrix_out_MEF[8] ; AD26  ; 5A       ; 89           ; 16           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; load              ; W24   ; 5A       ; 89           ; 15           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[0] ; AG30  ; 5A       ; 89           ; 16           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[1] ; AF30  ; 5A       ; 89           ; 15           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[2] ; AB25  ; 5A       ; 89           ; 11           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[3] ; W25   ; 5B       ; 89           ; 20           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[4] ; Y23   ; 5A       ; 89           ; 13           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[5] ; AF28  ; 5A       ; 89           ; 13           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[6] ; AF29  ; 5A       ; 89           ; 15           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[7] ; AG28  ; 5A       ; 89           ; 13           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; matrix_out_MEF[8] ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; r[0]              ; AK29  ; 4A       ; 82           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; r[1]              ; AK28  ; 4A       ; 82           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; r[2]              ; AK27  ; 4A       ; 80           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -536,8 +544,8 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; 3A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 5 / 48 ( 10 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 46 / 80 ( 57 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 8 / 32 ( 25 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 9 / 16 ( 56 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 11 / 32 ( 34 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 6 / 16 ( 38 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -606,7 +614,7 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AA23     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AA24     ; 228        ; 5A             ; estado[0]                       ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AA25     ; 224        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AA26     ; 252        ; 5B             ; matrix_out_MEF[7]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AA26     ; 252        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA27     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA28     ; 251        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA29     ;            ; 5B             ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -635,9 +643,9 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AB22     ; 225        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB23     ; 227        ; 5A             ; estado[1]                       ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AB24     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB25     ; 230        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AB25     ; 230        ; 5A             ; matrix_out_MEF[2]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AB26     ; 226        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AB27     ; 254        ; 5B             ; matrix_out_MEF[4]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AB27     ; 254        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB28     ; 249        ; 5B             ; A                               ; input  ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AB29     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB30     ; 248        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -696,7 +704,7 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD24     ; 211        ; 4A             ; estado[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AD26     ; 240        ; 5A             ; matrix_out_MEF[8]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD29     ; 255        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -728,7 +736,7 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE26     ; 220        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE27     ; 229        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AE28     ; 231        ; 5A             ; matrix_out_MEF[0]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AE28     ; 231        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE29     ; 253        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE30     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AF1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -758,9 +766,9 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AF25     ; 206        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF26     ; 204        ; 4A             ; r[5]                            ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AF27     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF28     ; 235        ; 5A             ; matrix_out_MEF[3]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AF28     ; 235        ; 5A             ; matrix_out_MEF[5]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AF29     ; 237        ; 5A             ; matrix_out_MEF[6]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AF30     ; 239        ; 5A             ; matrix_out_MEF[1]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -788,9 +796,9 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; AG25     ; 190        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG26     ; 203        ; 4A             ; r[6]                            ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG27     ; 212        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AG28     ; 233        ; 5A             ; matrix_out_MEF[6]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AG28     ; 233        ; 5A             ; matrix_out_MEF[7]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AG30     ; 243        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AG30     ; 243        ; 5A             ; matrix_out_MEF[0]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH2      ; 69         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH3      ; 81         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1381,9 +1389,9 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; V20      ; 292        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V22      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; V23      ; 236        ; 5A             ; matrix_out_MEF[5]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; V23      ; 236        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V24      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; V25      ; 246        ; 5B             ; load                            ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; V25      ; 246        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V26      ;            ; 6B             ; VCCIO6B_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; V27      ; 265        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V28      ; 271        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1408,12 +1416,12 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; W17      ; 152        ; 4A             ; seg1[0]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W19      ; 192        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W20      ; 217        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; W21      ; 221        ; 5A             ; matrix_out_MEF[2]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W20      ; 217        ; 5A             ; matrix_out_MEF[8]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W23      ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W24      ; 238        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; W25      ; 244        ; 5B             ; matrix_out_MEF[1]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W24      ; 238        ; 5A             ; load                            ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W25      ; 244        ; 5B             ; matrix_out_MEF[3]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; W26      ; 274        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W27      ; 261        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W28      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1441,7 +1449,7 @@ The pin-out file can be found in C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/G
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y21      ; 219        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; Y23      ; 232        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; Y23      ; 232        ; 5A             ; matrix_out_MEF[4]               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y24      ; 234        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y25      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y26      ; 256        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1523,8 +1531,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; I                 ; Incomplete set of assignments ;
 ; A                 ; Incomplete set of assignments ;
 ; T                 ; Incomplete set of assignments ;
-; B                 ; Incomplete set of assignments ;
 ; J1                ; Incomplete set of assignments ;
+; B                 ; Incomplete set of assignments ;
 ; W                 ; Incomplete set of assignments ;
 ; matrix_out_MEF[0] ; Missing location assignment   ;
 ; matrix_out_MEF[1] ; Missing location assignment   ;
@@ -1539,30 +1547,31 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                           ;
-+---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node            ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name       ; Library Name ;
-+---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; |Main                                 ; 526.0 (7.8)          ; 542.0 (8.8)                      ; 17.0 (1.2)                                        ; 1.0 (0.2)                        ; 0.0 (0.0)            ; 947 (15)            ; 131 (0)                   ; 0 (0)         ; 0                 ; 0     ; 37         ; 68   ; 0            ; |Main                                                       ; Main              ; work         ;
-;    |Debounce:debounce_inst|           ; 20.5 (0.3)           ; 21.0 (0.3)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (1)              ; 34 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst                                ; Debounce          ; work         ;
-;       |clock_enable:u1|               ; 19.2 (19.2)          ; 19.8 (19.8)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 37 (37)             ; 31 (31)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|clock_enable:u1                ; clock_enable      ; work         ;
-;       |my_dff_en:d0|                  ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d0                   ; my_dff_en         ; work         ;
-;       |my_dff_en:d1|                  ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d1                   ; my_dff_en         ; work         ;
-;       |my_dff_en:d2|                  ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d2                   ; my_dff_en         ; work         ;
-;    |DisplayController:display_inst|   ; 4.0 (0.0)            ; 4.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst                        ; DisplayController ; work         ;
-;       |BinaryToBCD:bcd_conv|          ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD       ; work         ;
-;       |HexTo7Segment:display2|        ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment     ; work         ;
-;    |MEF:mef_inst|                     ; 6.3 (6.3)            ; 7.3 (7.3)                        ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                          ; MEF               ; work         ;
-;    |Pantalla_Inicial:pantallaInicial| ; 20.4 (20.4)          ; 21.6 (21.6)                      ; 1.5 (1.5)                                         ; 0.2 (0.2)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial  ; work         ;
-;    |TopCounter:counter_inst|          ; 27.8 (9.2)           ; 28.7 (9.6)                       ; 0.9 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (14)             ; 39 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                               ; TopCounter        ; work         ;
-;       |Counter:counter_chain[0].u|    ; 18.7 (18.7)          ; 19.2 (19.2)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (33)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter           ; work         ;
-;    |matrixControl:u_matrixControl|    ; 19.3 (19.3)          ; 19.3 (19.3)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|matrixControl:u_matrixControl                         ; matrixControl     ; work         ;
-;    |matrixRegister:u_matrixRegister|  ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|matrixRegister:u_matrixRegister                       ; matrixRegister    ; work         ;
-;    |pll:vgapll|                       ; 0.5 (0.5)            ; 0.8 (0.8)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|pll:vgapll                                            ; pll               ; work         ;
-;    |vgaController:vgaCont|            ; 20.5 (20.5)          ; 20.4 (20.4)                      ; 0.0 (0.0)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 29 (29)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                 ; vgaController     ; work         ;
-;    |videoGen:vgagen|                  ; 393.8 (393.8)        ; 407.3 (407.3)                    ; 14.0 (14.0)                                       ; 0.6 (0.6)                        ; 0.0 (0.0)            ; 723 (723)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                       ; videoGen          ; work         ;
-+---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name        ; Library Name ;
++-------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; |Main                                           ; 624.0 (13.1)         ; 635.0 (15.6)                     ; 12.0 (2.9)                                        ; 1.0 (0.4)                        ; 0.0 (0.0)            ; 1102 (20)           ; 140 (0)                   ; 0 (0)         ; 0                 ; 0     ; 37         ; 68   ; 0            ; |Main                                                       ; Main               ; work         ;
+;    |Debounce:debounce_inst|                     ; 20.5 (0.3)           ; 21.0 (0.3)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (1)              ; 42 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst                                ; Debounce           ; work         ;
+;       |clock_enable:u1|                         ; 19.5 (19.5)          ; 20.0 (20.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 37 (37)             ; 39 (39)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|clock_enable:u1                ; clock_enable       ; work         ;
+;       |my_dff_en:d0|                            ; 0.0 (0.0)            ; 0.3 (0.3)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d0                   ; my_dff_en          ; work         ;
+;       |my_dff_en:d1|                            ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d1                   ; my_dff_en          ; work         ;
+;       |my_dff_en:d2|                            ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst|my_dff_en:d2                   ; my_dff_en          ; work         ;
+;    |DisplayController:display_inst|             ; 3.8 (0.0)            ; 4.0 (0.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst                        ; DisplayController  ; work         ;
+;       |BinaryToBCD:bcd_conv|                    ; 0.3 (0.3)            ; 0.5 (0.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|BinaryToBCD:bcd_conv   ; BinaryToBCD        ; work         ;
+;       |HexTo7Segment:display2|                  ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|HexTo7Segment:display2 ; HexTo7Segment      ; work         ;
+;    |MEF:mef_inst|                               ; 9.2 (9.2)            ; 10.2 (10.2)                      ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                          ; MEF                ; work         ;
+;    |Pantalla_Inicial:pantallaInicial|           ; 18.2 (18.2)          ; 19.3 (19.3)                      ; 1.2 (1.2)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 35 (35)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                      ; Pantalla_Inicial   ; work         ;
+;    |Pantalla_Jugadores:pantalla_jugadores_inst| ; 80.7 (80.7)          ; 83.9 (83.9)                      ; 3.4 (3.4)                                         ; 0.2 (0.2)                        ; 0.0 (0.0)            ; 130 (130)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|Pantalla_Jugadores:pantalla_jugadores_inst            ; Pantalla_Jugadores ; work         ;
+;    |TopCounter:counter_inst|                    ; 24.0 (5.8)           ; 24.7 (5.8)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (9)              ; 37 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                               ; TopCounter         ; work         ;
+;       |Counter:counter_chain[0].u|              ; 18.2 (18.2)          ; 18.8 (18.8)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (33)             ; 32 (32)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst|Counter:counter_chain[0].u    ; Counter            ; work         ;
+;    |matrixControl:u_matrixControl|              ; 18.9 (18.9)          ; 18.9 (18.9)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|matrixControl:u_matrixControl                         ; matrixControl      ; work         ;
+;    |matrixRegister:u_matrixRegister|            ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|matrixRegister:u_matrixRegister                       ; matrixRegister     ; work         ;
+;    |pll:vgapll|                                 ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|pll:vgapll                                            ; pll                ; work         ;
+;    |vgaController:vgaCont|                      ; 20.5 (20.5)          ; 20.4 (20.4)                      ; 0.0 (0.0)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 29 (29)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                 ; vgaController      ; work         ;
+;    |videoGen:vgagen|                            ; 408.8 (408.8)        ; 414.0 (414.0)                    ; 5.3 (5.3)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 742 (742)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                       ; videoGen           ; work         ;
++-------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1636,8 +1645,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I                 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; A                 ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; T                 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; B                 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; J1                ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; B                 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; W                 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1669,10 +1678,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - matrixRegister:u_matrixRegister|matrix[6]              ; 0                 ; 0       ;
 ;      - matrixRegister:u_matrixRegister|matrix[7]              ; 0                 ; 0       ;
 ;      - matrixRegister:u_matrixRegister|matrix[8]              ; 0                 ; 0       ;
-;      - MEF:mef_inst|current_state.S1                          ; 0                 ; 0       ;
-;      - MEF:mef_inst|current_state.S7                          ; 0                 ; 0       ;
 ;      - MEF:mef_inst|current_state.S0                          ; 0                 ; 0       ;
+;      - MEF:mef_inst|current_state.S2                          ; 0                 ; 0       ;
 ;      - MEF:mef_inst|current_state.S6                          ; 0                 ; 0       ;
+;      - MEF:mef_inst|current_state.S5                          ; 0                 ; 0       ;
+;      - MEF:mef_inst|current_state.S1                          ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[2]~_emulated ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[2]~10        ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[3]~_emulated ; 0                 ; 0       ;
@@ -1692,7 +1702,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - matrixControl:u_matrixControl|temp_matrix[7]~_emulated ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[7]~30        ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[3]                 ; 0                 ; 0       ;
-;      - MEF:mef_inst|current_state.S2                          ; 0                 ; 0       ;
+;      - MEF:mef_inst|current_state.S7                          ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[1]                 ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[0]                 ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[2]                 ; 0                 ; 0       ;
@@ -1706,33 +1716,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - matrixControl:u_matrixControl|temp_matrix[5]~21        ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[6]~25        ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|temp_matrix[7]~29        ; 0                 ; 0       ;
-;      - MEF:mef_inst|estado[1]~DUPLICATE                       ; 0                 ; 0       ;
+;      - MEF:mef_inst|estado[0]~DUPLICATE                       ; 0                 ; 0       ;
 ;      - MEF:mef_inst|estado[2]~DUPLICATE                       ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[3]~DUPLICATE       ; 0                 ; 0       ;
 ;      - matrixControl:u_matrixControl|index[0]~DUPLICATE       ; 0                 ; 0       ;
 ; I                                                             ;                   ;         ;
 ;      - matrixControl:u_matrixControl|load~0                   ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector0~0                               ; 0                 ; 0       ;
-;      - TopCounter:counter_inst|counter15[0]~0                 ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector3~0                               ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector2~1                               ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector1~0                               ; 0                 ; 0       ;
-;      - TopCounter:counter_inst|counter15[0]~8                 ; 0                 ; 0       ;
-; A                                                             ;                   ;         ;
-;      - MEF:mef_inst|Selector0~1                               ; 1                 ; 0       ;
-;      - MEF:mef_inst|Selector1~0                               ; 1                 ; 0       ;
-; T                                                             ;                   ;         ;
+;      - MEF:mef_inst|Selector1~1                               ; 0                 ; 0       ;
+;      - MEF:mef_inst|Selector3~1                               ; 0                 ; 0       ;
+;      - MEF:mef_inst|Selector1~2                               ; 0                 ; 0       ;
 ;      - MEF:mef_inst|Selector0~1                               ; 0                 ; 0       ;
-;      - MEF:mef_inst|current_state.S0~0                        ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector2~0                               ; 0                 ; 0       ;
-; B                                                             ;                   ;         ;
-;      - TopCounter:counter_inst|counter15[0]~0                 ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector3~0                               ; 0                 ; 0       ;
-;      - MEF:mef_inst|Selector2~1                               ; 0                 ; 0       ;
-;      - TopCounter:counter_inst|counter15[0]~8                 ; 0                 ; 0       ;
-; J1                                                            ;                   ;         ;
-;      - MEF:mef_inst|current_state.S0~0                        ; 1                 ; 0       ;
+;      - MEF:mef_inst|Selector4~0                               ; 0                 ; 0       ;
+; A                                                             ;                   ;         ;
+;      - MEF:mef_inst|next_state_enum.S0~0                      ; 1                 ; 0       ;
+;      - MEF:mef_inst|Selector1~0                               ; 1                 ; 0       ;
+;      - MEF:mef_inst|Selector1~2                               ; 1                 ; 0       ;
 ;      - MEF:mef_inst|Selector2~0                               ; 1                 ; 0       ;
+;      - MEF:mef_inst|Selector0~0                               ; 1                 ; 0       ;
+; T                                                             ;                   ;         ;
+;      - MEF:mef_inst|next_state_enum.S0~0                      ; 0                 ; 0       ;
+;      - MEF:mef_inst|Selector2~0                               ; 0                 ; 0       ;
+;      - MEF:mef_inst|Selector0~0                               ; 0                 ; 0       ;
+; J1                                                            ;                   ;         ;
+;      - MEF:mef_inst|Selector3~0                               ; 1                 ; 0       ;
+;      - MEF:mef_inst|Selector2~0                               ; 1                 ; 0       ;
+; B                                                             ;                   ;         ;
+;      - MEF:mef_inst|Selector3~2                               ; 0                 ; 0       ;
+;      - MEF:mef_inst|Selector4~0                               ; 0                 ; 0       ;
 ; W                                                             ;                   ;         ;
 ;      - Debounce:debounce_inst|my_dff_en:d0|Q                  ; 0                 ; 0       ;
 +---------------------------------------------------------------+-------------------+---------+
@@ -1743,20 +1753,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                        ; Location             ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Debounce:debounce_inst|clock_enable:u1|Equal0~6             ; LABCELL_X88_Y27_N3   ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Debounce:debounce_inst|clock_enable:u1|LessThan0~1          ; LABCELL_X88_Y27_N12  ; 31      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Debounce:debounce_inst|pb_out                               ; LABCELL_X88_Y27_N9   ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; TopCounter:counter_inst|Counter:counter_chain[0].u|Equal0~5 ; LABCELL_X88_Y19_N9   ; 34      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; TopCounter:counter_inst|counter15[0]~4                      ; LABCELL_X81_Y19_N48  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; TopCounter:counter_inst|reset_all                           ; FF_X88_Y18_N59       ; 34      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; Debounce:debounce_inst|clock_enable:u1|Equal0~6             ; MLABCELL_X82_Y11_N24 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Debounce:debounce_inst|clock_enable:u1|LessThan0~1          ; LABCELL_X81_Y11_N54  ; 39      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Debounce:debounce_inst|pb_out                               ; MLABCELL_X82_Y11_N42 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; TopCounter:counter_inst|Counter:counter_chain[0].u|Equal0~5 ; LABCELL_X88_Y15_N6   ; 32      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; TopCounter:counter_inst|counter15[0]~1                      ; MLABCELL_X87_Y15_N45 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; TopCounter:counter_inst|reset_all                           ; FF_X87_Y14_N47       ; 32      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
 ; clk                                                         ; PIN_AF14             ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk                                                         ; PIN_AF14             ; 108     ; Clock                      ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; matrixControl:u_matrixControl|load                          ; FF_X83_Y19_N8        ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; matrixControl:u_matrixControl|load~0                        ; LABCELL_X83_Y19_N6   ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; pll:vgapll|toggle                                           ; FF_X47_Y11_N56       ; 24      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; rst                                                         ; PIN_AA30             ; 58      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; vgaController:vgaCont|Equal0~1                              ; MLABCELL_X47_Y10_N57 ; 22      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vgaController:vgaCont|Equal1~1                              ; MLABCELL_X47_Y11_N57 ; 11      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; clk                                                         ; PIN_AF14             ; 115     ; Clock                      ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; matrixControl:u_matrixControl|load                          ; FF_X83_Y15_N14       ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; matrixControl:u_matrixControl|load~0                        ; LABCELL_X83_Y15_N12  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; pll:vgapll|toggle                                           ; FF_X51_Y12_N5        ; 26      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; rst                                                         ; PIN_AA30             ; 59      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; vgaController:vgaCont|Equal0~1                              ; LABCELL_X51_Y12_N45  ; 24      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vgaController:vgaCont|Equal1~1                              ; LABCELL_X51_Y13_N39  ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1765,7 +1775,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_AF14 ; 108     ; Global Clock         ; GCLK6            ; --                        ;
+; clk  ; PIN_AF14 ; 115     ; Global Clock         ; GCLK6            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1788,42 +1798,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                       ; Mode                  ; Location       ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
 +----------------------------+-----------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 ; videoGen:vgagen|Mult18~8   ; Two Independent 18x18 ; DSP_X32_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult4~136  ; Two Independent 18x18 ; DSP_X32_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult5~8    ; Two Independent 18x18 ; DSP_X32_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult4~477  ; Sum of two 18x18      ; DSP_X54_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult6~136  ; Two Independent 18x18 ; DSP_X54_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult7~8    ; Two Independent 18x18 ; DSP_X86_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult6~477  ; Sum of two 18x18      ; DSP_X54_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult16~136 ; Two Independent 18x18 ; DSP_X32_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult17~8   ; Two Independent 18x18 ; DSP_X32_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult16~477 ; Sum of two 18x18      ; DSP_X32_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult0~136  ; Two Independent 18x18 ; DSP_X20_Y4_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult1~8    ; Two Independent 18x18 ; DSP_X20_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult0~477  ; Sum of two 18x18      ; DSP_X32_Y4_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult2~136  ; Two Independent 18x18 ; DSP_X32_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult3~8    ; Two Independent 18x18 ; DSP_X32_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult2~477  ; Sum of two 18x18      ; DSP_X32_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult8~136  ; Two Independent 18x18 ; DSP_X54_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult9~8    ; Two Independent 18x18 ; DSP_X54_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult8~477  ; Sum of two 18x18      ; DSP_X54_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult10~136 ; Two Independent 18x18 ; DSP_X54_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult11~8   ; Two Independent 18x18 ; DSP_X54_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult10~477 ; Sum of two 18x18      ; DSP_X54_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult12~136 ; Two Independent 18x18 ; DSP_X20_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult13~8   ; Two Independent 18x18 ; DSP_X20_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult12~477 ; Sum of two 18x18      ; DSP_X20_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult14~136 ; Two Independent 18x18 ; DSP_X32_Y24_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult15~8   ; Two Independent 18x18 ; DSP_X32_Y26_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult14~477 ; Sum of two 18x18      ; DSP_X54_Y24_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult5~405  ; Sum of two 18x18      ; DSP_X20_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult7~405  ; Sum of two 18x18      ; DSP_X86_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult17~405 ; Sum of two 18x18      ; DSP_X20_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult1~405  ; Sum of two 18x18      ; DSP_X20_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult3~405  ; Sum of two 18x18      ; DSP_X20_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult9~405  ; Sum of two 18x18      ; DSP_X86_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult11~405 ; Sum of two 18x18      ; DSP_X86_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult13~405 ; Sum of two 18x18      ; DSP_X20_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; videoGen:vgagen|Mult15~405 ; Sum of two 18x18      ; DSP_X20_Y24_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult4~136  ; Two Independent 18x18 ; DSP_X20_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult5~8    ; Two Independent 18x18 ; DSP_X20_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult4~477  ; Sum of two 18x18      ; DSP_X20_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult6~136  ; Two Independent 18x18 ; DSP_X32_Y26_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult7~8    ; Two Independent 18x18 ; DSP_X20_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult6~477  ; Sum of two 18x18      ; DSP_X54_Y24_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult16~136 ; Two Independent 18x18 ; DSP_X54_Y4_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult17~8   ; Two Independent 18x18 ; DSP_X54_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult16~477 ; Sum of two 18x18      ; DSP_X54_Y2_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult0~136  ; Two Independent 18x18 ; DSP_X32_Y24_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult1~8    ; Two Independent 18x18 ; DSP_X32_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult0~477  ; Sum of two 18x18      ; DSP_X54_Y26_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult2~136  ; Two Independent 18x18 ; DSP_X20_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult3~8    ; Two Independent 18x18 ; DSP_X20_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult2~477  ; Sum of two 18x18      ; DSP_X20_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult8~136  ; Two Independent 18x18 ; DSP_X32_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult9~8    ; Two Independent 18x18 ; DSP_X32_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult8~477  ; Sum of two 18x18      ; DSP_X32_Y4_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult10~136 ; Two Independent 18x18 ; DSP_X20_Y4_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult11~8   ; Two Independent 18x18 ; DSP_X20_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult10~477 ; Sum of two 18x18      ; DSP_X20_Y2_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult12~136 ; Two Independent 18x18 ; DSP_X54_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult13~8   ; Two Independent 18x18 ; DSP_X54_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult12~477 ; Sum of two 18x18      ; DSP_X54_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult14~136 ; Two Independent 18x18 ; DSP_X54_Y10_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult15~8   ; Two Independent 18x18 ; DSP_X54_Y12_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult14~477 ; Sum of two 18x18      ; DSP_X32_Y2_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult5~405  ; Sum of two 18x18      ; DSP_X20_Y20_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult7~405  ; Sum of two 18x18      ; DSP_X32_Y22_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult17~405 ; Sum of two 18x18      ; DSP_X54_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult1~405  ; Sum of two 18x18      ; DSP_X32_Y18_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult3~405  ; Sum of two 18x18      ; DSP_X32_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult9~405  ; Sum of two 18x18      ; DSP_X32_Y8_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult11~405 ; Sum of two 18x18      ; DSP_X32_Y6_N0  ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult13~405 ; Sum of two 18x18      ; DSP_X54_Y16_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; videoGen:vgagen|Mult15~405 ; Sum of two 18x18      ; DSP_X54_Y14_N0 ; Unsigned            ; no                     ; no                     ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
 +----------------------------+-----------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
@@ -1832,14 +1842,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+---------------------------+
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Block interconnects                         ; 2,633 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 57 / 13,420 ( < 1 % )     ;
-; C2 interconnects                            ; 1,283 / 119,108 ( 1 % )   ;
-; C4 interconnects                            ; 783 / 56,300 ( 1 % )      ;
+; Block interconnects                         ; 2,798 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 80 / 13,420 ( < 1 % )     ;
+; C2 interconnects                            ; 1,499 / 119,108 ( 1 % )   ;
+; C4 interconnects                            ; 892 / 56,300 ( 2 % )      ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 93 / 289,320 ( < 1 % )    ;
+; Direct links                                ; 147 / 289,320 ( < 1 % )   ;
 ; Global clocks                               ; 1 / 16 ( 6 % )            ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -1895,13 +1905,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 365 / 84,580 ( < 1 % )    ;
+; Local interconnects                         ; 453 / 84,580 ( < 1 % )    ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 218 / 12,676 ( 2 % )      ;
+; R14 interconnects                           ; 196 / 12,676 ( 2 % )      ;
 ; R14/C12 interconnect drivers                ; 236 / 20,720 ( 1 % )      ;
-; R3 interconnects                            ; 1,649 / 130,992 ( 1 % )   ;
-; R6 interconnects                            ; 2,650 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 2 / 360 ( < 1 % )         ;
+; R3 interconnects                            ; 1,588 / 130,992 ( 1 % )   ;
+; R6 interconnects                            ; 2,156 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 1 / 360 ( < 1 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
 
@@ -2030,8 +2040,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; A                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; T                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; B                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; J1                 ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; B                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; W                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
@@ -2084,11 +2094,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+----------------------+-------------------+
 ; Source Clock(s)   ; Destination Clock(s) ; Delay Added in ns ;
 +-------------------+----------------------+-------------------+
-; I/O               ; clk                  ; 38.0              ;
-; rst               ; clk                  ; 16.2              ;
-; clk               ; clk                  ; 15.0              ;
-; clk               ; rst                  ; 11.5              ;
-; pll:vgapll|toggle ; pll:vgapll|toggle    ; 5.8               ;
+; I/O               ; clk                  ; 30.6              ;
+; clk               ; clk                  ; 16.7              ;
+; rst               ; clk                  ; 13.5              ;
+; clk               ; rst                  ; 11.9              ;
+; pll:vgapll|toggle ; pll:vgapll|toggle    ; 6.6               ;
 +-------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2099,74 +2109,74 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------------------------------+--------------------------------------------------------+-------------------+
 ; Source Register                                        ; Destination Register                                   ; Delay Added in ns ;
 +--------------------------------------------------------+--------------------------------------------------------+-------------------+
-; pll:vgapll|toggle                                      ; pll:vgapll|toggle                                      ; 5.319             ;
-; rst                                                    ; matrixRegister:u_matrixRegister|matrix[5]              ; 2.574             ;
-; matrixRegister:u_matrixRegister|matrix[2]              ; matrixControl:u_matrixControl|temp_matrix[2]~9         ; 1.312             ;
-; matrixRegister:u_matrixRegister|matrix[7]              ; matrixControl:u_matrixControl|temp_matrix[7]~29        ; 1.299             ;
-; matrixRegister:u_matrixRegister|matrix[1]              ; matrixControl:u_matrixControl|temp_matrix[1]~5         ; 1.299             ;
-; matrixRegister:u_matrixRegister|matrix[5]              ; matrixControl:u_matrixControl|temp_matrix[5]~21        ; 1.293             ;
-; matrixRegister:u_matrixRegister|matrix[3]              ; matrixControl:u_matrixControl|temp_matrix[3]~13        ; 1.293             ;
-; matrixRegister:u_matrixRegister|matrix[0]              ; matrixControl:u_matrixControl|temp_matrix[0]~1         ; 1.293             ;
-; matrixRegister:u_matrixRegister|matrix[4]              ; matrixControl:u_matrixControl|temp_matrix[4]~17        ; 1.249             ;
-; matrixRegister:u_matrixRegister|matrix[6]              ; matrixControl:u_matrixControl|temp_matrix[6]~25        ; 1.245             ;
-; matrixRegister:u_matrixRegister|matrix[8]              ; matrixControl:u_matrixControl|temp_matrix[8]~33        ; 1.245             ;
-; matrixControl:u_matrixControl|temp_matrix[7]~29        ; matrixRegister:u_matrixRegister|matrix[7]              ; 0.935             ;
-; matrixControl:u_matrixControl|temp_matrix[3]~13        ; matrixRegister:u_matrixRegister|matrix[3]              ; 0.929             ;
-; matrixControl:u_matrixControl|temp_matrix[0]~1         ; matrixRegister:u_matrixRegister|matrix[0]              ; 0.929             ;
-; matrixControl:u_matrixControl|temp_matrix[8]~33        ; matrixControl:u_matrixControl|temp_matrix[8]~_emulated ; 0.917             ;
-; matrixControl:u_matrixControl|temp_matrix[2]~9         ; matrixControl:u_matrixControl|temp_matrix[2]~_emulated ; 0.917             ;
-; matrixControl:u_matrixControl|temp_matrix[1]~5         ; matrixRegister:u_matrixRegister|matrix[1]              ; 0.913             ;
-; matrixControl:u_matrixControl|temp_matrix[4]~17        ; matrixControl:u_matrixControl|temp_matrix[4]~_emulated ; 0.909             ;
-; matrixControl:u_matrixControl|temp_matrix[6]~25        ; matrixControl:u_matrixControl|temp_matrix[6]~_emulated ; 0.907             ;
-; matrixControl:u_matrixControl|temp_matrix[5]~21        ; matrixRegister:u_matrixRegister|matrix[5]              ; 0.884             ;
-; vgaController:vgaCont|y[5]                             ; vgaController:vgaCont|y[5]                             ; 0.447             ;
-; vgaController:vgaCont|y[6]                             ; vgaController:vgaCont|y[6]                             ; 0.390             ;
-; vgaController:vgaCont|y[3]                             ; vgaController:vgaCont|y[5]                             ; 0.362             ;
-; vgaController:vgaCont|x[5]                             ; vgaController:vgaCont|x[5]                             ; 0.349             ;
-; vgaController:vgaCont|x[8]                             ; vgaController:vgaCont|x[8]                             ; 0.343             ;
-; vgaController:vgaCont|y[2]                             ; vgaController:vgaCont|y[2]                             ; 0.333             ;
-; vgaController:vgaCont|y[1]                             ; vgaController:vgaCont|y[2]                             ; 0.333             ;
-; vgaController:vgaCont|y[0]                             ; vgaController:vgaCont|y[2]                             ; 0.333             ;
-; vgaController:vgaCont|x[6]                             ; vgaController:vgaCont|x[8]                             ; 0.333             ;
-; vgaController:vgaCont|y[4]                             ; vgaController:vgaCont|y[5]                             ; 0.325             ;
-; vgaController:vgaCont|y[8]                             ; vgaController:vgaCont|y[8]                             ; 0.322             ;
-; MEF:mef_inst|current_state.S6                          ; MEF:mef_inst|current_state.S7                          ; 0.317             ;
-; MEF:mef_inst|current_state.S1                          ; MEF:mef_inst|estado[1]                                 ; 0.302             ;
-; matrixControl:u_matrixControl|temp_matrix[4]~_emulated ; matrixRegister:u_matrixRegister|matrix[4]              ; 0.301             ;
-; vgaController:vgaCont|y[7]                             ; vgaController:vgaCont|y[7]                             ; 0.298             ;
-; MEF:mef_inst|estado[2]                                 ; TopCounter:counter_inst|counter15[1]                   ; 0.294             ;
-; vgaController:vgaCont|x[7]                             ; vgaController:vgaCont|x[8]                             ; 0.292             ;
-; matrixControl:u_matrixControl|temp_matrix[6]~_emulated ; matrixRegister:u_matrixRegister|matrix[6]              ; 0.285             ;
-; matrixControl:u_matrixControl|temp_matrix[8]~_emulated ; matrixRegister:u_matrixRegister|matrix[8]              ; 0.285             ;
-; matrixControl:u_matrixControl|index[1]                 ; matrixControl:u_matrixControl|index[2]                 ; 0.281             ;
-; vgaController:vgaCont|x[2]                             ; vgaController:vgaCont|x[2]                             ; 0.269             ;
-; vgaController:vgaCont|x[1]                             ; vgaController:vgaCont|x[2]                             ; 0.269             ;
-; vgaController:vgaCont|x[0]                             ; vgaController:vgaCont|x[2]                             ; 0.269             ;
-; MEF:mef_inst|estado[1]                                 ; TopCounter:counter_inst|counter15[1]                   ; 0.264             ;
-; vgaController:vgaCont|x[4]                             ; vgaController:vgaCont|x[4]                             ; 0.263             ;
-; vgaController:vgaCont|x[3]                             ; vgaController:vgaCont|x[4]                             ; 0.263             ;
-; matrixControl:u_matrixControl|index[0]                 ; matrixControl:u_matrixControl|index[2]                 ; 0.261             ;
-; MEF:mef_inst|current_state.S7                          ; MEF:mef_inst|current_state.S6                          ; 0.259             ;
-; MEF:mef_inst|current_state.S0                          ; MEF:mef_inst|estado[1]                                 ; 0.259             ;
-; matrixControl:u_matrixControl|index[2]                 ; matrixControl:u_matrixControl|index[1]                 ; 0.259             ;
-; TopCounter:counter_inst|counter15[3]                   ; MEF:mef_inst|current_state.S2                          ; 0.243             ;
-; matrixControl:u_matrixControl|temp_matrix[5]~_emulated ; matrixRegister:u_matrixRegister|matrix[5]              ; 0.234             ;
-; matrixControl:u_matrixControl|temp_matrix[7]~_emulated ; matrixRegister:u_matrixRegister|matrix[7]              ; 0.234             ;
-; TopCounter:counter_inst|counter15[1]                   ; MEF:mef_inst|current_state.S2                          ; 0.211             ;
-; TopCounter:counter_inst|counter15[2]                   ; MEF:mef_inst|current_state.S2                          ; 0.209             ;
-; TopCounter:counter_inst|counter15[0]                   ; TopCounter:counter_inst|counter15[1]                   ; 0.208             ;
-; MEF:mef_inst|estado[0]                                 ; TopCounter:counter_inst|counter15[1]                   ; 0.201             ;
-; MEF:mef_inst|current_state.S2                          ; TopCounter:counter_inst|counter15[1]                   ; 0.175             ;
-; vgaController:vgaCont|y[9]                             ; vgaController:vgaCont|y[3]                             ; 0.162             ;
-; matrixControl:u_matrixControl|temp_matrix[0]~_emulated ; matrixRegister:u_matrixRegister|matrix[0]              ; 0.157             ;
-; matrixControl:u_matrixControl|temp_matrix[3]~_emulated ; matrixRegister:u_matrixRegister|matrix[3]              ; 0.153             ;
-; matrixControl:u_matrixControl|index[3]                 ; matrixControl:u_matrixControl|temp_matrix[3]~_emulated ; 0.147             ;
-; vgaController:vgaCont|x[9]                             ; vgaController:vgaCont|x[9]                             ; 0.143             ;
-; matrixControl:u_matrixControl|temp_matrix[1]~_emulated ; matrixRegister:u_matrixRegister|matrix[1]              ; 0.141             ;
-; matrixControl:u_matrixControl|temp_matrix[2]~_emulated ; matrixRegister:u_matrixRegister|matrix[2]              ; 0.137             ;
-; A                                                      ; TopCounter:counter_inst|counter15[1]                   ; 0.135             ;
-; T                                                      ; TopCounter:counter_inst|counter15[1]                   ; 0.135             ;
-; I                                                      ; TopCounter:counter_inst|counter15[1]                   ; 0.135             ;
+; pll:vgapll|toggle                                      ; pll:vgapll|toggle                                      ; 5.463             ;
+; rst                                                    ; matrixRegister:u_matrixRegister|matrix[0]              ; 2.298             ;
+; matrixRegister:u_matrixRegister|matrix[1]              ; matrixControl:u_matrixControl|temp_matrix[1]~5         ; 1.337             ;
+; matrixRegister:u_matrixRegister|matrix[2]              ; matrixControl:u_matrixControl|temp_matrix[2]~9         ; 1.337             ;
+; matrixRegister:u_matrixRegister|matrix[5]              ; matrixControl:u_matrixControl|temp_matrix[5]~21        ; 1.332             ;
+; matrixRegister:u_matrixRegister|matrix[7]              ; matrixControl:u_matrixControl|temp_matrix[7]~29        ; 1.326             ;
+; matrixRegister:u_matrixRegister|matrix[3]              ; matrixControl:u_matrixControl|temp_matrix[3]~13        ; 1.326             ;
+; matrixRegister:u_matrixRegister|matrix[8]              ; matrixControl:u_matrixControl|temp_matrix[8]~33        ; 1.326             ;
+; matrixRegister:u_matrixRegister|matrix[4]              ; matrixControl:u_matrixControl|temp_matrix[4]~17        ; 1.326             ;
+; matrixRegister:u_matrixRegister|matrix[6]              ; matrixControl:u_matrixControl|temp_matrix[6]~25        ; 1.322             ;
+; matrixRegister:u_matrixRegister|matrix[0]              ; matrixControl:u_matrixControl|temp_matrix[0]~1         ; 1.316             ;
+; matrixControl:u_matrixControl|temp_matrix[1]~5         ; matrixControl:u_matrixControl|temp_matrix[1]~_emulated ; 0.848             ;
+; matrixControl:u_matrixControl|temp_matrix[8]~33        ; matrixControl:u_matrixControl|temp_matrix[8]~_emulated ; 0.843             ;
+; matrixControl:u_matrixControl|temp_matrix[2]~9         ; matrixControl:u_matrixControl|temp_matrix[2]~_emulated ; 0.838             ;
+; matrixControl:u_matrixControl|temp_matrix[5]~21        ; matrixControl:u_matrixControl|temp_matrix[5]~_emulated ; 0.826             ;
+; matrixControl:u_matrixControl|temp_matrix[0]~1         ; matrixRegister:u_matrixRegister|matrix[0]              ; 0.801             ;
+; matrixControl:u_matrixControl|temp_matrix[6]~25        ; matrixRegister:u_matrixRegister|matrix[6]              ; 0.786             ;
+; matrixControl:u_matrixControl|temp_matrix[3]~13        ; matrixRegister:u_matrixRegister|matrix[3]              ; 0.778             ;
+; matrixControl:u_matrixControl|temp_matrix[7]~29        ; matrixRegister:u_matrixRegister|matrix[7]              ; 0.778             ;
+; matrixControl:u_matrixControl|temp_matrix[4]~17        ; matrixRegister:u_matrixRegister|matrix[4]              ; 0.778             ;
+; vgaController:vgaCont|x[6]                             ; vgaController:vgaCont|y[3]                             ; 0.521             ;
+; vgaController:vgaCont|x[5]                             ; vgaController:vgaCont|y[3]                             ; 0.491             ;
+; vgaController:vgaCont|x[9]                             ; vgaController:vgaCont|y[3]                             ; 0.435             ;
+; vgaController:vgaCont|x[8]                             ; vgaController:vgaCont|y[3]                             ; 0.416             ;
+; vgaController:vgaCont|x[7]                             ; vgaController:vgaCont|y[3]                             ; 0.394             ;
+; vgaController:vgaCont|y[5]                             ; vgaController:vgaCont|y[5]                             ; 0.394             ;
+; vgaController:vgaCont|x[4]                             ; vgaController:vgaCont|y[3]                             ; 0.377             ;
+; vgaController:vgaCont|x[3]                             ; vgaController:vgaCont|y[3]                             ; 0.359             ;
+; vgaController:vgaCont|y[6]                             ; vgaController:vgaCont|y[6]                             ; 0.349             ;
+; vgaController:vgaCont|y[8]                             ; vgaController:vgaCont|y[8]                             ; 0.331             ;
+; vgaController:vgaCont|x[2]                             ; vgaController:vgaCont|y[3]                             ; 0.322             ;
+; TopCounter:counter_inst|counter15[0]                   ; TopCounter:counter_inst|counter15[1]                   ; 0.317             ;
+; matrixControl:u_matrixControl|index[1]                 ; matrixControl:u_matrixControl|index[3]                 ; 0.315             ;
+; matrixControl:u_matrixControl|index[0]                 ; matrixControl:u_matrixControl|index[3]                 ; 0.313             ;
+; MEF:mef_inst|estado[2]                                 ; TopCounter:counter_inst|counter15[0]                   ; 0.310             ;
+; matrixControl:u_matrixControl|temp_matrix[5]~_emulated ; matrixRegister:u_matrixRegister|matrix[5]              ; 0.307             ;
+; matrixControl:u_matrixControl|temp_matrix[2]~_emulated ; matrixRegister:u_matrixRegister|matrix[2]              ; 0.307             ;
+; matrixControl:u_matrixControl|temp_matrix[8]~_emulated ; matrixRegister:u_matrixRegister|matrix[8]              ; 0.305             ;
+; matrixControl:u_matrixControl|index[3]                 ; matrixControl:u_matrixControl|index[2]                 ; 0.304             ;
+; vgaController:vgaCont|y[3]                             ; vgaController:vgaCont|y[5]                             ; 0.303             ;
+; vgaController:vgaCont|y[7]                             ; vgaController:vgaCont|y[7]                             ; 0.301             ;
+; matrixControl:u_matrixControl|temp_matrix[1]~_emulated ; matrixRegister:u_matrixRegister|matrix[1]              ; 0.291             ;
+; TopCounter:counter_inst|counter15[1]                   ; TopCounter:counter_inst|counter15[1]                   ; 0.286             ;
+; vgaController:vgaCont|x[1]                             ; vgaController:vgaCont|y[3]                             ; 0.276             ;
+; vgaController:vgaCont|x[0]                             ; vgaController:vgaCont|y[3]                             ; 0.276             ;
+; vgaController:vgaCont|y[2]                             ; vgaController:vgaCont|y[2]                             ; 0.275             ;
+; vgaController:vgaCont|y[1]                             ; vgaController:vgaCont|y[2]                             ; 0.275             ;
+; vgaController:vgaCont|y[0]                             ; vgaController:vgaCont|y[2]                             ; 0.275             ;
+; MEF:mef_inst|current_state.S2                          ; MEF:mef_inst|estado[0]                                 ; 0.271             ;
+; matrixControl:u_matrixControl|index[2]                 ; matrixControl:u_matrixControl|index[3]                 ; 0.270             ;
+; vgaController:vgaCont|y[4]                             ; vgaController:vgaCont|y[5]                             ; 0.270             ;
+; MEF:mef_inst|current_state.S6                          ; MEF:mef_inst|current_state.S7                          ; 0.263             ;
+; MEF:mef_inst|current_state.S5                          ; TopCounter:counter_inst|counter15[3]                   ; 0.225             ;
+; matrixControl:u_matrixControl|temp_matrix[0]~_emulated ; matrixRegister:u_matrixRegister|matrix[0]              ; 0.222             ;
+; TopCounter:counter_inst|counter15[3]                   ; MEF:mef_inst|current_state.S6                          ; 0.218             ;
+; matrixControl:u_matrixControl|temp_matrix[7]~_emulated ; matrixRegister:u_matrixRegister|matrix[7]              ; 0.208             ;
+; matrixControl:u_matrixControl|temp_matrix[6]~_emulated ; matrixRegister:u_matrixRegister|matrix[6]              ; 0.208             ;
+; matrixControl:u_matrixControl|temp_matrix[3]~_emulated ; matrixRegister:u_matrixRegister|matrix[3]              ; 0.208             ;
+; matrixControl:u_matrixControl|temp_matrix[4]~_emulated ; matrixRegister:u_matrixRegister|matrix[4]              ; 0.208             ;
+; TopCounter:counter_inst|counter15[2]                   ; MEF:mef_inst|current_state.S6                          ; 0.174             ;
+; MEF:mef_inst|estado[1]                                 ; matrixControl:u_matrixControl|temp_matrix[5]~_emulated ; 0.169             ;
+; vgaController:vgaCont|y[9]                             ; vgaController:vgaCont|y[9]                             ; 0.162             ;
+; TopCounter:counter_inst|Counter:counter_chain[0].u|t0  ; TopCounter:counter_inst|counter15[0]                   ; 0.148             ;
+; I                                                      ; MEF:mef_inst|current_state.S6                          ; 0.122             ;
+; MEF:mef_inst|current_state.S0                          ; MEF:mef_inst|current_state.S0                          ; 0.079             ;
+; A                                                      ; MEF:mef_inst|current_state.S0                          ; 0.079             ;
+; T                                                      ; MEF:mef_inst|current_state.S0                          ; 0.079             ;
+; MEF:mef_inst|estado[0]                                 ; matrixControl:u_matrixControl|temp_matrix[5]~_emulated ; 0.028             ;
 +--------------------------------------------------------+--------------------------------------------------------+-------------------+
 Note: This table only shows the top 68 path(s) that have the largest delay added for hold.
 
@@ -2185,7 +2195,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (169085): No exact pin location assignment(s) for 10 pins of 68 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clk~inputCLKENA0 with 94 fanout uses global clock CLKCTRL_G6
+    Info (11162): clk~inputCLKENA0 with 95 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Warning (335093): The Timing Analyzer is analyzing 9 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -2199,28 +2209,28 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:19
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:14
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X45_Y11 to location X55_Y22
+    Info (170196): Router estimated peak interconnect usage is 8% of the available device resources in the region that extends from location X45_Y11 to location X55_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 1.37 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.00 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/output_files/Gato.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7843 megabytes
-    Info: Processing ended: Sun Sep 29 13:14:25 2024
-    Info: Elapsed time: 00:01:19
-    Info: Total CPU time (on all processors): 00:02:57
+    Info: Peak virtual memory: 7939 megabytes
+    Info: Processing ended: Sun Sep 29 16:47:57 2024
+    Info: Elapsed time: 00:00:57
+    Info: Total CPU time (on all processors): 00:02:17
 
 
 +----------------------------+

@@ -108,6 +108,13 @@ module Main (
         .load(load), 
         .matrix(matrix_reg)
     );
+	 Pantalla_Jugadores pantalla_jugadores_inst (
+        .x(x),
+        .y(y),
+        .r(r_PantallaJugadores),
+        .g(g_PantallaJugadores),
+        .b(b_PantallaJugadores)
+    );
 
     assign matrix_out_MEF = matrix_reg;
 
@@ -129,6 +136,13 @@ module Main (
                 g = g_videoGen;
                 b = b_videoGen;
             end
+				
+				4'b0101: begin
+                r = r_PantallaJugadores;
+                g = g_PantallaJugadores;
+                b = b_PantallaJugadores;
+            end
+				
             4'b0110: begin
                 r = r_videoGen;
                 g = g_videoGen;
@@ -139,6 +153,7 @@ module Main (
                 g = g_videoGen;
                 b = b_videoGen;
             end
+				
             default: begin
                 r = 8'b00000000;
                 g = 8'b00000000;

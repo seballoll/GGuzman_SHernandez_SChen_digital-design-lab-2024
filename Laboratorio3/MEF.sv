@@ -1,5 +1,5 @@
 module MEF (
-    input logic clk, rst, T, I, B, A, J1,
+    input logic clk, rst, T, I, B, A, J1, J2,
     input logic finished,            // Entrada desde el TopCounter
     output logic [3:0] estado,       // Salida de estado actual
     output logic [3:0] next_state    // Salida del siguiente estado
@@ -28,8 +28,8 @@ module MEF (
             S0: begin
                 if (T)
                     next_state_enum = S1;     // Cambio a S1 si T está en alto
-                else if (J1)
-                    next_state_enum = S6;     // Cambio a S6 si J1 está en alto
+                else if (A)
+                    next_state_enum = S5;     // Cambio a S6 si J1 está en alto
 					 else next_state_enum= S0;
             end
             S1: begin
@@ -43,6 +43,13 @@ module MEF (
                 if (A)
                     next_state_enum = S1;     // Regreso a S1 si A está en alto
 					 else next_state_enum= S2;
+            end
+				S5: begin
+                if (J1)
+                    next_state_enum = S6;     // Cambio a S7 si I está en bajo
+                else if (J2)            // Cambio a S7 si finished es 1
+                    next_state_enum = S7;
+					 else next_state_enum= S5;
             end
             S6: begin
                 if (!I)
