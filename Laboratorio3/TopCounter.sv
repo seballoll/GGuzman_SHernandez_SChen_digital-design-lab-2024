@@ -38,10 +38,10 @@ module TopCounter (
                 counter15 <= counter15 + 1;  // Sumar el pulso t0
             end
 				
-				if (current_state != next_state)
-				begin
-					counter15 <= 0;
-				end
+//				if (current_state != next_state)
+//				begin
+//					counter15 <= 0;
+//				end
 				
             if (|t && (current_state==4'b0110)) 
 				begin

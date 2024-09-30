@@ -1,5 +1,5 @@
 module Main (
-    input logic clk, rst, I, T, W, A, B, Z, J1, J2,
+    input logic clk, rst, I, T, W, A, B, Z, J1, J2, C,
     output logic [3:0] estado,  // Salida de estado de la MEF
     output logic vgaclk, hsync, vsync, sync_b, blank_b,  // Señales VGA
     output logic [7:0] r, g, b,  // Señales de color VGA
@@ -14,6 +14,9 @@ module Main (
     logic [9:0] x, y;
     logic [7:0] r_PantallaInicial, g_PantallaInicial, b_PantallaInicial; 
     logic [7:0] r_PantallaJugadores, g_PantallaJugadores, b_PantallaJugadores;
+	 logic [7:0] r_PantallaGJ1, g_PantallaGJ1, b_PantallaGJ1;
+	 logic [7:0] r_PantallaGJ2, g_PantallaGJ2, b_PantallaGJ2;
+	 logic [7:0] r_PantallaPJ1, g_PantallaPJ1, b_PantallaPJ1;
     logic [7:0] r_videoGen, g_videoGen, b_videoGen;  
     logic [7:0] r_black, g_black, b_black;  
     logic [3:0] count;
@@ -49,8 +52,10 @@ module Main (
         .B(B),
         .A(A),
         .J1(J1),
+		  .J2(J2),
 		  .G1(G1),
 		  .G2(G2),
+		  .C(C),
         .finished(finished),  // Conectar la salida finished del contador como entrada aquí
         .estado(estado),
 		  .next_state(next_state)
@@ -136,6 +141,31 @@ module Main (
 		  .G1(G1),
 		  .G2(G2)
 		  );
+<<<<<<< HEAD
+	 Pantalla_Gano_J1 pantalla_gano_j1 (
+		 .x(x),        // Coordenadas de píxel actual en X
+		 .y(y),        // Coordenadas de píxel actual en Y
+		 .r(r_PantallaGJ1),        // Salida de componente roja del color RGB
+		 .g(g_PantallaGJ1),        // Salida de componente verde del color RGB
+		 .b(b_PantallaGJ1)         // Salida de componente azul del color RGB
+	  );
+	  Pantalla_Gano_J2 pantalla_gano_j2 (
+		 .x(x),        // Coordenadas de píxel actual en X
+		 .y(y),        // Coordenadas de píxel actual en Y
+		 .r(r_PantallaGJ2),        // Salida de componente roja del color RGB
+		 .g(g_PantallaGJ2),        // Salida de componente verde del color RGB
+		 .b(b_PantallaGJ2)         // Salida de componente azul del color RGB
+	);
+
+	 Pantalla_Perdio_J1 pantalla_perdio_J1 (
+		 .x(x),        // Coordenadas de píxel actual en X
+		 .y(y),        // Coordenadas de píxel actual en Y
+		 .r(r_PantallaPJ1),        // Salida de componente roja del color RGB
+		 .g(g_PantallaPJ1),        // Salida de componente verde del color RGB
+		 .b(b_PantallaPJ1)         // Salida de componente azul del color RGB
+	);
+
+=======
 		  
 		  spiMaster spi_master_inst (
         .clk(clk),                 // Conectado al reloj del sistema
@@ -145,6 +175,7 @@ module Main (
         .done(done),               // Señal de finalización de transferencia
         .received_data(received_data) // Dato recibido del Arduino
     );
+>>>>>>> bc8efb8efd8a963fcc7cf14147405db2ffe858f3
 
     assign matrix_out_MEF = matrix_reg;
 
@@ -166,7 +197,17 @@ module Main (
                 g = g_videoGen;
                 b = b_videoGen;
             end
+				4'b0011: begin
+                r = r_PantallaGJ1;
+                g = g_PantallaGJ1;
+                b = b_PantallaGJ1;
+            end
 				
+				4'b0100: begin
+					r= r_PantallaPJ1;        
+					g= g_PantallaPJ1;        
+					b= b_PantallaPJ1;
+				end
 				4'b0101: begin
                 r = r_PantallaJugadores;
                 g = g_PantallaJugadores;
@@ -183,6 +224,18 @@ module Main (
                 g = g_videoGen;
                 b = b_videoGen;
             end
+				4'b1000: begin
+                r = r_PantallaGJ1;
+                g = g_PantallaGJ1;
+                b = b_PantallaGJ1;
+            end
+				4'b1001: begin
+                r = r_PantallaGJ2;
+                g = g_PantallaGJ2;
+                b = b_PantallaGJ2;
+            end
+				
+				
 				
             default: begin
                 r = 8'b00000000;

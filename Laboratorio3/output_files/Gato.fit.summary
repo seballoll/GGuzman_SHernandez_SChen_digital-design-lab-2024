@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Sep 30 12:54:38 2024
+Fitter Status : Successful - Mon Sep 30 15:10:10 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Gato
 Top-level Entity Name : Main
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,322 / 41,910 ( 3 % )
-Total registers : 2571
-Total pins : 79 / 499 ( 16 % )
+Logic utilization (in ALMs) : 1,381 / 41,910 ( 3 % )
+Total registers : 2575
+Total pins : 80 / 499 ( 16 % )
 Total virtual pins : 0
 Total block memory bits : 21,504 / 5,662,720 ( < 1 % )
 Total RAM Blocks : 5 / 553 ( < 1 % )

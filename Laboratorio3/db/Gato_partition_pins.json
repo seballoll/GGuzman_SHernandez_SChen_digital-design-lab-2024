@@ -16,6 +16,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "estado[3]",
+					"strict" : false
+				},
+				{
 					"name" : "vgaclk",
 					"strict" : false
 				},
@@ -288,7 +292,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
 					"name" : "J1",
+					"strict" : false
+				},
+				{
+					"name" : "J2",
 					"strict" : false
 				},
 				{

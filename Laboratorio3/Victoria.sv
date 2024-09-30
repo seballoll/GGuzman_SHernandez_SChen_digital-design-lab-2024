@@ -65,10 +65,10 @@ module Victoria(
 				else if (matrix[0] && matrix[8]&&matrix[16]) begin
                 G2 <= 1'b1;  // Activa g si se cumple la condición
             end
-            else begin
+           else begin
                 G1 <= 1'b0;  // De lo contrario, g permanece en 0
 					 G2 <= 1'b0;
-            end
+           end
         end
 		  end
 endmodule 

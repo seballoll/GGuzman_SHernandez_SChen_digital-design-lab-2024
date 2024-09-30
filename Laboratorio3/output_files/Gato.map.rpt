@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Gato
-Mon Sep 30 12:53:00 2024
+Mon Sep 30 15:08:30 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -60,14 +60,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 30 12:53:00 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 30 15:08:30 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Gato                                        ;
 ; Top-level Entity Name           ; Main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2526                                        ;
-; Total pins                      ; 79                                          ;
+; Total registers                 ; 2530                                        ;
+; Total pins                      ; 80                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 21,504                                      ;
 ; Total DSP Blocks                ; 37                                          ;
@@ -212,6 +212,9 @@ https://fpgasoftware.intel.com/eula.
 ; Pantalla_Jugadores.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv                                              ;             ;
 ; Main.sv                                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv                                                            ;             ;
 ; Victoria.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Victoria.sv                                                        ;             ;
+; Pantalla_Gano_J1.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv                                                ;             ;
+; Pantalla_Gano_J2.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv                                                ;             ;
+; Pantalla_Perdio_J1.sv                                              ; yes             ; User SystemVerilog HDL File                  ; C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv                                              ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                                                       ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                                                  ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                                                     ;             ;
@@ -276,27 +279,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1569      ;
+; Estimate of Logic utilization (ALMs needed) ; 1597      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1653      ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 250       ;
-;     -- 5 input functions                    ; 322       ;
-;     -- 4 input functions                    ; 226       ;
-;     -- <=3 input functions                  ; 853       ;
+; Combinational ALUT usage for logic          ; 1716      ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 261       ;
+;     -- 5 input functions                    ; 357       ;
+;     -- 4 input functions                    ; 242       ;
+;     -- <=3 input functions                  ; 852       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2526      ;
+; Dedicated logic registers                   ; 2530      ;
 ;                                             ;           ;
-; I/O pins                                    ; 79        ;
+; I/O pins                                    ; 80        ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 21504     ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 37        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1737      ;
-; Total fan-out                               ; 17395     ;
-; Average fan-out                             ; 3.82      ;
+; Maximum fan-out                             ; 1741      ;
+; Total fan-out                               ; 17740     ;
+; Average fan-out                             ; 3.84      ;
 +---------------------------------------------+-----------+
 
 
@@ -305,7 +308,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Main                                                                                                                                   ; 1653 (16)           ; 2526 (0)                  ; 21504             ; 37         ; 79   ; 0            ; |Main                                                                                                                                                                                                                                                                                                                                            ; Main                              ; work         ;
+; |Main                                                                                                                                   ; 1716 (22)           ; 2530 (0)                  ; 21504             ; 37         ; 80   ; 0            ; |Main                                                                                                                                                                                                                                                                                                                                            ; Main                              ; work         ;
 ;    |Debounce:debounce_inst1|                                                                                                            ; 29 (0)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst1                                                                                                                                                                                                                                                                                                                    ; Debounce                          ; work         ;
 ;       |clock_enable:u1|                                                                                                                 ; 29 (29)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst1|clock_enable:u1                                                                                                                                                                                                                                                                                                    ; clock_enable                      ; work         ;
 ;       |my_dff_en:d0|                                                                                                                    ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Debounce:debounce_inst1|my_dff_en:d0                                                                                                                                                                                                                                                                                                       ; my_dff_en                         ; work         ;
@@ -319,10 +322,12 @@ https://fpgasoftware.intel.com/eula.
 ;    |DisplayController:display_inst|                                                                                                     ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst                                                                                                                                                                                                                                                                                                             ; DisplayController                 ; work         ;
 ;       |BinaryToBCD:bcd_conv|                                                                                                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|BinaryToBCD:bcd_conv                                                                                                                                                                                                                                                                                        ; BinaryToBCD                       ; work         ;
 ;       |HexTo7Segment:display2|                                                                                                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|DisplayController:display_inst|HexTo7Segment:display2                                                                                                                                                                                                                                                                                      ; HexTo7Segment                     ; work         ;
-;    |MEF:mef_inst|                                                                                                                       ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                                                                                                                                                                                                                                                                                                               ; MEF                               ; work         ;
-;    |Pantalla_Inicial:pantallaInicial|                                                                                                   ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                                                                                                                                                                                                                                                                                                           ; Pantalla_Inicial                  ; work         ;
-;    |Pantalla_Jugadores:pantalla_jugadores_inst|                                                                                         ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Jugadores:pantalla_jugadores_inst                                                                                                                                                                                                                                                                                                 ; Pantalla_Jugadores                ; work         ;
-;    |TopCounter:counter_inst|                                                                                                            ; 42 (9)              ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                                                                                                                                                                                                                                                                                                                    ; TopCounter                        ; work         ;
+;    |MEF:mef_inst|                                                                                                                       ; 17 (17)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|MEF:mef_inst                                                                                                                                                                                                                                                                                                                               ; MEF                               ; work         ;
+;    |Pantalla_Gano_J1:pantalla_gano_j1|                                                                                                  ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Gano_J1:pantalla_gano_j1                                                                                                                                                                                                                                                                                                          ; Pantalla_Gano_J1                  ; work         ;
+;    |Pantalla_Inicial:pantallaInicial|                                                                                                   ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Inicial:pantallaInicial                                                                                                                                                                                                                                                                                                           ; Pantalla_Inicial                  ; work         ;
+;    |Pantalla_Jugadores:pantalla_jugadores_inst|                                                                                         ; 92 (92)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Jugadores:pantalla_jugadores_inst                                                                                                                                                                                                                                                                                                 ; Pantalla_Jugadores                ; work         ;
+;    |Pantalla_Perdio_J1:pantalla_perdio_J1|                                                                                              ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Pantalla_Perdio_J1:pantalla_perdio_J1                                                                                                                                                                                                                                                                                                      ; Pantalla_Perdio_J1                ; work         ;
+;    |TopCounter:counter_inst|                                                                                                            ; 41 (8)              ; 33 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst                                                                                                                                                                                                                                                                                                                    ; TopCounter                        ; work         ;
 ;       |Counter:counter_chain[0].u|                                                                                                      ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|TopCounter:counter_inst|Counter:counter_chain[0].u                                                                                                                                                                                                                                                                                         ; Counter                           ; work         ;
 ;    |Victoria:victory|                                                                                                                   ; 10 (10)             ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|Victoria:victory                                                                                                                                                                                                                                                                                                                           ; Victoria                          ; work         ;
 ;    |matrixControl:u_matrixControl|                                                                                                      ; 100 (100)           ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|matrixControl:u_matrixControl                                                                                                                                                                                                                                                                                                              ; matrixControl                     ; work         ;
@@ -536,8 +541,8 @@ https://fpgasoftware.intel.com/eula.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 1 (1)               ; 168 (168)                 ; 0                 ; 0          ; 0    ; 0            ; |Main|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |vgaController:vgaCont|                                                                                                              ; 32 (32)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                                                                                                                                                                                                                                                                                                      ; vgaController                     ; work         ;
-;    |videoGen:vgagen|                                                                                                                    ; 759 (759)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                                                                                                                                                                                                                                                                                                            ; videoGen                          ; work         ;
+;    |vgaController:vgaCont|                                                                                                              ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|vgaController:vgaCont                                                                                                                                                                                                                                                                                                                      ; vgaController                     ; work         ;
+;    |videoGen:vgagen|                                                                                                                    ; 736 (736)           ; 0 (0)                     ; 0                 ; 37         ; 0    ; 0            ; |Main|videoGen:vgagen                                                                                                                                                                                                                                                                                                                            ; videoGen                          ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -578,18 +583,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Main|MEF:mef_inst|current_state                                                                                   ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; Name             ; current_state.S7 ; current_state.S6 ; current_state.S5 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
-; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
-; current_state.S2 ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
-; current_state.S5 ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
-; current_state.S6 ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S7 ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Main|MEF:mef_inst|current_state                                                                                                                                                               ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name             ; current_state.S9 ; current_state.S8 ; current_state.S7 ; current_state.S6 ; current_state.S5 ; current_state.S4 ; current_state.S3 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; current_state.S2 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; current_state.S3 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; current_state.S4 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S5 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S6 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S7 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S8 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S9 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -597,7 +606,6 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
 ; Register name                                                  ; Reason for Removal                                                        ;
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
-; MEF:mef_inst|estado[3]                                         ; Stuck at GND due to stuck port data_in                                    ;
 ; matrixControl:u_matrixControl|index1[0]                        ; Stuck at VCC due to stuck port data_in                                    ;
 ; matrixControl:u_matrixControl|index2[0]                        ; Stuck at GND due to stuck port data_in                                    ;
 ; TopCounter:counter_inst|Counter:counter_chain[10].u|t0         ; Merged with TopCounter:counter_inst|Counter:counter_chain[0].u|t0         ;
@@ -1051,6 +1059,7 @@ Encoding Type:  One-Hot
 ; MEF:mef_inst|current_state~5                                   ; Lost fanout                                                               ;
 ; MEF:mef_inst|current_state~6                                   ; Lost fanout                                                               ;
 ; MEF:mef_inst|current_state~7                                   ; Lost fanout                                                               ;
+; MEF:mef_inst|current_state.S8                                  ; Stuck at GND due to stuck port data_in                                    ;
 ; Total Number of Removed Registers = 454                        ;                                                                           ;
 +----------------------------------------------------------------+---------------------------------------------------------------------------+
 
@@ -1060,10 +1069,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2526  ;
+; Total registers                              ; 2530  ;
 ; Number of registers using Synchronous Clear  ; 175   ;
 ; Number of registers using Synchronous Load   ; 279   ;
-; Number of registers using Asynchronous Clear ; 890   ;
+; Number of registers using Asynchronous Clear ; 894   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 836   ;
 ; Number of registers using Preset             ; 0     ;
@@ -1092,21 +1101,21 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Main|TopCounter:counter_inst|counter15[1]         ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |Main|matrixControl:u_matrixControl|temp_matrix[6] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft1     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft0     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft1     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft0     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |Main|Mux23                                        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|Mux3           ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|Mux1           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Main|TopCounter:counter_inst|counter15[1]          ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |Main|matrixControl:u_matrixControl|temp_matrix[14] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft1      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft0      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft1      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|ShiftLeft0      ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; No         ; |Main|Mux15                                         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|Mux3            ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Main|matrixControl:u_matrixControl|Mux1            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -1223,14 +1232,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MEF:mef_inst"                                                                                                                                      ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; next_state ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "next_state[3..1]" have no fanouts                ;
-; J2         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MEF:mef_inst"                                                                                                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; next_state ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "next_state[3..1]" have no fanouts ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1256,36 +1264,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 145                         ;
-;     CLR               ; 13                          ;
+; arriav_ff             ; 149                         ;
+;     CLR               ; 17                          ;
 ;     CLR SCLR          ; 27                          ;
 ;     ENA               ; 6                           ;
 ;     ENA CLR           ; 50                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 37                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 1152                        ;
+; arriav_lcell_comb     ; 1215                        ;
 ;     arith             ; 461                         ;
-;         0 data inputs ; 14                          ;
+;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 155                         ;
-;         2 data inputs ; 292                         ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 564                         ;
+;         2 data inputs ; 293                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 625                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 69                          ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 188                         ;
-;         5 data inputs ; 105                         ;
-;         6 data inputs ; 147                         ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 63                          ;
+;         4 data inputs ; 204                         ;
+;         5 data inputs ; 140                         ;
+;         6 data inputs ; 158                         ;
 ;     shared            ; 126                         ;
 ;         3 data inputs ; 126                         ;
 ; arriav_mac            ; 37                          ;
-; boundary_port         ; 79                          ;
+; boundary_port         ; 80                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.70                        ;
-; Average LUT depth     ; 7.04                        ;
+; Max LUT depth         ; 9.40                        ;
+; Average LUT depth     ; 6.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1294,7 +1302,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1681,7 +1689,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 30 12:52:41 2024
+    Info: Processing started: Mon Sep 30 15:08:11 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Gato -c Gato
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1727,37 +1735,71 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.sv
     Info (12023): Found entity 1: Main File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file victoria.sv
     Info (12023): Found entity 1: Victoria File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Victoria.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Main.sv(26): created implicit net for "next_state" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at Main.sv(35): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at Main.sv(40): created implicit net for "Zdebounced" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at Main.sv(94): created implicit net for "Id" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 94
+Info (12021): Found 1 design units, including 1 entities, in source file pantalla_gano_j1.sv
+    Info (12023): Found entity 1: Pantalla_Gano_J1 File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pantalla_gano_j2.sv
+    Info (12023): Found entity 1: Pantalla_Gano_J2 File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pantalla_perdio_j1.sv
+    Info (12023): Found entity 1: Pantalla_Perdio_J1 File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Main.sv(29): created implicit net for "next_state" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at Main.sv(38): created implicit net for "Wdebounced" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at Main.sv(43): created implicit net for "Zdebounced" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at Main.sv(99): created implicit net for "Id" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 99
 Info (12127): Elaborating entity "Main" for the top level hierarchy
-Info (12128): Elaborating entity "TopCounter" for hierarchy "TopCounter:counter_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 30
+Info (12128): Elaborating entity "TopCounter" for hierarchy "TopCounter:counter_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at TopCounter.sv(38): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 38
 Warning (10230): Verilog HDL assignment warning at TopCounter.sv(48): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 48
 Warning (10230): Verilog HDL assignment warning at TopCounter.sv(53): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 53
 Info (12128): Elaborating entity "Counter" for hierarchy "TopCounter:counter_inst|Counter:counter_chain[0].u" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/TopCounter.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at Counter.sv(18): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Counter.sv Line: 18
-Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:debounce_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 36
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:debounce_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 39
 Info (12128): Elaborating entity "clock_enable" for hierarchy "Debounce:debounce_inst|clock_enable:u1" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 9
 Warning (10230): Verilog HDL assignment warning at Debounce.sv(33): truncated value with size 32 to match size of target (27) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 33
 Info (12128): Elaborating entity "my_dff_en" for hierarchy "Debounce:debounce_inst|my_dff_en:d0" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Debounce.sv Line: 12
-Info (12128): Elaborating entity "MEF" for hierarchy "MEF:mef_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 57
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 60
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 71
-Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 80
-Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 87
+Info (12128): Elaborating entity "MEF" for hierarchy "MEF:mef_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 62
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 65
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 76
+Info (12128): Elaborating entity "Pantalla_Inicial" for hierarchy "Pantalla_Inicial:pantallaInicial" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 85
+Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 92
 Info (12128): Elaborating entity "BinaryToBCD" for hierarchy "DisplayController:display_inst|BinaryToBCD:bcd_conv" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at BinaryToBCD.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/BinaryToBCD.sv Line: 14
 Info (12128): Elaborating entity "HexTo7Segment" for hierarchy "DisplayController:display_inst|HexTo7Segment:display1" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/DisplayController.sv Line: 20
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 98
-Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 114
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:vgagen" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 103
+Info (12128): Elaborating entity "matrixControl" for hierarchy "matrixControl:u_matrixControl" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 119
 Warning (10034): Output port "Id" at matrixControl.sv(14) has no driver File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 14
-Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 123
-Info (12128): Elaborating entity "Pantalla_Jugadores" for hierarchy "Pantalla_Jugadores:pantalla_jugadores_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 130
-Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 21
+Info (12128): Elaborating entity "matrixRegister" for hierarchy "matrixRegister:u_matrixRegister" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 128
+Info (12128): Elaborating entity "Pantalla_Jugadores" for hierarchy "Pantalla_Jugadores:pantalla_jugadores_inst" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 135
 Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(22): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 22
-Info (12128): Elaborating entity "Victoria" for hierarchy "Victoria:victory" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(23): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(24): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(26): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(27): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(28): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(29): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(30): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at Pantalla_Jugadores.sv(31): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Jugadores.sv Line: 31
+Info (12128): Elaborating entity "Victoria" for hierarchy "Victoria:victory" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 143
+Info (12128): Elaborating entity "Pantalla_Gano_J1" for hierarchy "Pantalla_Gano_J1:pantalla_gano_j1" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 150
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J1.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J1.sv(22): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J1.sv(23): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J1.sv(24): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J1.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J1.sv Line: 25
+Info (12128): Elaborating entity "Pantalla_Gano_J2" for hierarchy "Pantalla_Gano_J2:pantalla_gano_j2" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 157
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J2.sv(21): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J2.sv(22): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J2.sv(23): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J2.sv(24): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at Pantalla_Gano_J2.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Gano_J2.sv Line: 25
+Info (12128): Elaborating entity "Pantalla_Perdio_J1" for hierarchy "Pantalla_Perdio_J1:pantalla_perdio_J1" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 165
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(22): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(23): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(24): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(26): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(27): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at Pantalla_Perdio_J1.sv(28): truncated value with size 32 to match size of target (11) File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Pantalla_Perdio_J1.sv Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4f84.tdf
     Info (12023): Found entity 1: altsyncram_4f84 File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/db/altsyncram_4f84.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
@@ -1780,7 +1822,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.09.30.12:52:52 Progress: Loading sld3fab8073/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.09.30.15:08:22 Progress: Loading sld3fab8073/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1824,7 +1866,6 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[14]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[14]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[14]~65" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 51
     Warning (13310): Register "matrixControl:u_matrixControl|temp_matrix[16]" is converted into an equivalent circuit using register "matrixControl:u_matrixControl|temp_matrix[16]~_emulated" and latch "matrixControl:u_matrixControl|temp_matrix[16]~69" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/matrixControl.sv Line: 51
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "estado[3]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 3
     Warning (13410): Pin "seg2[1]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 12
     Warning (13410): Pin "seg2[2]" is stuck at GND File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 12
     Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 12
@@ -1834,19 +1875,17 @@ Info (144001): Generated suppressed messages file C:/Users/gabri/OneDrive/Deskto
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 279 of its 369 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 90 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "J2" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2
-Info (21057): Implemented 4056 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 4121 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 70 output pins
-    Info (21061): Implemented 3767 logic cells
+    Info (21061): Implemented 3831 logic cells
     Info (21064): Implemented 168 RAM segments
     Info (21062): Implemented 37 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 5029 megabytes
-    Info: Processing ended: Mon Sep 30 12:53:00 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 5032 megabytes
+    Info: Processing ended: Mon Sep 30 15:08:30 2024
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
