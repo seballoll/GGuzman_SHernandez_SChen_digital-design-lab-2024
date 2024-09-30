@@ -200,6 +200,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
 					"name" : "A",
 					"strict" : false
 				},
@@ -212,11 +216,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "B",
+					"name" : "W",
 					"strict" : false
 				},
 				{
-					"name" : "W",
+					"name" : "Z",
 					"strict" : false
 				}
 			]

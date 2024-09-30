@@ -33,6 +33,11 @@ module Main (
 			 .clk(clk),      // Señal de reloj global
 			 .pb_out(Wdebounced) // Señal de salida debounced
 		);
+		Debounce debounce_inst1 (
+			 .pb_1(Z),       // Botón de entrada a debouncing (ejemplo: Z)
+			 .clk(clk),      // Señal de reloj global
+			 .pb_out(Zdebounced) // Señal de salida debounced
+		);
 
     // Instancia de la MEF, usando la señal finished del contador como entrada
     MEF mef_inst (
@@ -83,6 +88,7 @@ module Main (
         .x(x), 
         .y(y), 
         .matrix(matrix_out_MEF), 
+		  .Id(Id),
         .r(r_videoGen), 
         .g(g_videoGen), 
         .b(b_videoGen)
@@ -94,6 +100,10 @@ module Main (
         .rst_n(!rst), 
         .I(I), 
         .W(!Wdebounced), 
+		  .B(B),
+		  .Z(!Zdebounced),
+		  .Id(Id),
+		  .finished(finished),
         .matrix_in(matrix_reg), 
         .matrix_out(matrix_in), 
 		  .current_state(estado),

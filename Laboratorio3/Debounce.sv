@@ -27,13 +27,13 @@ module clock_enable(
 
     // Contador para generar el reloj lento
     always_ff @(posedge Clk_100M) begin
-        if (counter >= 249999)
+        if (counter >= 124999)
             counter <= 0;
         else
             counter <= counter + 1;
     end
 
-    assign slow_clk_en = (counter == 249999) ? 1'b1 : 1'b0;
+    assign slow_clk_en = (counter == 124999) ? 1'b1 : 1'b0;
 endmodule
 
 // D flip-flop con habilitación de reloj para el módulo de debouncing
