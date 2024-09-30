@@ -150,7 +150,7 @@ module Main (
 		  .G1(G1),
 		  .G2(G2)
 		  );
-<<<<<<< HEAD
+
 	 Pantalla_Gano_J1 pantalla_gano_j1 (
 		 .x(x),        // Coordenadas de píxel actual en X
 		 .y(y),        // Coordenadas de píxel actual en Y
@@ -174,7 +174,7 @@ module Main (
 		 .b(b_PantallaPJ1)         // Salida de componente azul del color RGB
 	);
 
-=======
+
 		  
 	 spiMaster spi_master_inst (
         .clk(clk),                 // Conectado al reloj del sistema
@@ -188,7 +188,6 @@ module Main (
         .sclk(sclk),                 // Reloj SPI
         .ss(ss),                     // Selección del esclavo
     );
->>>>>>> bc8efb8efd8a963fcc7cf14147405db2ffe858f3
 
     assign matrix_out_MEF = matrix_reg;
 

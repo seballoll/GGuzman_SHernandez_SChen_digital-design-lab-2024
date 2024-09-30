@@ -10,7 +10,7 @@ module matrixControl (
 	 input logic [3:0] current_state,
     output logic [17:0]  matrix_out,  // Output 9-bit matrix with modified value
     output logic        load,       // Load signal to indicate a change
-	 output logic [1:0]  Id
+	 output logic [5:0]  indexOut
 );
 
     logic [5:0] index1;  // 4-bit index to count from 8 to 0 (positions in the 9-bit matrix)
