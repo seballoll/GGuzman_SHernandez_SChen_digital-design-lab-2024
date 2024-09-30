@@ -212,6 +212,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "G1",
+					"strict" : false
+				},
+				{
+					"name" : "G2",
+					"strict" : false
+				},
+				{
 					"name" : "seg1[0]",
 					"strict" : false
 				},

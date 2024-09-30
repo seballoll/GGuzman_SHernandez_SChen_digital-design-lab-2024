@@ -1,6 +1,7 @@
 module MEF (
     input logic clk, rst, T, I, B, A, J1, J2,
     input logic finished,            // Entrada desde el TopCounter
+	 input logic G1, G2,
     output logic [3:0] estado,       // Salida de estado actual
     output logic [3:0] next_state    // Salida del siguiente estado
 );

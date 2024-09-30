@@ -16,7 +16,7 @@ module matrixControl (
     logic [5:0] index1;  // 4-bit index to count from 8 to 0 (positions in the 9-bit matrix)
 	 logic [5:0] index2;
     logic [17:0] temp_matrix; // Temporary matrix to store the modified values
-	 logic [3:0] random_index;
+	 logic [5:0] random_index;
 
     // Button select logic to cycle through matrix positions
     always_ff @(posedge clk or negedge rst_n) begin
@@ -36,13 +36,7 @@ module matrixControl (
             else
                 index2 <= index2 - 5'd2; // Move to the next position
         end
-//		  else if (random_index) begin 
-//					if (random_index==4'b1000)
-//					random_index <= 4'b0000;
-//					else 
-//						random_index <= random_index + 1;
-//					end
-//					
+
 		      
     end
 
@@ -93,7 +87,7 @@ module matrixControl (
 				end
 			end
 //			else if (finished) begin
-//							if (!matrix_in[random_index]&&(current_state==4'b0001 | current_state==4'b0110)) begin
+//							if (!matrix_in[index1+random_index]&&(current_state==4'b0001 | current_state==4'b0110)) begin
 //								 temp_matrix <= matrix_in | (9'b1 << random_index); // Place a 1 in the available position
 //								 
 //								 load <= 1'b1; // Indicate that a change has been made
@@ -103,7 +97,7 @@ module matrixControl (
 //								 
 //								 load <= 1'b1; // Indicate that a change has been made
 //							end
-					   
+//					   
 //					  else begin
 //							load <= 1'b0; // No load when confirm button is not pressed
 //					  end

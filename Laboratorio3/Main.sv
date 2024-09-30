@@ -6,6 +6,7 @@ module Main (
     output logic [17:0] matrix_out_MEF,  // Salida de la matriz modificada
     output logic load,  // Señal de carga de la matriz
     output logic finished,  // Señal que indica que el contador ha llegado a 15 segundos
+	 output logic G1,G2,
     output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos
     output logic [6:0] seg2   // Segmentos del segundo display de 7 segmentos
 );
@@ -48,6 +49,8 @@ module Main (
         .B(B),
         .A(A),
         .J1(J1),
+		  .G1(G1),
+		  .G2(G2),
         .finished(finished),  // Conectar la salida finished del contador como entrada aquí
         .estado(estado),
 		  .next_state(next_state)
@@ -125,6 +128,14 @@ module Main (
         .g(g_PantallaJugadores),
         .b(b_PantallaJugadores)
     );
+	 
+	 Victoria victory(
+		  .clk(clk),
+		  .rst_n(!rst),
+		  .matrix(matrix_out_MEF),
+		  .G1(G1),
+		  .G2(G2)
+		  );
 
     assign matrix_out_MEF = matrix_reg;
 
