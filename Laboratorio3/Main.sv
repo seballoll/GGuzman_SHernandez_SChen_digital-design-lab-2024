@@ -3,7 +3,7 @@ module Main (
     output logic [3:0] estado,  // Salida de estado de la MEF
     output logic vgaclk, hsync, vsync, sync_b, blank_b,  // Señales VGA
     output logic [7:0] r, g, b,  // Señales de color VGA
-    output logic [8:0] matrix_out_MEF,  // Salida de la matriz modificada
+    output logic [17:0] matrix_out_MEF,  // Salida de la matriz modificada
     output logic load,  // Señal de carga de la matriz
     output logic finished,  // Señal que indica que el contador ha llegado a 15 segundos
     output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos
@@ -16,7 +16,7 @@ module Main (
     logic [7:0] r_videoGen, g_videoGen, b_videoGen;  
     logic [7:0] r_black, g_black, b_black;  
     logic [3:0] count;
-    logic [8:0] matrix_in, matrix_reg;
+    logic [17:0] matrix_in, matrix_reg;
 
     // Instancia del contador
     TopCounter counter_inst (

@@ -1,0 +1,933 @@
+Partition Merge report for Gato
+Sun Sep 29 21:38:51 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge DSP Block Usage Summary
+ 10. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Partition Merge Summary                                                       ;
++---------------------------------+---------------------------------------------+
+; Partition Merge Status          ; Successful - Sun Sep 29 21:38:51 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Gato                                        ;
+; Top-level Entity Name           ; Main                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 2524                                        ;
+; Total pins                      ; 77                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 21,504                                      ;
+; Total DSP Blocks                ; 37                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                               ;
++---------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+---------------------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                                    ; Type         ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                       ; Details                                                                                  ;
++---------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+---------------------------------------------------------+------------------------------------------------------------------------------------------+
+; A                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; A                                                       ; N/A                                                                                      ;
+; A                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; A                                                       ; N/A                                                                                      ;
+; A~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; A                                                       ; N/A                                                                                      ;
+; A~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; A                                                       ; N/A                                                                                      ;
+; B                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; B                                                       ; N/A                                                                                      ;
+; B                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; B                                                       ; N/A                                                                                      ;
+; B~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; B                                                       ; N/A                                                                                      ;
+; B~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; B                                                       ; N/A                                                                                      ;
+; I                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; I                                                       ; N/A                                                                                      ;
+; I                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; I                                                       ; N/A                                                                                      ;
+; I~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; I                                                       ; N/A                                                                                      ;
+; I~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; I                                                       ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S0                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S0                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S0                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S0                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S1                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S1                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S1                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S1                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S2                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S2                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S2                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S2                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S5                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S5                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S5                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S5                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S6                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S6                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S6                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S6                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S7                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S7                           ; N/A                                                                                      ;
+; MEF:mef_inst|current_state.S7                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|current_state.S7                           ; N/A                                                                                      ;
+; MEF:mef_inst|estado[0]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[0]                                  ; N/A                                                                                      ;
+; MEF:mef_inst|estado[0]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[0]                                  ; N/A                                                                                      ;
+; MEF:mef_inst|estado[1]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[1]                                  ; N/A                                                                                      ;
+; MEF:mef_inst|estado[1]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[1]                                  ; N/A                                                                                      ;
+; MEF:mef_inst|estado[2]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[2]                                  ; N/A                                                                                      ;
+; MEF:mef_inst|estado[2]                                  ; post-fitting ; connected ; Top                            ; post-synthesis    ; MEF:mef_inst|estado[2]                                  ; N/A                                                                                      ;
+; W                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; W                                                       ; N/A                                                                                      ;
+; W                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; W                                                       ; N/A                                                                                      ;
+; W~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; W                                                       ; N/A                                                                                      ;
+; W~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; W                                                       ; N/A                                                                                      ;
+; Z                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; Z                                                       ; N/A                                                                                      ;
+; Z                                                       ; post-fitting ; connected ; Top                            ; post-synthesis    ; Z                                                       ; N/A                                                                                      ;
+; Z~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; Z                                                       ; N/A                                                                                      ;
+; Z~input                                                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; Z                                                       ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                     ; N/A                                                                                      ;
+; clk                                                     ; post-fitting ; connected ; Top                            ; post-synthesis    ; clk                                                     ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[1]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[1]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[1]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[1]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[1]~0               ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[1]~0               ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[1]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[1]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[2]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[2]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[2]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[2]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[2]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[2]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[3]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[3]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[3]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[3]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[4]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[4]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[4]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[4]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[4]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[4]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[5]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[5]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[5]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index1[5]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index1[6]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[6]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[7]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[7]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[8]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index1[8]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[1]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[1]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[1]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[1]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[1]~0               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[1]~0               ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[1]~0               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[1]~0               ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[2]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[2]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[2]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[2]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[3]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[3]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[3]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[3]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[4]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[4]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[4]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[4]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[4]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[4]~DUPLICATE       ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[5]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[5]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[5]                 ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|index2[5]                 ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|index2[6]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[6]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[7]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[7]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[8]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index2[8]                 ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~0                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~0                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~1                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~1                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~2                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|index~2                   ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|load                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|load                      ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|load                      ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|load                      ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|load~0                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|load~0                    ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|load~0                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|load~0                    ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|load~1                    ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|load~1                    ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|load~2                    ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|load~2                    ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~1          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~1          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~2          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~2          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~3          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~3          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[0]~37         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~37         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~37         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~37         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~38         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~38         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~38         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~38         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~39         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~39         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~39         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~39         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[0]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[0]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~57        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~57        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~57        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~57        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~58        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~58        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~58        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~58        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~59        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~59        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~59        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~59        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[10]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[10]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~21        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~21        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~21        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~21        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~22        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~22        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~22        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~22        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~23        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~23        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~23        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~23        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~74        ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[11]~74        ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[11]~75        ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[11]~75        ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[11]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[11]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[11]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~61        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~61        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~61        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~61        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~62        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~62        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~62        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~62        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~63        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~63        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~63        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~63        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[12]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[12]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~25        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~25        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~25        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~25        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~26        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~26        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~26        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~26        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~27        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~27        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~27        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~27        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[13]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[13]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~65        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~65        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~65        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~65        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~66        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~66        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~66        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~66        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~67        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~67        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~67        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~67        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[14]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[14]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~29        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~29        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~29        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~29        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~30        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~30        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~30        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~30        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~31        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~31        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~31        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~31        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[15]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[15]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~69        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~69        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~69        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~69        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~70        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~70        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~70        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~70        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~71        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~71        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~71        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~71        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[16]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[16]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~33        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~33        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~33        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~33        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~34        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~34        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~34        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~34        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~35        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~35        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~35        ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~35        ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[17]~_emulated ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[17]~_emulated ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~1          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~1          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~1          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~1          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~2          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~2          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~2          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~2          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~3          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~3          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~3          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~3          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~5          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~5          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~6          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~6          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~7          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~7          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[1]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[1]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[1]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~10         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~10         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~11         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~11         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~41         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~41         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~41         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~41         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~42         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~42         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~42         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~42         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~43         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~43         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~43         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~43         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~9          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~9          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[2]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[2]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[2]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~13         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~13         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~14         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~14         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~15         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~15         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[3]~5          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~5          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~5          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~5          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~6          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~6          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~6          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~6          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~7          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~7          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~7          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~7          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[3]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[3]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~17         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~17         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~18         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~18         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~19         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~19         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[4]~45         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~45         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~45         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~45         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~46         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~46         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~46         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~46         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~47         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~47         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~47         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~47         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[4]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[4]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~10         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~10         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~10         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~10         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~11         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~11         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~11         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~11         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~21         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~21         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~22         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~22         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~23         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~23         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[5]~9          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~9          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~9          ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~9          ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[5]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[5]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~25         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~25         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~26         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~26         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~27         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~27         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[6]~49         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~49         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~49         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~49         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~50         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~50         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~50         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~50         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~51         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~51         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~51         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~51         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[6]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[6]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~13         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~13         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~13         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~13         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~14         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~14         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~14         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~14         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~15         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~15         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~15         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~15         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~29         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~29         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~30         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~30         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~31         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~31         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[7]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[7]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[7]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~33         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~33         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~34         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~34         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~35         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~35         ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; matrixControl:u_matrixControl|temp_matrix[8]~53         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~53         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~53         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~53         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~54         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~54         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~54         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~54         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~55         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~55         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~55         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~55         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[8]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[8]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~17         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~17         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~17         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~17         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~18         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~18         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~18         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~18         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~19         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~19         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~19         ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~19         ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~_emulated  ; N/A                                                                                      ;
+; matrixControl:u_matrixControl|temp_matrix[9]~_emulated  ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixControl:u_matrixControl|temp_matrix[9]~_emulated  ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[0]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[0]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[0]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[0]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[10]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[10]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[10]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[10]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[11]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[11]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[11]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[11]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[12]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[12]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[12]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[12]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[13]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[13]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[13]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[13]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[14]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[14]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[14]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[14]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[15]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[15]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[15]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[15]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[16]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[16]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[16]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[16]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[17]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[17]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[17]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[17]              ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[1]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[1]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[1]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[1]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[2]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[2]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[2]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[2]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[3]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[3]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[3]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[3]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[4]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[4]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[4]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[4]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[5]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[5]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[5]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[5]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[6]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[6]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[6]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[6]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[7]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[7]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[7]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[7]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[8]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[8]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[8]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[8]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[9]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[9]               ; N/A                                                                                      ;
+; matrixRegister:u_matrixRegister|matrix[9]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[9]               ; N/A                                                                                      ;
+; rst                                                     ; post-fitting ; connected ; Top                            ; post-synthesis    ; rst                                                     ; N/A                                                                                      ;
+; rst                                                     ; post-fitting ; connected ; Top                            ; post-synthesis    ; rst                                                     ; N/A                                                                                      ;
++---------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+---------------------------------------------------------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                    ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top  ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 513  ; 59               ; 1018                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Combinational ALUT usage for logic          ; 1181 ; 91               ; 414                            ; 0                              ;
+;     -- 7 input functions                    ; 1    ; 1                ; 0                              ; 0                              ;
+;     -- 6 input functions                    ; 153  ; 12               ; 91                             ; 0                              ;
+;     -- 5 input functions                    ; 118  ; 24               ; 193                            ; 0                              ;
+;     -- 4 input functions                    ; 202  ; 15               ; 23                             ; 0                              ;
+;     -- <=3 input functions                  ; 707  ; 39               ; 107                            ; 0                              ;
+; Memory ALUT usage                           ; 0    ; 0                ; 0                              ; 0                              ;
+;     -- 64-address deep                      ; 0    ; 0                ; 0                              ; 0                              ;
+;     -- 32-address deep                      ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Dedicated logic registers                   ; 143  ; 90               ; 2291                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+;                                             ;      ;                  ;                                ;                                ;
+; I/O pins                                    ; 77   ; 0                ; 0                              ; 0                              ;
+; I/O registers                               ; 0    ; 0                ; 0                              ; 0                              ;
+; Total block memory bits                     ; 0    ; 0                ; 21504                          ; 0                              ;
+; Total block memory implementation bits      ; 0    ; 0                ; 0                              ; 0                              ;
+; JTAG                                        ; 0    ; 0                ; 0                              ; 1                              ;
+; DSP block                                   ; 37   ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Connections                                 ;      ;                  ;                                ;                                ;
+;     -- Input Connections                    ; 0    ; 133              ; 3379                           ; 1                              ;
+;     -- Registered Input Connections         ; 0    ; 109              ; 2646                           ; 0                              ;
+;     -- Output Connections                   ; 1948 ; 389              ; 34                             ; 1142                           ;
+;     -- Registered Output Connections        ; 112  ; 389              ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Internal Connections                        ;      ;                  ;                                ;                                ;
+;     -- Total Connections                    ; 8802 ; 1030             ; 11850                          ; 1151                           ;
+;     -- Registered Connections               ; 1394 ; 851              ; 9347                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; External Connections                        ;      ;                  ;                                ;                                ;
+;     -- Top                                  ; 0    ; 0                ; 1948                           ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 0    ; 20               ; 380                            ; 122                            ;
+;     -- sld_signaltap:auto_signaltap_0       ; 1948 ; 380              ; 64                             ; 1021                           ;
+;     -- hard_block:auto_generated_inst       ; 0    ; 122              ; 1021                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Partition Interface                         ;      ;                  ;                                ;                                ;
+;     -- Input Ports                          ; 13   ; 45               ; 573                            ; 4                              ;
+;     -- Output Ports                         ; 68   ; 62               ; 351                            ; 9                              ;
+;     -- Bidir Ports                          ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Registered Ports                            ;      ;                  ;                                ;                                ;
+;     -- Registered Input Ports               ; 0    ; 13               ; 341                            ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 29               ; 337                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Port Connectivity                           ;      ;                  ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0    ; 0                ; 105                            ; 0                              ;
+;     -- Output Ports driven by GND           ; 0    ; 28               ; 2                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0    ; 0                ; 17                             ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0    ; 0                ; 1                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 25               ; 172                            ; 0                              ;
+;     -- Output Ports with no Source          ; 0    ; 0                ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 30               ; 186                            ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 29               ; 339                            ; 0                              ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++----------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                               ;
++-----------------------------------+-----------+---------------+----------+-------------+
+; Name                              ; Partition ; Type          ; Location ; Status      ;
++-----------------------------------+-----------+---------------+----------+-------------+
+; A                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- A                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- A~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; B                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- B                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- B~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; I                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- I                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- I~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; J1                                ; Top       ; Input Port    ; n/a      ;             ;
+;     -- J1                         ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- J1~input                   ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; J2                                ; Top       ; Input Port    ; n/a      ;             ;
+;     -- J2                         ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- J2~input                   ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; T                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- T                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- T~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; W                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- W                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- W~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; Z                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- Z                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- Z~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tck               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tck        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tck~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tdi               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tdi        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdi~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tdo               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- altera_reserved_tdo        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdo~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; altera_reserved_tms               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tms        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tms~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[0]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[0]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[0]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[1]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[1]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[1]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[2]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[2]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[2]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[3]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[3]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[3]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[4]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[4]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[4]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[5]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[5]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[5]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[6]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[6]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[6]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; b[7]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- b[7]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- b[7]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; blank_b                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- blank_b                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- blank_b~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; clk                               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- clk                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- clk~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; estado[0]                         ; Top       ; Output Port   ; n/a      ;             ;
+;     -- estado[0]                  ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- estado[0]~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; estado[1]                         ; Top       ; Output Port   ; n/a      ;             ;
+;     -- estado[1]                  ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- estado[1]~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; estado[2]                         ; Top       ; Output Port   ; n/a      ;             ;
+;     -- estado[2]                  ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- estado[2]~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; estado[3]                         ; Top       ; Output Port   ; n/a      ;             ;
+;     -- estado[3]                  ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- estado[3]~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; finished                          ; Top       ; Output Port   ; n/a      ;             ;
+;     -- finished                   ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- finished~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[0]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[0]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[0]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[1]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[1]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[1]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[2]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[2]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[2]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[3]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[3]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[3]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[4]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[4]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[4]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[5]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[5]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[5]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[6]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[6]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[6]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; g[7]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- g[7]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- g[7]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; hsync                             ; Top       ; Output Port   ; n/a      ;             ;
+;     -- hsync                      ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- hsync~output               ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; load                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- load                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- load~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[0]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[0]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[0]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[10]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[10]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[10]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[11]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[11]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[11]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[12]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[12]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[12]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[13]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[13]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[13]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[14]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[14]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[14]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[15]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[15]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[15]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[16]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[16]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[16]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[17]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[17]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[17]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[1]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[1]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[1]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[2]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[2]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[2]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[3]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[3]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[3]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[4]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[4]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[4]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[5]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[5]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[5]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[6]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[6]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[6]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[7]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[7]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[7]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[8]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[8]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[8]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; matrix_out_MEF[9]                 ; Top       ; Output Port   ; n/a      ;             ;
+;     -- matrix_out_MEF[9]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- matrix_out_MEF[9]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[0]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[0]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[0]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[1]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[1]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[1]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[2]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[2]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[2]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[3]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[3]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[3]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[4]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[4]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[4]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[5]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[5]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[5]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[6]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[6]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[6]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; r[7]                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- r[7]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- r[7]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; rst                               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- rst                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- rst~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[0]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[0]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[0]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[1]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[1]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[1]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[2]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[2]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[2]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[3]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[3]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[3]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[4]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[4]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[4]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[5]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[5]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[5]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg1[6]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg1[6]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg1[6]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[0]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[0]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[0]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[1]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[1]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[1]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[2]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[2]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[2]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[3]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[3]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[3]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[4]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[4]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[4]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[5]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[5]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[5]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; seg2[6]                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- seg2[6]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- seg2[6]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; sync_b                            ; Top       ; Output Port   ; n/a      ;             ;
+;     -- sync_b                     ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- sync_b~output              ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; vgaclk                            ; Top       ; Output Port   ; n/a      ;             ;
+;     -- vgaclk                     ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- vgaclk~output              ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; vsync                             ; Top       ; Output Port   ; n/a      ;             ;
+;     -- vsync                      ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- vsync~output               ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
++-----------------------------------+-----------+---------------+----------+-------------+
+
+
++---------------------------------------------------------+
+; Partition Merge Resource Usage Summary                  ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1580      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1686      ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 256       ;
+;     -- 5 input functions                    ; 335       ;
+;     -- 4 input functions                    ; 240       ;
+;     -- <=3 input functions                  ; 853       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 2524      ;
+;                                             ;           ;
+; I/O pins                                    ; 77        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 21504     ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 37        ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1735      ;
+; Total fan-out                               ; 17544     ;
+; Average fan-out                             ; 3.83      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_4f84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 168          ; 128          ; 168          ; 21504 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++-----------------------------------------------+
+; Partition Merge DSP Block Usage Summary       ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 19          ;
+; Sum of two 18x18                ; 18          ;
+; Total number of DSP blocks      ; 37          ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 55          ;
++---------------------------------+-------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Sep 29 21:38:50 2024
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off Gato -c Gato --merge=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 279 of its 369 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 90 missing sources or connections.
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "J2" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2
+Info (21057): Implemented 4087 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 68 output pins
+    Info (21061): Implemented 3800 logic cells
+    Info (21064): Implemented 168 RAM segments
+    Info (21062): Implemented 37 DSP elements
+Info: Quartus Prime Partition Merge was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Sun Sep 29 21:38:51 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
