@@ -8,7 +8,12 @@ module Main (
     output logic finished,  // Señal que indica que el contador ha llegado a 15 segundos
 	 output logic G1,G2,
     output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos
-    output logic [6:0] seg2   // Segmentos del segundo display de 7 segmentos
+    output logic [6:0] seg2,   // Segmentos del segundo display de 7 segmentos
+	 
+	 input wire miso,          // Master In, Slave Out (desde el esclavo)
+    output wire mosi,         // Master Out, Slave In (hacia el esclavo)
+    output wire sclk,         // Reloj SPI
+    output wire ss           // Selección del esclavo
 );
 
     logic [9:0] x, y;
@@ -21,6 +26,10 @@ module Main (
     logic [7:0] r_black, g_black, b_black;  
     logic [3:0] count;
     logic [17:0] matrix_in, matrix_reg;
+	 logic [5:0] index1;
+	 logic start_signal;
+	 
+	 
 
     // Instancia del contador
     TopCounter counter_inst (
@@ -110,12 +119,12 @@ module Main (
         .W(!Wdebounced), 
 		  .B(B),
 		  .Z(!Zdebounced),
-		  .Id(Id),
 		  .finished(finished),
         .matrix_in(matrix_reg), 
         .matrix_out(matrix_in), 
 		  .current_state(estado),
-        .load(load)
+        .load(load),
+		  .indexOut(index1)
     );
 
     // Instancia del módulo matrixRegister
@@ -167,13 +176,17 @@ module Main (
 
 =======
 		  
-		  spiMaster spi_master_inst (
+	 spiMaster spi_master_inst (
         .clk(clk),                 // Conectado al reloj del sistema
-        .rst_n(rst_n),             // Reset activo en bajo
-        .start(start_transfer),    // Señal para iniciar la transferencia
-        .move_index(move_index),   // Índice de jugada de 5 bits
+        .rst_n(!rst),             // Reset activo en bajo
+        .start( load),    // Señal para iniciar la transferencia
+        .move_index(index1),   // Índice de jugada de 5 bits
         .done(done),               // Señal de finalización de transferencia
-        .received_data(received_data) // Dato recibido del Arduino
+        .received_data(received_data), // Dato recibido del Arduino
+		  .mosi(mosi),                 // Señal mosi (Master Out, Slave In)
+        .miso(miso),                 // Señal miso (Master In, Slave Out)
+        .sclk(sclk),                 // Reloj SPI
+        .ss(ss),                     // Selección del esclavo
     );
 >>>>>>> bc8efb8efd8a963fcc7cf14147405db2ffe858f3
 
