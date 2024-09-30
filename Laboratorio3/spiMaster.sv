@@ -1,6 +1,13 @@
 module spiMaster (
     input wire clk,               // Reloj del sistema
     input wire rst_n,             // Reset activo en bajo
+	 
+	 output mosi,                     // Master Out, Slave In
+    input miso,                     // Master In, Slave Out
+    output sclk,                     // Reloj SPI
+    output ss,                       // Selección de esclavo (activo en bajo)
+	 
+	 
     input wire start,             // Señal para iniciar la transferencia
     input wire [4:0] move_index,  // Índice de la jugada (0-31)
     output reg done,              // Señal de finalización
@@ -8,10 +15,7 @@ module spiMaster (
 );
 
     // Señales SPI internas
-    reg mosi;                     // Master Out, Slave In
-    reg miso;                     // Master In, Slave Out
-    reg sclk;                     // Reloj SPI
-    reg ss;                       // Selección de esclavo (activo en bajo)
+    
 
     reg [7:0] spi_data;           // Byte de datos para transmitir
     reg [2:0] bit_cnt;            // Contador de bits (0-7)
