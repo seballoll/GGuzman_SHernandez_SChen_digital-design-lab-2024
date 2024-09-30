@@ -136,6 +136,15 @@ module Main (
 		  .G1(G1),
 		  .G2(G2)
 		  );
+		  
+		  spiMaster spi_master_inst (
+        .clk(clk),                 // Conectado al reloj del sistema
+        .rst_n(rst_n),             // Reset activo en bajo
+        .start(start_transfer),    // Señal para iniciar la transferencia
+        .move_index(move_index),   // Índice de jugada de 5 bits
+        .done(done),               // Señal de finalización de transferencia
+        .received_data(received_data) // Dato recibido del Arduino
+    );
 
     assign matrix_out_MEF = matrix_reg;
 
