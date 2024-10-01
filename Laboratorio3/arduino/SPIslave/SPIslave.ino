@@ -40,14 +40,14 @@ ISR(SPI_STC_vect) {
   
         // Ejemplo: índice de la jugada del Arduino
         // Confirmar que la jugada es válida
-
+  index = 0x1F;
   // 00000 0 0 0
-  send_byte = (index << 3) | (0<< 2) | (1 << 1) | (confirmation << 0);  // Jugada del Arduino
+  send_byte = (index << 5) | ( 0 << 2) | (1 << 1) | (confirmation << 0);  // Jugada del Arduino
 
   // Enviar el byte en la siguiente transferencia
-  SPDR = send_byte;
-  Serial.print("Package sent> ");
-  Serial.println(send_byte);
+  //SPDR = send_byte;
+  //Serial.print("Package sent> ");
+  //Serial.println(send_byte);
 
   confirmation = 0;
   
@@ -157,7 +157,7 @@ void loop() {
 
    if (data_ready) {
     // Procesar el byte recibido de la FPGA
-     indexPlayer = (received_byte >> 5) & 0x0F;  // Extraer los 4 bits del índice
+     indexPlayer = (received_byte >> 5) & 0x1F;  // Extraer los 4 bits del índice
     bool move_valid = (received_byte >> 2) & 0x01;     // Extraer bit de confirmación
     bool move_from_fpga = (received_byte >> 1) & 0x00; // Bit: jugada de la FPGA
      // Bit: jugada de Arduino
@@ -167,7 +167,7 @@ void loop() {
     Serial.print("Received byte: ");
     Serial.println(received_byte, BIN);
     Serial.print("Move index: ");
-    Serial.println(indexPlayer);
+    Serial.println(indexPlayer, BIN);
     Serial.print("Move valid: ");
     Serial.println(move_valid);
     Serial.print("Move from FPGA: ");

@@ -1,6 +1,6 @@
 Partition Merge report for Gato
-Sun Sep 29 21:38:51 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Oct  1 04:57:37 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -22,7 +22,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -39,27 +39,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Partition Merge Summary                                                       ;
-+---------------------------------+---------------------------------------------+
-; Partition Merge Status          ; Successful - Sun Sep 29 21:38:51 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; Gato                                        ;
-; Top-level Entity Name           ; Main                                        ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2524                                        ;
-; Total pins                      ; 77                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 21,504                                      ;
-; Total DSP Blocks                ; 37                                          ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++---------------------------------+------------------------------------------------+
+; Partition Merge Status          ; Successful - Tue Oct  1 04:57:37 2024          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; Gato                                           ;
+; Top-level Entity Name           ; Main                                           ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 2592                                           ;
+; Total pins                      ; 86                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 22,144                                         ;
+; Total DSP Blocks                ; 37                                             ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -448,6 +448,16 @@ https://fpgasoftware.intel.com/eula.
 ; matrixRegister:u_matrixRegister|matrix[9]               ; post-fitting ; connected ; Top                            ; post-synthesis    ; matrixRegister:u_matrixRegister|matrix[9]               ; N/A                                                                                      ;
 ; rst                                                     ; post-fitting ; connected ; Top                            ; post-synthesis    ; rst                                                     ; N/A                                                                                      ;
 ; rst                                                     ; post-fitting ; connected ; Top                            ; post-synthesis    ; rst                                                     ; N/A                                                                                      ;
+; spiMaster:spi_master_inst|mosi                          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|mosi                          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|sclk                          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|sclk                          ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|sclk_reg                      ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|sclk_reg                      ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; spiMaster:spi_master_inst|spi_active                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; spiMaster:spi_master_inst|spi_active                    ; N/A                                                                                      ;
+; spiMaster:spi_master_inst|spi_active                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; spiMaster:spi_master_inst|spi_active                    ; N/A                                                                                      ;
+; spiMaster:spi_master_inst|ss                            ; post-fitting ; connected ; Top                            ; post-synthesis    ; spiMaster:spi_master_inst|ss                            ; N/A                                                                                      ;
+; spiMaster:spi_master_inst|ss                            ; post-fitting ; connected ; Top                            ; post-synthesis    ; spiMaster:spi_master_inst|ss                            ; N/A                                                                                      ;
 +---------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+---------------------------------------------------------+------------------------------------------------------------------------------------------+
 
 
@@ -456,62 +466,62 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
 ; Statistic                                   ; Top  ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
 +---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 513  ; 59               ; 1018                           ; 0                              ;
+; Estimate of Logic utilization (ALMs needed) ; 557  ; 59               ; 1040                           ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
-; Combinational ALUT usage for logic          ; 1181 ; 91               ; 414                            ; 0                              ;
-;     -- 7 input functions                    ; 1    ; 1                ; 0                              ; 0                              ;
-;     -- 6 input functions                    ; 153  ; 12               ; 91                             ; 0                              ;
-;     -- 5 input functions                    ; 118  ; 24               ; 193                            ; 0                              ;
-;     -- 4 input functions                    ; 202  ; 15               ; 23                             ; 0                              ;
-;     -- <=3 input functions                  ; 707  ; 39               ; 107                            ; 0                              ;
+; Combinational ALUT usage for logic          ; 1280 ; 91               ; 422                            ; 0                              ;
+;     -- 7 input functions                    ; 2    ; 1                ; 0                              ; 0                              ;
+;     -- 6 input functions                    ; 175  ; 12               ; 85                             ; 0                              ;
+;     -- 5 input functions                    ; 146  ; 23               ; 204                            ; 0                              ;
+;     -- 4 input functions                    ; 208  ; 16               ; 23                             ; 0                              ;
+;     -- <=3 input functions                  ; 749  ; 39               ; 110                            ; 0                              ;
 ; Memory ALUT usage                           ; 0    ; 0                ; 0                              ; 0                              ;
 ;     -- 64-address deep                      ; 0    ; 0                ; 0                              ; 0                              ;
 ;     -- 32-address deep                      ; 0    ; 0                ; 0                              ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
-; Dedicated logic registers                   ; 143  ; 90               ; 2291                           ; 0                              ;
+; Dedicated logic registers                   ; 151  ; 90               ; 2351                           ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ;                                             ;      ;                  ;                                ;                                ;
-; I/O pins                                    ; 77   ; 0                ; 0                              ; 0                              ;
+; I/O pins                                    ; 86   ; 0                ; 0                              ; 0                              ;
 ; I/O registers                               ; 0    ; 0                ; 0                              ; 0                              ;
-; Total block memory bits                     ; 0    ; 0                ; 21504                          ; 0                              ;
+; Total block memory bits                     ; 0    ; 0                ; 22144                          ; 0                              ;
 ; Total block memory implementation bits      ; 0    ; 0                ; 0                              ; 0                              ;
 ; JTAG                                        ; 0    ; 0                ; 0                              ; 1                              ;
 ; DSP block                                   ; 37   ; 0                ; 0                              ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; Connections                                 ;      ;                  ;                                ;                                ;
-;     -- Input Connections                    ; 0    ; 133              ; 3379                           ; 1                              ;
-;     -- Registered Input Connections         ; 0    ; 109              ; 2646                           ; 0                              ;
-;     -- Output Connections                   ; 1948 ; 389              ; 34                             ; 1142                           ;
-;     -- Registered Output Connections        ; 112  ; 389              ; 0                              ; 0                              ;
+;     -- Input Connections                    ; 0    ; 133              ; 3464                           ; 1                              ;
+;     -- Registered Input Connections         ; 0    ; 109              ; 2716                           ; 0                              ;
+;     -- Output Connections                   ; 2003 ; 394              ; 34                             ; 1167                           ;
+;     -- Registered Output Connections        ; 116  ; 394              ; 0                              ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; Internal Connections                        ;      ;                  ;                                ;                                ;
-;     -- Total Connections                    ; 8802 ; 1030             ; 11850                          ; 1151                           ;
-;     -- Registered Connections               ; 1394 ; 851              ; 9347                           ; 0                              ;
+;     -- Total Connections                    ; 9292 ; 1036             ; 12144                          ; 1176                           ;
+;     -- Registered Connections               ; 1597 ; 859              ; 9591                           ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; External Connections                        ;      ;                  ;                                ;                                ;
-;     -- Top                                  ; 0    ; 0                ; 1948                           ; 0                              ;
-;     -- sld_hub:auto_hub                     ; 0    ; 20               ; 380                            ; 122                            ;
-;     -- sld_signaltap:auto_signaltap_0       ; 1948 ; 380              ; 64                             ; 1021                           ;
-;     -- hard_block:auto_generated_inst       ; 0    ; 122              ; 1021                           ; 0                              ;
+;     -- Top                                  ; 0    ; 0                ; 2003                           ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 0    ; 20               ; 385                            ; 122                            ;
+;     -- sld_signaltap:auto_signaltap_0       ; 2003 ; 385              ; 64                             ; 1046                           ;
+;     -- hard_block:auto_generated_inst       ; 0    ; 122              ; 1046                           ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; Partition Interface                         ;      ;                  ;                                ;                                ;
-;     -- Input Ports                          ; 13   ; 45               ; 573                            ; 4                              ;
-;     -- Output Ports                         ; 68   ; 62               ; 351                            ; 9                              ;
+;     -- Input Ports                          ; 15   ; 45               ; 588                            ; 4                              ;
+;     -- Output Ports                         ; 75   ; 62               ; 361                            ; 9                              ;
 ;     -- Bidir Ports                          ; 0    ; 0                ; 0                              ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; Registered Ports                            ;      ;                  ;                                ;                                ;
-;     -- Registered Input Ports               ; 0    ; 13               ; 341                            ; 0                              ;
-;     -- Registered Output Ports              ; 0    ; 29               ; 337                            ; 0                              ;
+;     -- Registered Input Ports               ; 0    ; 13               ; 351                            ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 29               ; 347                            ; 0                              ;
 ;                                             ;      ;                  ;                                ;                                ;
 ; Port Connectivity                           ;      ;                  ;                                ;                                ;
-;     -- Input Ports driven by GND            ; 0    ; 0                ; 105                            ; 0                              ;
+;     -- Input Ports driven by GND            ; 0    ; 0                ; 111                            ; 0                              ;
 ;     -- Output Ports driven by GND           ; 0    ; 28               ; 2                              ; 0                              ;
 ;     -- Input Ports driven by VCC            ; 0    ; 0                ; 17                             ; 0                              ;
 ;     -- Output Ports driven by VCC           ; 0    ; 0                ; 1                              ; 0                              ;
-;     -- Input Ports with no Source           ; 0    ; 25               ; 172                            ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 25               ; 177                            ; 0                              ;
 ;     -- Output Ports with no Source          ; 0    ; 0                ; 0                              ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0    ; 30               ; 186                            ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0    ; 29               ; 339                            ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 30               ; 191                            ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 29               ; 349                            ; 0                              ;
 +---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
 Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
 
@@ -528,6 +538,18 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ; B                                 ; Top       ; Input Port    ; n/a      ;             ;
 ;     -- B                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
 ;     -- B~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; C                                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- C                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- C~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; G1                                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- G1                         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- G1~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; G2                                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- G2                         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- G2~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
 ;                                   ;           ;               ;          ;             ;
 ; I                                 ; Top       ; Input Port    ; n/a      ;             ;
 ;     -- I                          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
@@ -741,6 +763,14 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;     -- matrix_out_MEF[9]          ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
 ;     -- matrix_out_MEF[9]~output   ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
 ;                                   ;           ;               ;          ;             ;
+; miso                              ; Top       ; Input Port    ; n/a      ;             ;
+;     -- miso                       ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- miso~input                 ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; mosi                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- mosi                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- mosi~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
 ; r[0]                              ; Top       ; Output Port   ; n/a      ;             ;
 ;     -- r[0]                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
 ;     -- r[0]~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
@@ -776,6 +806,10 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ; rst                               ; Top       ; Input Port    ; n/a      ;             ;
 ;     -- rst                        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
 ;     -- rst~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; sclk                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- sclk                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- sclk~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
 ;                                   ;           ;               ;          ;             ;
 ; seg1[0]                           ; Top       ; Output Port   ; n/a      ;             ;
 ;     -- seg1[0]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
@@ -833,9 +867,21 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;     -- seg2[6]                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
 ;     -- seg2[6]~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
 ;                                   ;           ;               ;          ;             ;
+; ss                                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ss                         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ss~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
 ; sync_b                            ; Top       ; Output Port   ; n/a      ;             ;
 ;     -- sync_b                     ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
 ;     -- sync_b~output              ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; test                              ; Top       ; Output Port   ; n/a      ;             ;
+;     -- test                       ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- test~output                ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                   ;           ;               ;          ;             ;
+; test2                             ; Top       ; Output Port   ; n/a      ;             ;
+;     -- test2                      ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- test2~output               ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
 ;                                   ;           ;               ;          ;             ;
 ; vgaclk                            ; Top       ; Output Port   ; n/a      ;             ;
 ;     -- vgaclk                     ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
@@ -853,27 +899,27 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1580      ;
+; Estimate of Logic utilization (ALMs needed) ; 1647      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1686      ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 256       ;
-;     -- 5 input functions                    ; 335       ;
-;     -- 4 input functions                    ; 240       ;
-;     -- <=3 input functions                  ; 853       ;
+; Combinational ALUT usage for logic          ; 1793      ;
+;     -- 7 input functions                    ; 3         ;
+;     -- 6 input functions                    ; 272       ;
+;     -- 5 input functions                    ; 373       ;
+;     -- 4 input functions                    ; 247       ;
+;     -- <=3 input functions                  ; 898       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2524      ;
+; Dedicated logic registers                   ; 2592      ;
 ;                                             ;           ;
-; I/O pins                                    ; 77        ;
+; I/O pins                                    ; 86        ;
 ; Total MLAB memory bits                      ; 0         ;
-; Total block memory bits                     ; 21504     ;
+; Total block memory bits                     ; 22144     ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 37        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1735      ;
-; Total fan-out                               ; 17544     ;
-; Average fan-out                             ; 3.83      ;
+; Maximum fan-out                             ; 1788      ;
+; Total fan-out                               ; 18268     ;
+; Average fan-out                             ; 3.82      ;
 +---------------------------------------------+-----------+
 
 
@@ -882,7 +928,7 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_4f84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 168          ; 128          ; 168          ; 21504 ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_se84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 173          ; 128          ; 173          ; 22144 ; None ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -904,29 +950,29 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Partition Merge
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 29 21:38:50 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Tue Oct  1 04:57:36 2024
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off Gato -c Gato --merge=on
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
 Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
-Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 279 of its 369 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 90 missing sources or connections.
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 283 of its 379 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 96 missing sources or connections.
 Info (35002): Resolved and merged 3 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "J2" File: C:/Users/gabri/OneDrive/Desktop/LAB DE TALLER/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 2
-Info (21057): Implemented 4087 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 3800 logic cells
-    Info (21064): Implemented 168 RAM segments
+    Warning (15610): No output dependent on input pin "miso" File: C:/Users/seba2/Documents/GitHub/GGuzman_SHernandez_SChen_digital-design-lab-2024/Laboratorio3/Main.sv Line: 13
+Info (21057): Implemented 4266 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 75 output pins
+    Info (21061): Implemented 3965 logic cells
+    Info (21064): Implemented 173 RAM segments
     Info (21062): Implemented 37 DSP elements
 Info: Quartus Prime Partition Merge was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Sun Sep 29 21:38:51 2024
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Tue Oct  1 04:57:37 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

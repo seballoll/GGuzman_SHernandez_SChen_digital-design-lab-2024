@@ -8,6 +8,10 @@ module matrixControl (
 	 input  logic        Z,
     input  logic [17:0]  matrix_in,   // Input 9-bit matrix
 	 input logic [3:0] current_state,
+	 
+	 input logic [3:0] random1,
+	 input logic [3:0] random2,
+	 
     output logic [17:0]  matrix_out,  // Output 9-bit matrix with modified value
     output logic        load,       // Load signal to indicate a change
 	 output logic [5:0]  indexOut
@@ -82,6 +86,53 @@ module matrixControl (
 				  load <= 1'b1; // Indica que se ha hecho un cambio
 				 
 				end
+				
+				
+			else if (finished && (current_state == 4'b0001)) begin
+			
+			if (!(matrix_in[random1]) && !(matrix_in[random1-1])) begin
+				  temp_matrix <= matrix_in | (18'b1 << random1); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				   
+				end else begin
+				
+					temp_matrix <= matrix_in | (18'b1 << random1); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				
+				end
+			end
+			
+			
+			else if (finished && (current_state == 4'b0110)) begin
+			
+			if (!(matrix_in[random1]) && !(matrix_in[random1-1])) begin
+				  temp_matrix <= matrix_in | (18'b1 << random1); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				   
+				end else begin
+				
+					temp_matrix <= matrix_in | (18'b1 << random1); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				
+				end
+			end
+			
+			
+			else if (finished && (current_state == 4'b0111)) begin
+			
+			if (!(matrix_in[random2]) && !(matrix_in[random2+1])) begin
+				  temp_matrix <= matrix_in | (18'b1 << random2); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				   
+				end else begin
+				
+					temp_matrix <= matrix_in | (18'b1 << random2); // Pone el bit correspondiente a 1 si no lo es
+				  load <= 1'b1; // Indica que se ha hecho un cambio
+				
+				end
+			end
+			
+				
 			 else begin
 				  load <= 1'b0; // No hay cambio, ya que el bit en 'index' ya es 1
 				end

@@ -10,10 +10,18 @@ module Main (
     output logic [6:0] seg1,  // Segmentos del primer display de 7 segmentos
     output logic [6:0] seg2,   // Segmentos del segundo display de 7 segmentos
 	 
-	 input wire miso,          // Master In, Slave Out (desde el esclavo)
-    output wire mosi,         // Master Out, Slave In (hacia el esclavo)
-    output wire sclk,         // Reloj SPI
-    output wire ss           // Selección del esclavo
+	 input  logic miso,          // Master In, Slave Out (desde el esclavo)
+    output logic mosi,         // Master Out, Slave In (hacia el esclavo)
+    output logic sclk,         // Reloj SPI
+    output logic ss  ,         // Selección del esclavo
+	 
+	 output logic [3:0] random_pares,   // Salida del LFSR de números pares
+    output logic [3:0] random_impares,
+	 
+	 
+	 output logic test1,
+	 
+	 output logic test2
 );
 
     logic [9:0] x, y;
@@ -28,6 +36,8 @@ module Main (
     logic [17:0] matrix_in, matrix_reg;
 	 logic [5:0] index1;
 	 logic start_signal;
+	 logic [3:0] seed_pares = 4'b0100;
+	 logic [3:0] seed_impares = 4'b0001;
 	 
 	 
 
@@ -120,6 +130,8 @@ module Main (
 		  .B(B),
 		  .Z(!Zdebounced),
 		  .finished(finished),
+		  .random1(random_impares),
+		  .random2(random_pares),
         .matrix_in(matrix_reg), 
         .matrix_out(matrix_in), 
 		  .current_state(estado),
@@ -173,6 +185,22 @@ module Main (
 		 .g(g_PantallaPJ1),        // Salida de componente verde del color RGB
 		 .b(b_PantallaPJ1)         // Salida de componente azul del color RGB
 	);
+	
+	
+	LFSR_pares lfsr_p (
+        .clk(clk),
+        .rst_n(rst_n),
+        .seed(seed_pares),
+        .random_out(random_pares)
+    );
+
+    // Instancia del LFSR que genera números impares
+    LFSR_impares lfsr_i (
+        .clk(clk),
+        .rst_n(rst_n),
+        .seed(seed_impares),
+        .random_out(random_impares)
+    );
 
 
 		  
@@ -187,6 +215,8 @@ module Main (
         .miso(miso),                 // Señal miso (Master In, Slave Out)
         .sclk(sclk),                 // Reloj SPI
         .ss(ss),                     // Selección del esclavo
+		  .test1(test1),
+		  .test2(test2)
     );
 
     assign matrix_out_MEF = matrix_reg;

@@ -300,11 +300,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "T",
+					"name" : "C",
 					"strict" : false
 				},
 				{
-					"name" : "C",
+					"name" : "T",
 					"strict" : false
 				},
 				{

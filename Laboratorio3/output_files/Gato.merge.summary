@@ -1,13 +1,13 @@
-Partition Merge Status : Successful - Sun Sep 29 21:38:51 2024
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Partition Merge Status : Successful - Tue Oct  1 04:57:37 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Gato
 Top-level Entity Name : Main
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2524
-Total pins : 77
+Total registers : 2592
+Total pins : 86
 Total virtual pins : 0
-Total block memory bits : 21,504
+Total block memory bits : 22,144
 Total DSP Blocks : 37
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
