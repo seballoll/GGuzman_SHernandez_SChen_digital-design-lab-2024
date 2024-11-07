@@ -1,0 +1,27 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do ImagenVGA_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/sebas/OneDrive/Escritorio/imagenVGA {C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Oct 30,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sebas/OneDrive/Escritorio/imagenVGA" C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv 
+# -- Compiling module PixCounter
+# ** Error (suppressible): C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv(18): (vlog-7061) Variable 'PIXCOUNT' driven in an always_ff block, may not be driven by any other process. See C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv(13).
+# ** Error (suppressible): C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv(20): (vlog-7061) Variable 'PIXCOUNT' driven in an always_ff block, may not be driven by any other process. See C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv(13).
+# End time: 19:21:36 on Oct 30,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./ImagenVGA_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/sebas/OneDrive/Escritorio/imagenVGA {C:/Users/sebas/OneDrive/Escritorio/imagenVGA/PixCounter.sv}"
